@@ -12,6 +12,7 @@ $(function(){
 		$(this).siblings('.upload_name').val(filename); 
 	});
 
+	// history.scrollRestoration = "manual";
 
 	$(window).on('scroll', function() {
 		scrollFn();
@@ -37,9 +38,10 @@ $(function(){
  */
 
 		$('#pc_gnb .depth1 > li').addClass('on');		
-		$('#pc_gnb .depth2 > li').addClass('on');		
+		$('#pc_gnb .depth2 > li, .nav_back').addClass('on');		
+		
 		/* pc nav */
-	$('.pc #pc_gnb .depth1 > li > a').on('mouseenter focus', function() {
+	$('.pc #pc_gnb .depth1, .nav_back').on('mouseenter focus', function() {
 		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
 		// var $target = $(this).parent();
 		// $target.addClass('on');		
@@ -51,12 +53,12 @@ $(function(){
 	// 	$target.addClass('on');		
 	// });
 
-	// $('.pc #pc_gnb').on('mouseleave', function() {
-	// 	$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
-	// });
-	// $('.pc #pc_gnb a.last').on('focusout', function() {
-	// 	$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
-	// });
+	$('.pc #pc_gnb, .nav_back').on('mouseleave', function() {
+		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
+	});
+	$('.pc #pc_gnb a.last').on('focusout', function() {
+		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
+	});
 	
 	/* mobile nav */	
 	$('#mobile_gnb .depth1 > li > a').on('click', function(e) {
