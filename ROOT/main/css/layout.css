@@ -29,7 +29,7 @@
 
 #pc_search {position:absolute; top:22px; right:0; width:230px; padding-right:55px; border:3px solid #0170e0; border-radius: 8px;}
 #pc_gnb {margin-left:190px; margin-right:220px; text-align:center; font-size:0;}
-.nav_back {display: none; width:100%; position: absolute; top: 100%; left: 0; height: 600px; background-color: #fff; box-shadow: 0 5px 5px rgba(0,0,0,0.1); border: 1px solid #f4f4f4;}
+.nav_back {display: none; width:100%; position: absolute; top: 100%; left: 0; height: 630px; background-color: #fff; box-shadow: 0 5px 5px rgba(0,0,0,0.1); border: 1px solid #f4f4f4;}
 .nav_back.on {display:block;}
 
 #pc_gnb .depth1 {width:100%; max-width:900px; margin:0 auto;}
