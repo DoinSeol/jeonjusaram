@@ -1,7 +1,7 @@
 var fullpage;
 
 $(function() {
-  var main_visual = new Swiper("#main_visual .swiper-container", {
+  var main_visual = new Swiper("#main_visual > .swiper-container", {
     loop: true,
     centeredSlides: true,
     speed: 700,
@@ -10,27 +10,39 @@ $(function() {
       disableOnInteraction: false
     },
     navigation: {
-      nextEl: "#main_visual .swiper-button-next",
-      prevEl: "#main_visual .swiper-button-prev"
+      nextEl: "#main_visual > .swiper-container .swiper-button-next",
+      prevEl: "#main_visual > .swiper-container .swiper-button-prev"
     },
     pagination: {
-      el: "#main_visual .swiper-pagination",
-      clickable: true
+      el: "#main_visual > .swiper-container .swiper-pagination-num",
+      type: "fraction",
     }
+
   });
-  $("#main_visual .swiper-button-prev-d").on("click", function(e) {
+  // var main_visual_paging = new Swiper("#main_visual > .swiper-container", {
+  //   pagination: {
+  //     el: "#main_visual > .swiper-container .swiper-pagination-dot",
+  //     type: "bullets",
+  //     clickable: true
+  //   },
+  // });
+  
+  // main_visual.controller.control = main_visual_paging;
+
+  $("#main_visual > .swiper-container .swiper-button-prev-d").on("click", function(e) {
     main_visual.slidePrev();
   });
-  $("#main_visual .swiper-button-next-d").on("click", function(e) {
+  $("#main_visual > .swiper-container .swiper-button-next-d").on("click", function(e) {
     main_visual.slideNext();
   });
-  $("#main_visual .swiper-button-play").on("click", function(e) {
+  $("#main_visual > .swiper-container .swiper-button-play").on("click", function(e) {
     main_visual.autoplay.stop();
     main_visual.autoplay.start();
   });
-  $("#main_visual .swiper-button-pause").on("click", function(e) {
+  $("#main_visual > .swiper-container .swiper-button-pause").on("click", function(e) {
     main_visual.autoplay.stop();
   });
+
 
   var pop_zone = new Swiper("#pop_zone .swiper-container", {
     loop: true,
@@ -43,8 +55,13 @@ $(function() {
     navigation: {
       nextEl: "#pop_zone .swiper-button-next",
       prevEl: "#pop_zone .swiper-button-prev"
-    }
+    },
+    pagination: {
+      el: "#pop_zone .pop_zone-pagination-num",
+      type: "fraction",
+    },
   });
+
   $("#pop_zone .swiper-button-playpause").on("click", function(e) {
     var b = $("#pop_zone .swiper-button-playpause").hasClass("on");
 
