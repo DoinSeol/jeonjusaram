@@ -92,19 +92,19 @@ $(function() {
   var activity_swiper = new Swiper("#activity_swiper .swiper-container", {
     loop: true,
     speed: 700,
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 20,
     navigation: {
-      nextEl: "#activity_swiper .swiper-button-next",
-      prevEl: "#activity_swiper .swiper-button-prev"
+      nextEl: ".activity_swiper_control .swiper-button-next",
+      prevEl: ".activity_swiper_control .swiper-button-prev"
     },
     breakpoints: {
       1260: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20
       },
       450: {

@@ -190,7 +190,12 @@
                   <li><a title="로그아웃" href="/login/logout.jsp?url=${currentUrl}">로그아웃</a></li>
                 </c:if>
                 <li><a href="/main/content.action?cmsid=101060200000">사이트맵</a></li>
-                <li><a href="/main/content.action?cmsid=101060200000">명예의전당</a></li>
+                <li>
+                  <a class="honor" href="/main/content.action?cmsid=101060200000">
+                    <svg width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill:#ffd43b;" d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"/></svg>
+                    명예의전당
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -819,24 +824,26 @@
           <div class="main_pop_zone">[모바일 시] 팝업존
             <!-- //sponsor -->
             <div id="pop_zone">
-              <h2 class="mtitle">팝업존</h2>
-              <div class="pop_zone-pagination-num"></div>
-              <div class="swiper-controls main_pop">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-playpause" tabindex="0" role="button" aria-label="메인배너 플레이 일시정지"></div>		
-                <div class="swiper-button-next"></div>					
-              </div>
-              
+              <!-- <h2 class="mtitle">팝업존</h2> -->
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="noticeimg"></div>
-                  <div class="swiper-slide"><a href="http://jjfwc.jjwf.or.kr/" onclick="fun_popup_open('http://jjfwc.jjwf.or.kr/','_top')" ><img src="/upload/popupzone/20210419152146_101000000000_abc7PUbXWFu7I9eEGYOJx.jpg" alt="전주시 금융복지 상담소 소개 
+                  <div class="swiper-slide"><a href="http://jjfwc.jjwf.or.kr/" onclick="fun_popup_open('http://jjfwc.jjwf.or.kr/','_top')" ><img src="/ROOT/upload/popupzone/pop_01.png" alt="전주시 금융복지 상담소 소개 
                     전주시 완산구 노송광장로 10, 전주시청 종합민원실(서노송동) 
                     전화번호 : 063) 281-0060
                     상담시간 : 09:00 ~ 18:00"></a></div>
                 </div>
               </div>
-              
+
+              <div class="pop_zone_control">
+                <div class="pop_zone-pagination-num"></div>
+                <div class="swiper-controls main_pop">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-playpause" tabindex="0" role="button" aria-label="메인배너 플레이 일시정지"></div>		
+                  <div class="swiper-button-next"></div>					
+                </div>
+              </div>
+
             </div>
             <!-- //pop_zone -->
           </div>
@@ -850,47 +857,101 @@
         <!-- //main_visual -->
         <div id="section01" class="row csize">
           <div class="inwrap">
-            <div id="sponsor01">
-              <h2 class="mtitle">후원안내</h2>
-              <div class="box">
-                <div class="inbox">
-                  <div class="cont">
-                    <p><span>누구나 쉽게</span> <span>참여할 수 있는 후원!</span> <br><span>후원신청 하러 가실까요?</span></p>
-                    <a href="/main/content.action?cmsid=101010100000" class="btn_more01">후원안내</a>
+            <div class="main_content_activity main_content_line_box">
+              <div class="inwrap_title">
+                <div class="inwrap_title_left">
+                  <h2 class="mtitle">전주사람 활동</h2>
+                  <div class="activity_swiper_control">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                   </div>
-                  <ul class="link">
-                    <li><a href="/main/program.action?cmsid=101010202000">정기후원</a></li>
-                    <li><a href="/main/program.action?cmsid=101010203000">일시후원</a></li>
-                    <li><a href="/main/program.action?cmsid=101010204000">현물후원</a></li>
-                  </ul>
+                </div>
+                <div class="main_content_more_bt"><a href="#"></a></div>
+              </div>
+
+              <div class="inwrap_cont">
+                <div id="activity_swiper">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">						
+                      
+                      <div class='swiper-slide'>
+                        <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=631" title='[기부금 전달식] 임종우 연합회장님'>
+                          <p class='img_wrap'><img src="/ROOT/upload/photo/thumbnail/202405091745160_abcXiWKNLiupheKCkFC9y.gif" width='110' height='70' border='0' alt='[기부금 전달식] 임종우 연합회장님' /></p>
+                          <div class='cont'>
+                            <p class='tit'>[기부금 전달식] 임종우 연합...</p>
+                            <p class='txt'>✅ 임종우 연합회장, 취약계층 아동 위한 후원금 기부♥️5월 8일,임종우 ...</p>
+                          </div>
+                          <div class="date">2024.05.14</div>
+                        </a>
+                      </div>
+                      <div class='swiper-slide'>
+                        <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=625" title='[기부물품 전달식] SH수협은행 전북지역금융본부 '>
+                          <p class='img_wrap'><img src="/Root/upload/photo/thumbnail/202405091734440_abcXiWKNLiupheKCkFC9y.gif" width='110' height='70' border='0' alt='[기부물품 전달식] SH수협은행 전북지역금융본부 ' /></p>
+                          <div class='cont'>
+                            <p class='tit'>[기부물품 전달식] SH수협은행...</p>
+                            <p class='txt'>✅SH수협은행 전북지역금융본부, 취약계층 어르신을 위한 잡곡 기부!5월 7...</p>
+                          </div>
+                          <div class="date">2024.05.14</div>
+                        </a>
+                      </div>
+                      <div class='swiper-slide'>
+                        <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=623" title='[천사들의 따뜻한 나눔] 창대어린이집'>
+                          <p class='img_wrap'><img src="/Root/upload/photo/thumbnail/202404261805460_abcgKzM1N0HbU8myOPz8y.gif" width='110' height='70' border='0' alt='[천사들의 따뜻한 나눔] 창대어린이집' /></p>
+                          <div class='cont'>
+                            <p class='tit'>[천사들의 따뜻한 나눔] 창대...</p>
+                            <p class='txt'>✅천사들의 따뜻한 나눔, 창대어린이집💗4월 26일,창대리더어린이집(원장...</p>
+                          </div>
+                          <div class="date">2024.05.14</div>
+                        </a>
+                      </div>
+                      <div class='swiper-slide'>
+                        <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=613" title='[기부물품 전달식] 전주완산의용소방대'>
+                          <p class='img_wrap'><img src="/Root/upload/photo/thumbnail/202404251737330_abcNqArcHgsk0cRQwzu8y.gif" width='110' height='70' border='0' alt='[기부물품 전달식] 전주완산의용소방대' /></p>
+                          <div class='cont'>
+                            <p class='tit'>[기부물품 전달식] 전주완산의...</p>
+                            <p class='txt'>✅전주완산의용소방대연합회, 취약계층 위해 백미 30포 기부👏👏4월 2...</p>
+                          </div>
+                          <div class="date">2024.05.14</div>
+                        </a>
+                      </div>
+                      <div class='swiper-slide'>
+                        <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=612" title='[기부금 전달식] (주) 이마트 '>
+                          <p class='img_wrap'><img src="/Root/upload/photo/thumbnail/202404241834310_abcyewPaod9BkbRF96o8y.gif" width='110' height='70' border='0' alt='[기부금 전달식] (주) 이마트 ' /></p>
+                          <div class='cont'>
+                            <p class='tit'>[기부금 전달식] (주) 이마트 </p>
+                            <p class='txt'>✅(주)이마트 전주점, 지역상권과 '상생'실천4월 24일,대형마트인 (주)이마...</p>
+                          </div>
+                          <div class="date">2024.05.14</div>
+                        </a>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <div class="mbox">
-              <div id="sponsor02">
-                
-                <h2 class="mtitle">후원현황</h2>
-                <div class="box">		
-                  
-                  <div class="cont">
-                    
-                    <!-- <a href="/main/content.action?cmsid=101010100000"><strong>후원안내</strong></a> -->
-                    <p>여러분의 소중한 나눔이 누군가에겐 한끼가 되고, 누군가에겐 희망이 됩니다.</p>
-                    <!-- <a href="/main/program.action?cmsid=101010301000"><strong>후원현황</strong></a>
-                    <p>후원현황을 확인해 보세요.</p> -->
-                  </div>					
-                  
-                  <ul class="link">
-                    
-                    <li class="s02"><a href="/main/photo.action?cmsid=101010302000">희망1004<br>릴레이</a></li>
-                    <li class="s01"><a href="/main/photo.action?cmsid=101010303000">삼삼한<br>챌린지</a></li>
-                    <li class="s03"><a href="/main/photo.action?cmsid=101010304000">나눔이웃<br>나눔가게</a></li>
-                    <li class="s04"><a href="/main/photo.action?cmsid=101010305000">후원기업</a></li>
-                  </ul>
-                  
-                </div>
+
+
+            <div class="main_content_tv main_content_line_box">
+              <div class="inwrap_title">
+                <h2 class="mtitle">전주사람 TV</h2>
               </div>
+
+              <div class="inwrap_cont">
+              </div>
+
+            </div>
+
+            <div class="main_content_web main_content_line_box">
+              <div class="inwrap_title">
+                <h2 class="mtitle">웹진</h2>
+              </div>
+              
+              <div class="inwrap_cont">
+              </div>
+            </div>
+            
               
 
               <!-- //sponsor -->
@@ -988,87 +1049,7 @@
         </div>
         <!-- //section02 -->
         
-        <div id="section03">
-          <div class="csize">
-            <h2 class="mtitle">전주사람 활동</h2>
-            <div id="activity_swiper">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-              <!--<div class="swiper-container">
-                <div class="swiper-wrapper">						
-                  
-                  <s:include value="ajax/photo.jsp">
-                    <s:param name="cmsid">101040102000</s:param>
-                  </s:include>
-                
-                  
-                  <div class="swiper-slide">
-                    <a href="">
-                      <p class="img_wrap"><img src="images/main/section03_img01.jpg" alt=""/></p>
-                      <div class="cont">
-                        <p class="tit">전주시 복지재단 2019년 3월 활동</p>
-                        <p class="txt">주민 대피소·임시 주거시설 등 긴급 안전점검 386개소 실시</p>
-                      </div>
-                    </a>							
-                  </div>
-                  
-                  <div class="swiper-slide">
-                    <a href="">
-                      <p class="img_wrap"><img src="images/main/section03_img02.jpg" alt=""/></p>
-                      <div class="cont">
-                        <p class="tit">전주시 복지재단 2019년 3월 활동</p>
-                        <p class="txt">주민 대피소·임시 주거시설 등 긴급 안전점검 386개소 실시</p>
-                      </div>
-                    </a>							
-                  </div>
-                  
-                  <div class="swiper-slide">
-                    <a href="">
-                      <p class="img_wrap"><img src="images/main/section03_img03.jpg" alt=""/></p>
-                      <div class="cont">
-                        <p class="tit">전주시 복지재단 2019년 3월 활동</p>
-                        <p class="txt">주민 대피소·임시 주거시설 등 긴급 안전점검 386개소 실시</p>
-                      </div>
-                    </a>							
-                  </div>
-                  
-                  <div class="swiper-slide">
-                    <a href="">
-                      <p class="img_wrap"><img src="images/main/section03_img04.jpg" alt=""/></p>
-                      <div class="cont">
-                        <p class="tit">전주시 복지재단 2019년 3월 활동</p>
-                        <p class="txt">주민 대피소·임시 주거시설 등 긴급 안전점검 386개소 실시</p>
-                      </div>
-                    </a>							
-                  </div>
-                  
-                  <div class="swiper-slide">
-                    <a href="">
-                      <p class="img_wrap"><img src="images/main/notice_img.jpg" alt=""/></p>
-                      <div class="cont">
-                        <p class="tit">전주시 복지재단 2019년 3월 활동</p>
-                        <p class="txt">주민 대피소·임시 주거시설 등 긴급 안전점검 386개소 실시</p>
-                      </div>
-                    </a>							
-                  </div>
-                  
-                  <div class="swiper-slide">
-                    <a href="">
-                      <p class="img_wrap"><img src="images/main/notice_img.jpg" alt=""/></p>
-                      <div class="cont">
-                        <p class="tit">전주시 복지재단 2019년 3월 활동</p>
-                        <p class="txt">주민 대피소·임시 주거시설 등 긴급 안전점검 386개소 실시</p>
-                      </div>
-                    </a>							
-                  </div>
-                  
-                  
-                </div>
-              </div>-->
-            </div>
-          </div>
-        </div>
-        <!-- //section03 -->
+
         
         <div id="section04">
           <div class="csize">

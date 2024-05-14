@@ -23,6 +23,9 @@
 #pc_header .top_util > li:first-child {border-left:1px solid #e2e2e2;}
 #pc_header .top_util li {border-right:1px solid #e2e2e2; }
 #pc_header .top_util a {display:block; padding:0 14px; font-size:14px; color:#777777; line-height:35px;}
+#pc_header .top_util a.honor {color:#EE2E5B}
+#pc_header .top_util a.honor svg {margin-bottom: -3px;}
+
 
 #pc_header h1 {position:absolute; top:0; left:0;}
 #pc_header .header_bottom {background-color: #fff;}
@@ -144,6 +147,7 @@
 
 .dimmed_bg {display:none; position:fixed; top:0; left:0; z-index:95; width:100%; height:100%; background:rgba(0,0,0,0.7);}
 .csize {width:95%; max-width:1440px; margin:0 auto;}
+
 
 @media all and (max-width: 1600px){
 	/* 사이드 */
