@@ -856,6 +856,7 @@
         </div>
       <!-- </div> -->
         
+        <!-- //section01_START -->
         <!-- //main_visual -->
         <div id="section01" class="row csize">
           <div class="inwrap">
@@ -940,7 +941,6 @@
               </div>
             </div>
 
-
             <div class="main_content_tv main_content_line_box">
               <div class="inwrap_title">
                 <div class="inwrap_title_left">
@@ -952,7 +952,18 @@
               </div>
 
               <div class="inwrap_cont">
-                
+                <ul class="contain_tv">
+                  <li class="contain_box_tv">
+                    <a href="#">
+                      <div class="tit_contain_tv"><p class="tit_tv">전주사람 홍보 영상</p></div>
+                    </a>
+                  </li>
+                  <li class="contain_box_tv">
+                    <a href="#">
+                      <div class="tit_contain_tv"><p class="tit_tv">기부자의 날 행사 스케치</p></div>
+                    </a>
+                  </li>
+                </ul>
               </div>
 
             </div>
@@ -968,104 +979,126 @@
               </div>
               
               <div class="inwrap_cont">
+                <a href="#">
+                  <div class="tit_contain_web"><p class="tit_web">전주사람,</p><p class="date_web">2024년 4월 호</p></div>
+                </a>
               </div>
             </div>
-            
-              
 
-              <!-- //sponsor -->
-              <!-- <div id="pop_zone">
-                
-                <h2 class="mtitle">팝업존</h2>
-                
-                <div class="swiper-controls">
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-playpause" tabindex="0" role="button" aria-label="메인배너 플레이 일시정지"></div>		
-                  <div class="swiper-button-next"></div>					
-                </div>
-                
-                <div class="swiper-container">
-                  <div class="swiper-wrapper">
-                    <div class="noticeimg"></div>
-                    <div class="swiper-slide"><a href="http://jjfwc.jjwf.or.kr/" onclick="fun_popup_open('http://jjfwc.jjwf.or.kr/','_top')" ><img src="/upload/popupzone/20210419152146_101000000000_abc7PUbXWFu7I9eEGYOJx.jpg" alt="전주시 금융복지 상담소 소개 
-                      전주시 완산구 노송광장로 10, 전주시청 종합민원실(서노송동) 
-                      전화번호 : 063) 281-0060
-                      상담시간 : 09:00 ~ 18:00"></a></div>
-                  </div>
-                </div>
-                
-              </div> -->
-              <!-- //pop_zone -->
-            </div>
-            
           </div>
+            
         </div>
-
-        <!-- //section01 -->
+        <!-- //section01_END -->
         
-        <div id="section02">
-          <div class="row csize">
-            <ul class="tab_menu" role="tablist">
-              <li class="on"><a href="" aria-controls="b_notice" aria-selected="true" role="tab">공지사항</a>
-              <li><a href="" aria-controls="b_edu" aria-selected="false" role="tab">교육안내</a>
-            </ul>
-            
-            <h2>공지사항</h2>
-            <div id="b_notice" class="board on">					
-              
-              <s:include value="ajax/news.jsp">
-              <s:param name="cmsid">101040101000</s:param>
-            </s:include>
-              
-              <a href="/main/board.action?cmsid=101040101000" class="t_more" title="공지사항 더보기">+ MORE</a>
+
+        <div id="section02" class="row csize">
+
+
+          <div class="inwrap">
+            <div class="main_cont_sponsor_01 main_content_line_box">
+              <div class="sponsor_left_tit">
+                <h3>후원자</h3>
+              </div>
+              <div class="sponser_right_cont">
+                <div id="fban_swiper">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">						
+                      
+                      
+                    <div class="swiper-slide"><p class="img_wrap">김후원</p></div>
+                    <div class="swiper-slide"><p class="img_wrap">이후원</p></div>
+                    <div class="swiper-slide"><p class="img_wrap">박후원</p></div>
+                    <div class="swiper-slide"><p class="img_wrap">전후원</p></div>
+                    <div class="swiper-slide"><p class="img_wrap">최후원</p></div>
+                    <div class="swiper-slide"><p class="img_wrap">홍후원</p></div>
+
+                      
+                      <!--
+                      <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img01.jpg" alt=""/></p></a></div>
+                      <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img02.jpg" alt=""/></p></a></div>
+                      <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img03.jpg" alt=""/></p></a></div>
+                      <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img04.jpg" alt=""/></p></a></div>
+                      -->
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <h2>교육안내</h2>
-            <div id="b_edu" class="board">
-              <ul class="edu_list">
-                
-                <s:include value="ajax/eduinfo.jsp">
-              <s:param name="cmsid">101040101000</s:param>
-              </s:include>
-                
-                <!--
-                <li>
-                  <p class="img_wrap"><img src="images/main/notice_img.jpg" alt=""/></p>
-                  <div class="cont">
-                    <span class="state state_ing">접수</span>
-                    <a href="" class="tit">다문화 발달지도사 집합 보수교육 2차</a>
-                    <p class="date">2019-06-13 ~ 2019-06-15</p>
-                    <a href="" class="btn_more">신청하기</a>
+            <div class="main_cont_sponsor_02 main_content_line_box">
+              <div class="sponsor_left_tit">
+                <h3>후원처</h3>
+              </div>
+              <div class="sponser_right_cont">
+                <div id="fban_swiper">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">						
+                      
+                      
+                    <div class="swiper-slide"><a href="http://jcsw.cafe24.com/default" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20190920083048_101000000000_abcGbCanNMpJK5aQd2l1w.jpg" alt=" 전주시사회복지협의회" /></p></a></div>
+                    
+                    <div class="swiper-slide"><a href="http://jeonjuvc.or.kr" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20190920083138_101000000000_abcGbCanNMpJK5aQd2l1w.jpg" alt="전주시자원봉사센터" /></p></a></div>
+                    
+                    <div class="swiper-slide"><a href="http://www.bokjiro.go.kr/nwel/bokjiroMain.do" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20200319131027_101000000000_abckD_WJDC6uidrtC9Wdx.jpg" alt="0" /></p></a></div>
+                    
+                    <div class="swiper-slide"><a href="http://jb.chest.or.kr" target="_blank" title="0[새창]"><p class="img_wrap"><img src="/ROOT/upload/banner/20200319131405_101000000000_abckD_WJDC6uidrtC9Wdx.jpg" alt="0" /></p></a></div>
+                    
+                    <div class="swiper-slide"><a href="http://www.jeonju.go.kr" target="_blank" title="0[새창]"><p class="img_wrap"><img src="/ROOT/upload/banner/20200319131214_101000000000_abckD_WJDC6uidrtC9Wdx.jpg" alt="0" /></p></a></div>
+                    
+                    <div class="swiper-slide"><a href="https://www.jeonbuk.go.kr/" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20220328151657_101000000000_abckt72QfERsa-9nBdJ9x.jpg" alt="전라북도" /></p></a></div>
+                    
+                    <div class="swiper-slide"><a href="https://www.nts.go.kr/nts/main.do" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20220328152347_101000000000_abckt72QfERsa-9nBdJ9x.jpg" alt="국세청" /></p></a></div>
+                    
+                    <div class="swiper-slide"><a href="https://www.acrc.go.kr/" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20220328152302_101000000000_abckt72QfERsa-9nBdJ9x.jpg" alt="국민권익위원회" /></p></a></div>
+                    
+                      
+                      <!--
+                      <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img01.jpg" alt=""/></p></a></div>
+                      <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img02.jpg" alt=""/></p></a></div>
+                      <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img03.jpg" alt=""/></p></a></div>
+                      <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img04.jpg" alt=""/></p></a></div>
+                      -->
+                      
+                    </div>
                   </div>
-                </li>
-                
-                <li>
-                  <p class="img_wrap"><img src="images/main/notice_img.jpg" alt=""/></p>
-                  <div class="cont">
-                    <span class="state state_ing">접수</span>
-                    <a href="" class="tit">다문화 발달지도사 집합 보수교육 2차</a>
-                    <p class="date">2019-06-13 ~ 2019-06-15</p>
-                    <a href="" class="btn_more">신청하기</a>
-                  </div>
-                </li>
-                
-                <li>
-                  <p class="img_wrap"><img src="images/main/notice_img.jpg" alt=""/></p>
-                  <div class="cont">
-                    <span class="state state_end">마감</span>
-                    <a href="" class="tit">다문화 발달지도사 집합 보수교육 2차</a>
-                    <p class="date">2019-06-13 ~ 2019-06-15</p>
-                    <a href="" class="btn_more">신청하기</a>
-                  </div>
-                </li>
-                -->
-                
-              </ul>
-              
-              <a href="/main/program.action?cmsid=101030100000" class="t_more" title="교육안내 더보기">+ MORE</a>
-            </div>				
+                </div>
+              </div>
+            </div>
           </div>
+          
+
+
         </div>
+
+        <!-- <div id="section02" class="row csize">
+          <div class="inwrap">
+            <div class="main_cont_sponsor_01 main_content_line_box">
+              <div class="sponsor_left_tit">
+                <h3>후원자</h3>
+              </div>
+              <div class="sponser_right_cont">
+                <ul>
+                  <li><h6>김후원</h6></li>
+                  <li><h6>김후원</h6></li>
+                  <li><h6>김후원</h6></li>
+                  <li><h6>김후원</h6></li>
+                  <li><h6>김후원</h6></li>
+                  <li><h6>김후원</h6></li>
+                  <li><h6>김후원</h6></li>
+                </ul>
+              </div>
+              <div class="sponser_right_slide_bt">
+                <svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path style="fill:#ddd;" d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"/></svg>
+                <svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path style="fill:#ddd;" d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+              </div>
+              
+            </div>
+          </div>
+        </div> -->
         <!-- //section02 -->
         
 
@@ -1153,30 +1186,7 @@
         </div>
         <!-- //section05 -->
         
-        <div id="section06">
-          <div class="csize">
-            <div id="fban_swiper">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-              <!--<div class="swiper-container">
-                <div class="swiper-wrapper">						
-                  
-                  <s:iterator value="%{banners}" status="rowStatus">
-                <div class="swiper-slide"><a href="${link_url}" target="${link_target}" <c:if test="${link_target == '_blank'}">title="${comments}[새창]"</c:if>><p class="img_wrap"><img src="/upload/banner/${image_url_saved}" alt="${comments}" /></p></a></div>
-                </s:iterator>
-                  
-                  
-                  <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img01.jpg" alt=""/></p></a></div>
-                  <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img02.jpg" alt=""/></p></a></div>
-                  <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img03.jpg" alt=""/></p></a></div>
-                  <div class="swiper-slide"><a href=""><p class="img_wrap"><img src="images/main/fban_img04.jpg" alt=""/></p></a></div>
-                  
-                  
-                </div>
-              </div>
-            </div>-->
-          </div>
-        </div>
+        
         <!-- //section06 -->
       </main>	
 

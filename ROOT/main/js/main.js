@@ -75,19 +75,19 @@ $(function() {
     }
   });
 
-  $("#section02 .tab_menu a").on("click", function(e) {
-    e.preventDefault();
-    $("#section02 .tab_menu li").removeClass("on");
-    $(this)
-      .parents("li")
-      .addClass("on");
-    $("#section02 .tab_menu a").attr("aria-selected", "false");
-    $(this).attr("aria-selected", "true");
+  // $("#section02 .tab_menu a").on("click", function(e) {
+  //   e.preventDefault();
+  //   $("#section02 .tab_menu li").removeClass("on");
+  //   $(this)
+  //     .parents("li")
+  //     .addClass("on");
+  //   $("#section02 .tab_menu a").attr("aria-selected", "false");
+  //   $(this).attr("aria-selected", "true");
 
-    var id = $(this).attr("aria-controls");
-    $("#section02 .board").removeClass("on");
-    $("#" + id).addClass("on");
-  });
+  //   var id = $(this).attr("aria-controls");
+  //   $("#section02 .board").removeClass("on");
+  //   $("#" + id).addClass("on");
+  // });
 
   var activity_swiper = new Swiper("#activity_swiper .swiper-container", {
     loop: true,
@@ -99,13 +99,13 @@ $(function() {
       prevEl: ".activity_swiper_control .swiper-button-prev"
     },
     breakpoints: {
-      1260: {
-        slidesPerView: 2,
-        spaceBetween: 20
+      1000: {
+        slidesPerView: 3,
+        spaceBetween: 14
       },
       768: {
-        slidesPerView: 1,
-        spaceBetween: 20
+        slidesPerView: 2,
+        spaceBetween: 14
       },
       450: {
         slidesPerView: 1,

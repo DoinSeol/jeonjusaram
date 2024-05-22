@@ -146,7 +146,7 @@
 
 
 .dimmed_bg {display:none; position:fixed; top:0; left:0; z-index:95; width:100%; height:100%; background:rgba(0,0,0,0.7);}
-.csize {width:95%; max-width:1440px; margin:0 auto;}
+.csize {width:100%; max-width:1440px; margin:0 auto;}
 
 
 @media all and (max-width: 1600px){
