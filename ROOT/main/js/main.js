@@ -139,14 +139,35 @@ $(function() {
     }
   });
 
-  var welfare_swiper = new Swiper("#fban_swiper .swiper-container", {
+  var welfare_swiper = new Swiper("#sponsor_swiper_01 .swiper-container", {
     loop: true,
     speed: 700,
     slidesPerView: 4,
     spaceBetween: 3,
     navigation: {
-      nextEl: "#fban_swiper .swiper-button-next",
-      prevEl: "#fban_swiper .swiper-button-prev"
+      nextEl: "#sponsor_swiper_01 .swiper-button-next",
+      prevEl: "#sponsor_swiper_01 .swiper-button-prev"
+    },
+    breakpoints: {
+      1260: {
+        slidesPerView: 3,
+        spaceBetween: 2
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 7
+      }
+    }
+  });
+
+  var welfare_swiper = new Swiper("#sponsor_swiper_02 .swiper-container", {
+    loop: true,
+    speed: 700,
+    slidesPerView: 4,
+    spaceBetween: 3,
+    navigation: {
+      nextEl: "#sponsor_swiper_02 .swiper-button-next",
+      prevEl: "#sponsor_swiper_02 .swiper-button-prev"
     },
     breakpoints: {
       1260: {
