@@ -75,13 +75,45 @@
     <script type="text/javascript" src="js/jquery.cookie.js"></script>
 
 
+    <script>
+      function myListener(obj) {
+        var type = $(obj).val();
+        // alert(document.getElementById('wrap').className);
+        // alert(type);
 
+        const all_amount = document.querySelectorAll('.spon_amount');
+
+        console.log(all_amount);
+        all_amount.forEach((allList) => {
+          allList.classList.add('show_n');
+          if(type = allList) {
+            alert(type);
+          }
+        })
+
+
+
+        alert("ii");
+
+
+// #section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount.show_n {display: none;}
+
+      } ; 
+
+      // $("#spon_type").change(function(obj){
+      //   var selectVal = $(obj).val();
+
+      //   alert(selectVal);
+      //   console.log(selectVal);
+      // })
+
+    </script>
 
   </head>
 
 
   <body class="pc">
-    <div id="wrap">
+    <div id="wrap" class="show">
       <a href="#main" id="skip_nav">본문바로가기</a>
 
 
@@ -667,7 +699,7 @@
                 </div>
               </s:iterator> -->
               <div class="swiper-slide">
-                <div class="hide">
+                <!-- <div class="hide">
                   <h1>전주시복지재단 전주사람 후원신청 안내</h1>
                   <ul>
                     <li>
@@ -682,130 +714,24 @@
                       </ul>
                     </li>
                   </ul>
-                </div>
-                <a class="img" target="_blank" href="/main/content.action?cmsid=101010100000" alt="자세한 내용보기">
-                  <img src="../main/images/main/main_visual07.png" alt="">
-                </a>
+                </div> -->
+                  <img src="../main/images/main/main_visual07.png"  alt="전주이미지1">
               </div>
               <div class="swiper-slide">
-                <div class="hide">
-                  <h1>저소득 청소년 통학비 지원사업</h1>
-                  <ul>
-                    <li>
-                      참여방법 
-                      <ul>
-                        <li>대상 : 저소득가정 원거리 통학(편도 2km이상)고등학생 100명 (중위소득 100% 이하)</li>
-                        <li>내용 : 통학비 1인당 24만원 지원 (반기별 분할 지원)</li>
-                        <li>신청기관 : 동주민센터 (대상자 추천)</li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <!-- <p>1년 내 100만원 이상을 일시 혹은 약정 기부하는 나눔파트너</p> -->
-                </div>
-                <a class="img" target="_blank" href="/main/content.action?cmsid=101020209000">
-                  <img src="../main/images/main/main_visual19.png" alt="저소득 청소년 통학비 지원사업">
-                </a>
+                  <img src="../main/images/main/main_visual19.png" alt="전주이미지2">
               </div>
               <div class="swiper-slide">
-                <div class="hide">
-                  <h1>위기, 고립가구 일상회복 지원넷(net) 사업</h1>
-                  <ul>
-                    <li>
-                      참여방법 
-                      <ul>
-                        <li>대상 : '위기, 고립가구 판단도구'를 활용한 추천 대상자 (중위소득 100%이하)</li>
-                        <li>내용 : [의료 건강관리] 건강검진 및 상담, [식사 영양개선] 균형 영양식 제공, [주거청소 및 방역] 저장강박 청소 및 방역교육 등</li>
-                        <li>신청기관 : 동주민센터, 구청을 통해 상담 및 신청</li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <!-- <p>1년 내 100만원 이상을 일시 혹은 약정 기부하는 나눔파트너</p> -->
-                </div>
-                <a class="img" target="_blank" href="/main/content.action?cmsid=101020210000">
-                  <img src="../main/images/main/main_visual20.png" alt="위기, 고립가구 일상회복 지원넷(net) 사업">
-                </a>
+                  <img src="../main/images/main/main_visual20.png" alt="전주이미지3">
               </div>
               <div class="swiper-slide">
-                <div class="hide">
-                  <h1>전북 복지정책 조사연구사업</h1>
-                  <ul>
-                    <li>
-                      참여방법 
-                      <ul>
-                        <li>대상 : 전주시민</li>
-                        <li>
-                          내용 : 전주시 복지정책 수립에 필요한 기반연구와 복지서비스 개선을 위한 조사,
-                          연구를 통해 지역복지 현안을 파악하고, 지역발전을 위한 대안 제시
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <!-- <p>삼삼한챌린지는 ‘기부천사’ 한분 한분의 참여를 바탕으로 만들어지는 특별한 도전입니다. </p> -->
-                </div>
-                <a class="img" target="_blank" href="/main/content.action?cmsid=101020400000">
-                  <img src="../main/images/main/main_visual09.png" alt="전북 복지정책 조사연구사업">
-                </a>
+                  <img src="../main/images/main/main_visual09.png"  alt="전주이미지4">
               </div>
               <div class="swiper-slide">
-                <div class="hide">
-                  <h1>전주형SOS긴급지원사업</h1>
-                  <ul>
-                    <li>
-                      대    상 : 위기상황이 발생한 중위소득 100% 이하 저소득가구 
-                    </li>
-                    <li>
-                      내    용 : 생계비, 의료비, 주거비 지원 
-                    </li>
-                    <li>
-                      신청방법 : 동주민센터를 통해 상담 및 신청 
-                    </li>
-                  </ul>
-                </div>
-                <a class="img" target="_blank" href="/main/content.action?cmsid=101020201000" alt="기부신청">
-                  <img src="../main/images/main/main_visual08.png" alt="">
-                </a>
+                  <img src="../main/images/main/main_visual08.png" alt="전주이미지5">
               </div>
               <div class="swiper-slide">
-                <div class="hide">
-                  <h1>빛! 더 이상 혼자 고민하지 마세요! 전주시민의 벗, 전주시금융복지상담소</h1>
-                  <ul>
-                    <li>
-                      주요사업
-                      <ul>
-                        <li>가계부채 예방</li>
-                        <li>가계부채 관리</li>
-                        <li>복지서비스 연계</li>
-                      </ul>
-                    </li>
-                    <li>
-                      상담문의 : 063-281-0060
-                    </li>
-                  </ul>
-                </div>
-                <a class="img" target="_blank" href="/main/content.action?cmsid=101020500000" alt="오시는길">
-                  <img src="../main/images/main/main_visual13.png" alt="">
-                </a>
+                  <img src="../main/images/main/main_visual13.png" alt="전주이미지6">
               </div>									
-              
-              <!-- <div class="swiper-slide">
-                <div class="hide">
-                  <h1>전주시 복지재단 전주사람 재단 소식이 궁금하세요?</h1>
-                  <p>좋아요, 친구맺기</p>
-                </div>
-                <a class="img" target="_blank" href="http://www.facebook.com/jjwf1004/" alt="페이스북 친구맺기">
-                  <img src="../main/images/main/main_visual12.png" alt="">
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="hide">
-                  <h1>전주시 복지재단 전주사람 인스타그램</h1>
-                  <p>전주시 복지재단 검색, 팔로우</p>
-                </div>
-                <a class="img" target="_blank" href="https://www.instagram.com/jeonju_welfare_foundation/" alt="전주시복지재단 인스타그램">
-                  <img src="../main/images/main/main_visual17.jpg" alt="">
-                </a>
-              </div> -->
               
             </div>
             
@@ -1076,26 +1002,97 @@
               <div class="spon_bottom_cont">
                 <form action="#">
                   <div class="spon_type">
-                    <select name="spon_type" id="spon_type">
+                    <select name="spon_type" id="spon_type" onchange="javascript:myListener(this);">
                       <option value="spon_type_01">희망천사</option>
                       <option value="spon_type_02">백만천사</option>
                       <option value="spon_type_03">기부천사</option>
                       <option value="spon_type_04">일반기부</option>
                     </select>
-                  </div>                    
-                  <div class="spon_amount">
+                  </div>
+
+                  <div class="spon_amount spon_type_01">
                     <div class="spon_amount_bt">
-                      <input type="radio" id="spon_type_01_01" name="spon_amount_radio" value="100,400">
-                      <label for="spon_type_01_01">100,400 원</label>
+                      <input type="radio" id="spon_type_01_01" name="spon_amount_radio" value="100,400" tabIndex = "0">
+                      <label for="spon_type_01_01" >100,400 원</label>
                     </div>
                     <div class="spon_amount_bt">
-                      <input type="radio" id="spon_type_01_02" name="spon_amount_radio" value="10,404,000">
-                      <label for="spon_type_01_02">10,404,000 원</label>
+                      <input type="radio" id="spon_type_01_02" name="spon_amount_radio" value="10,404,000" tabIndex = "0">
+                      <label for="spon_type_01_02" >10,404,000 원</label>
                     </div>
+
                     <div class="spon_amount_bt spon_amount_txt">
                       <input type="text" placeholder="직접입력 (원)" >  
                     </div>
                   </div>
+
+                  <div class="spon_amount spon_type_02">
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_02_01" name="spon_amount_radio" value="100,000" tabIndex = "0">
+                      <label for="spon_type_02_01" >100,000 원</label>
+                    </div>
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_02_02" name="spon_amount_radio" value="1,000,000" tabIndex = "0">
+                      <label for="spon_type_02_02" >1,000,000 원</label>
+                    </div>
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_02_03" name="spon_amount_radio" value="2,000,000" tabIndex = "0">
+                      <label for="spon_type_02_03" >2,000,000 원</label>
+                    </div>
+
+                    <div class="spon_amount_bt spon_amount_txt">
+                      <input type="text" placeholder="직접입력 (원)" >  
+                    </div>
+                  </div>
+
+                  <!-- <div class="spon_amount spon_type_03">
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_03_01" name="spon_amount_radio" value="100,000" tabIndex = "0">
+                      <label for="spon_type_03_01" >11,004 원</label>
+                    </div>
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_03_02" name="spon_amount_radio" value="1,000,000" tabIndex = "0">
+                      <label for="spon_type_03_02" >21,004 원</label>
+                    </div>
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_03_03" name="spon_amount_radio" value="2,000,000" tabIndex = "0">
+                      <label for="spon_type_03_03" >31,004 원</label>
+                    </div>
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_03_04" name="spon_amount_radio" value="2,000,000" tabIndex = "0">
+                      <label for="spon_type_03_04" >51,004 원</label>
+                    </div>
+
+                    <div class="spon_amount_bt spon_amount_txt">
+                      <input type="text" placeholder="직접입력 (원)" >  
+                    </div>
+                  </div> -->
+
+                  <!-- <div class="spon_amount spon_type_04">
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_04_01" name="spon_amount_radio" value="100,000" tabIndex = "0">
+                      <label for="spon_type_04_01" >100,000 원</label>
+                    </div>
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_04_02" name="spon_amount_radio" value="1,000,000" tabIndex = "0">
+                      <label for="spon_type_04_02" >1,000,000 원</label>
+                    </div>
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_04_03" name="spon_amount_radio" value="2,000,000" tabIndex = "0">
+                      <label for="spon_type_04_03" >2,000,000 원</label>
+                    </div>
+                    <div class="spon_amount_bt">
+                      <input type="radio" id="spon_type_04_04" name="spon_amount_radio" value="2,000,000" tabIndex = "0">
+                      <label for="spon_type_04_03" >2,000,000 원</label>
+                    </div>
+
+                    <div class="spon_amount_bt spon_amount_txt">
+                      <input type="text" placeholder="직접입력 (원)" >  
+                    </div>
+                  </div> -->
+
+
+
+
                   <div class="spon_bt">
                     <input type="submit" value="후원하기">
                   </div>

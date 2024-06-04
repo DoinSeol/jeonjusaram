@@ -246,7 +246,7 @@ input[type="password"] {
 input[type="text"]:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #77abe7;
+  /* outline: 2px solid #77abe7; */
 }
 input[type="search"] {
   -webkit-appearance: textfield;
@@ -272,8 +272,8 @@ select[readonly] {
   color: #555 !important;
 }
 input[placeholder] {
-  font-size: 13px;
-  color: #999 !important;
+  font-size: 14px;
+  color: #ccc !important;
 }
 select {
   width: 100%;

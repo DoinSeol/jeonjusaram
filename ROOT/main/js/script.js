@@ -24,23 +24,11 @@ $(function(){
 	}
 	scrollFn();
 	
-	/* 상단배너 */
-	/*
-	$('#top_ban_chk').on('click', function(e) {
-		e.preventDefault();
-		$('#top_ban').hide();
-	});
-	$('#top_ban .btn_close').on('click', function(e) {
-		e.preventDefault();
-		$('#top_ban').hide();
-		scrollFn();
-	});
- */
 
-		$('#pc_gnb .depth1 > li').addClass('on');		
-		$('#pc_gnb .depth2 > li, .nav_back').addClass('on');		
+		// $('#pc_gnb .depth1 > li').addClass('on');		
+		// $('#pc_gnb .depth2 > li, .nav_back').addClass('on');		
 		
-		/* pc nav */
+	/* pc nav */
 	$('.pc #pc_gnb .depth1, .nav_back').on('mouseenter focus', function() {
 		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
 		// var $target = $(this).parent();
@@ -59,6 +47,24 @@ $(function(){
 	$('.pc #pc_gnb a.last').on('focusout', function() {
 		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
 	});
+
+
+	$('#pc_gnb a').focus(function(){
+		$('#pc_gnb .depth1 > li, .nav_back').addClass('on');		
+	});
+
+
+	// $('#pc_gnb a').blur(function(){
+	// 	$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');		
+	// });
+
+
+
+
+
+
+
+
 	
 	/* mobile nav */	
 	$('#mobile_gnb .depth1 > li > a').on('click', function(e) {

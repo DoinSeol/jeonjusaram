@@ -64,7 +64,6 @@ $(function() {
 
   $("#pop_zone .swiper-button-playpause").on("click", function(e) {
     var b = $("#pop_zone .swiper-button-playpause").hasClass("on");
-
     if (!b) {
       pop_zone.autoplay.stop();
       $("#pop_zone .swiper-button-playpause").addClass("on");
@@ -75,19 +74,48 @@ $(function() {
     }
   });
 
-  // $("#section02 .tab_menu a").on("click", function(e) {
-  //   e.preventDefault();
-  //   $("#section02 .tab_menu li").removeClass("on");
-  //   $(this)
-  //     .parents("li")
-  //     .addClass("on");
-  //   $("#section02 .tab_menu a").attr("aria-selected", "false");
-  //   $(this).attr("aria-selected", "true");
 
-  //   var id = $(this).attr("aria-controls");
-  //   $("#section02 .board").removeClass("on");
-  //   $("#" + id).addClass("on");
-  // });
+  // 후원하기
+  $('#section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount .spon_amount_bt.spon_amount_txt input').click(function() {
+    $("input:radio[name=spon_amount_radio]:checked")[0].checked = false;
+  });
+
+  $('#section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount .spon_amount_bt input[type=radio]').click(function(){
+    var spon_checked = $('input[name=spon_amount_radio]').is(":checked");
+    if (spon_chedked = 'true') {
+      $('#section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount .spon_amount_bt.spon_amount_txt input[type="text"]').val('');
+    }
+  });
+
+  $('#section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount .spon_amount_bt input[type=radio]').focus(function(){
+    $(this).siblings('label').css({'outline':'medium solid #000'});
+  });
+
+  $('#section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount .spon_amount_bt input[type=radio]').blur(function(){
+    $(this).siblings('label').css('outline', 'none');
+  });
+
+  // spon_amount_Ch = function(spone_type) {
+  //   var changeBT = spone_type.value;
+  //   alert(changeBT);
+  // }
+
+  // function myListener(obj) {
+  //   var type = $(obj).val();
+
+  //   alert(obj.value);
+    
+  // } ; 
+
+  // $("#spon_type").change(function(){
+  //   var selectVal = $(obj).val();
+
+  //   alert(selectVal);
+  //   console.log(selectVal);
+  // })
+
+
+
 
   var activity_swiper = new Swiper("#activity_swiper .swiper-container", {
     loop: true,
