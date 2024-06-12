@@ -95,26 +95,6 @@ $(function() {
     $(this).siblings('label').css('outline', 'none');
   });
 
-  // spon_amount_Ch = function(spone_type) {
-  //   var changeBT = spone_type.value;
-  //   alert(changeBT);
-  // }
-
-  // function myListener(obj) {
-  //   var type = $(obj).val();
-
-  //   alert(obj.value);
-    
-  // } ; 
-
-  // $("#spon_type").change(function(){
-  //   var selectVal = $(obj).val();
-
-  //   alert(selectVal);
-  //   console.log(selectVal);
-  // })
-
-
 
 
   var activity_swiper = new Swiper("#activity_swiper .swiper-container", {
@@ -142,35 +122,35 @@ $(function() {
     }
   });
 
-  var welfare_swiper = new Swiper("#welfare_swiper .swiper-container", {
-    loop: true,
-    speed: 700,
-    slidesPerView: 5,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: "#welfare_swiper .swiper-button-next",
-      prevEl: "#welfare_swiper .swiper-button-prev"
-    },
-    breakpoints: {
-      1260: {
-        slidesPerView: 4,
-        spaceBetween: 15
-      },
-      920: {
-        slidesPerView: 3,
-        spaceBetween: 15
-      },
-      450: {
-        slidesPerView: 2,
-        spaceBetween: 10
-      }
-    }
-  });
+  // var welfare_swiper = new Swiper("#welfare_swiper .swiper-container", {
+  //   loop: true,
+  //   speed: 700,
+  //   slidesPerView: 5,
+  //   spaceBetween: 20,
+  //   navigation: {
+  //     nextEl: "#welfare_swiper .swiper-button-next",
+  //     prevEl: "#welfare_swiper .swiper-button-prev"
+  //   },
+  //   breakpoints: {
+  //     1260: {
+  //       slidesPerView: 4,
+  //       spaceBetween: 15
+  //     },
+  //     920: {
+  //       slidesPerView: 3,
+  //       spaceBetween: 15
+  //     },
+  //     450: {
+  //       slidesPerView: 2,
+  //       spaceBetween: 10
+  //     }
+  //   }
+  // });
 
   var welfare_swiper = new Swiper("#sponsor_swiper_01 .swiper-container", {
     loop: true,
     speed: 700,
-    slidesPerView: 4,
+    slidesPerView: 5,
     spaceBetween: 3,
     navigation: {
       nextEl: "#sponsor_swiper_01 .swiper-button-next",
@@ -178,12 +158,16 @@ $(function() {
     },
     breakpoints: {
       1260: {
+        slidesPerView: 4,
+        spaceBetween: 2
+      },
+      900: {
         slidesPerView: 3,
         spaceBetween: 2
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 7
+        // spaceBetween: 7
       }
     }
   });
