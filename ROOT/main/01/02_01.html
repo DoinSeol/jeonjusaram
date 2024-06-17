@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new)전주시복지재단</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type"    content="text/html; charset=utf-8" />
+    <meta name="format-detection"      content="telephone=no,email=no,address=no" />
+    <meta name="viewport"              content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="title"                 content="" />
+    <meta name="description"           content="" />
+    
+    <meta name="author"      content="전주시복지재단 전주사람" />
+    <meta name="keywords"    content="전주시복지재단 전주사람 홈페이지" />
+    <meta name="description" content="전주시복지재단 전주사람" />
+    <meta name="copyright"   content="Copyright(c)2019 JJWF. All Rights Reserved." />
+    
+    <meta name="robots"             content="index,follow">
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="전주시복지재단 전주사람">
+    <meta property="og:description" content="전주시복지재단 전주사람">
+    <meta property="og:url"         content="http://www.jjwf.or.kr/main/main.action">
+    <meta property="og:image"       content="../images/open_graph.jpg">
+
+
+    <!-- // 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    
+    <!-- // 메인 CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+    <!-- // 서브 CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    <link rel="stylesheet" type="text/css" href="../css/board.css" />
+    
+    <!-- // 서브 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="../00/css/common.css" />
+    
+    <!-- // 서브 CMSID 대응 CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="${ct_css}" /> -->
+
+    <!-- // jQuery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+
+
+    <!--script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script-->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script> <!--메뉴-->
+    
+    <!--script type="text/javascript" src="/js/common.js" charset="utf-8"></script-->
+    <script type="text/javascript" src="../js/common.js" charset="utf-8"></script>
+    
+    <!--script type="text/javascript"  charset="utf-8" src="js/bxslider/jquery.bxslider.min.js"></script-->
+    
+    <s:if test="%{isindex == true}">
+    <script type="text/javascript" src="js/main.js" charset="utf-8"></script>	
+    </s:if>
+    
+    <s:if test="%{ct_type == '0'}">
+    <s:if test="%{mm != null && mm != ''}"><script type="text/javascript" src="${mm}/js/common.js"></script></s:if>
+    </s:if>
+    <s:if test="%{ct_script != null && ct_script != ''}"><script type="text/javascript" src="${ct_script}"></script></s:if>
+    
+    <!-- jQuery UI -->
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+
+    <script>
+      // 후원하기
+      function myListener(obj) {
+        var amount_type = $(obj).val();
+        var all_amount = document.querySelectorAll('.spon_amount');
+
+        console.log(all_amount);
+        console.log(amount_type);
+
+        all_amount.forEach((allList) => {
+
+          allList.classList.add('show_n');
+
+          if(allList = amount_type) {
+            // alert(allList + '_allList');
+            // alert(amount_type + '_amount_type');
+            var amountClassName = '.'+amount_type;
+            // alert(amountClassName);
+
+            document.querySelector(amountClassName).classList.remove('show_n');
+            document.querySelector(amountClassName).classList.add('show_f');
+          }
+        })
+        
+
+
+
+
+// #section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount.show_n {display: none;}
+
+      } ; 
+
+      // $("#spon_type").change(function(obj){
+      //   var selectVal = $(obj).val();
+
+      //   alert(selectVal);
+      //   console.log(selectVal);
+      // })
+
+    </script>
+
+  </head>
+
+
+  <body class="pc">
+    <div id="wrap" class="show">
+      <a href="#main" id="skip_nav">본문바로가기</a>
+
+
+      <!-- <%@ taglib tagdir="/WEB-INF/tags"                       prefix="tags"%>
+      <%@ taglib uri="/struts-tags"                           prefix="s"%>
+      <%@ taglib uri="http://java.sun.com/jsp/jstl/core"      prefix="c"%>
+      <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> -->
+      
+      <!-- <c:set var="currentUrl"  value="${requestScope['struts.request_uri']}?${pageContext.request.queryString}" scope="request" />
+      
+      <c:url var="loginUrl" value="/login/loginForm.action">
+        <c:param name="url">${currentUrl}</c:param>
+      </c:url>
+      <c:url var="logoutUrl" value="/login/logout.jsp">
+        <c:param name="url">${currentUrl}</c:param>
+      </c:url>
+      
+      
+      <c:url var="homeUrl" value="/main/main.action" />
+
+
+
+      <s:if test="%{isindex==true}"> -->
+
+      <!-- 상단 배너 -->
+      <!-- <s:set name="topbanner_chk">false</s:set>
+      <s:iterator value="%{topbanners}" status="rowStatus">
+      <s:if test="%{#rowStatus.count > 0}">
+      <s:set name="topbanner_chk">true</s:set>
+      </s:if>
+      </s:iterator>
+
+      <s:if test="#topbanner_chk == 'true'"> -->
+
+
+
+      <div id="top_ban">
+        <div class="inwrap">
+          <div class="ban_wrap">
+            <s:iterator value="%{topbanners}" status="rowStatus">
+              <s:if test="%{#rowStatus.index < 2}">
+              <a href="#" onclick="fun_popup_open(${link_url},'${link_target}')" <c:if test="${link_target == '_blank'}">title="${comments}[새창]"</c:if>><img src="/upload/topbanner/${image_url_saved}" alt="${comments}" title="${title}"></a>
+              </s:if>
+            </s:iterator>
+          </div>
+
+          <div class="ban_footer">
+              <form name="form_topbanner_close">
+            <input type="checkbox" name="topbanner_chk" id="closeChack" value="" /><label for="closeChack">오늘 하루 보이지 않기</label>
+              <a href="javascript:fun_topbanner_close();" id="topbanner_close" class="btn_close">닫기</a>
+            </form>
+          </div>
+        </div>
+      </div>
+      </s:if>
+
+      </s:if>
+
+
+      <header id="header">
+        <script type="text/javascript">
+          function fun_pc_top_search()
+          {
+            var form = document.pc_search_form;
+
+            if(form.pc_sk.value == "")
+            {
+              alert("검색어를 입력 하세요.");
+              form.pc_sk.focus();
+              return false;
+            }
+
+            form.submit();
+          }
+
+          function fun_mob_top_search()
+          {
+            var form = document.mob_search_form;
+
+            if(form.mob_sk.value == "")
+            {
+              alert("검색어를 입력 하세요.");
+              form.mob_sk.focus();
+              return false;
+            }
+
+            form.submit();
+          }
+
+        </script>
+
+        <div id="pc_header">
+          <div class="header_top">
+            <div class="inwrap">
+              <ul class="top_util">
+
+                <c:if test="${empty session.session_login_seq}">
+                  <li><a title="로그인" href="/login/loginForm.action?url=${currentUrl}">로그인</a></li>
+                </c:if>
+
+                <c:if test="${!empty session.session_login_seq}">
+                  <li><a href="#uname">${session.session_login_name}</span>님 환영합니다.</a></li>
+                </c:if>
+
+                <c:if test="${!empty session.session_login_seq}">
+                  <li><a title="로그아웃" href="/login/logout.jsp?url=${currentUrl}">로그아웃</a></li>
+                </c:if>
+                <li><a href="/main/content.action?cmsid=101060200000">사이트맵</a></li>
+                <li>
+                  <a class="honor" href="/main/content.action?cmsid=101060200000">
+                    <svg width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill:#ffd43b;" d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"/></svg>
+                    명예의전당
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header_bottom">
+            <div class="nav_back"></div>
+            <div class="inwrap">
+              <h1><a href="${homeUrl}"><img style="padding-top:27px;" src="../images/common/logo2.png" alt="전주시복지재단(JEONJU WELFARE FOUNDATION) 전주사람"/></a></h1>
+              <div id="pc_search" class="all_search">
+                <form name="pc_search_form" method="post" action="program.action" onsubmit="fun_pc_top_search(); return false" class="inner_box">
+                    <fieldset>
+                    <legend>통합검색</legend>
+                    <input type="hidden" name="method" value="">
+                    <input type="hidden" name="target" value="">
+                    <input type="hidden" name="cmsid" value="101060300000">
+                    <input type="hidden" name="idx" value="">
+                    <input type="hidden" name="page" value="1">
+                    <input type="hidden" name="psize" value="10">
+                    <label for="pc_sk"></label><input type="text" name="pc_sk" id="pc_sk" size="13" maxlength="15" value="" placeholder="검색어를 입력해주세요.">
+                    <input type="button" onclick="fun_pc_top_search();" class="search" value="검색"/>
+                    </fieldset>
+                </form>
+              </div>
+              <!-- <div class="nav_back"></div> -->
+              <nav id="pc_gnb">
+                  <ul class="depth1">
+                    <li>
+                      <a href="content.action?cmsid=101010100000" >후원안내</a>
+                      <ul class="depth2">
+                        <li class="no_child">
+                          <a href="program.action?cmsid=101010100000">희망천사</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="program.action?cmsid=101010200000">백만천사</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="program.action?cmsid=101010300000">기부천사</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="program.action?cmsid=101010400000">일시후원</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="program.action?cmsid=101010500000">현물후원</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101010600000">후원안내</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="content.action?cmsid=101020100000">사업안내</a>
+                      <ul class="depth2">
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101020100000">나눔문화 활성사업</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101020200000">복지정책조사 연구사업</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101020300000">전주형 SOS긴급지원</a>
+                        </li>
+                        <li >
+                          <a href="content.action?cmsid=101020401000">아동·청소년지원</a>
+                          <ul class="depth3">
+                            <li class="no_child"><a href="content.action?cmsid=101020401000"  >아동·청소년 새학기·새출발 지원사업</a></li>
+                            <li class="no_child"><a href="content.action?cmsid=101020402000"  >엄마의 밥상</a></li>
+                            <li class="no_child"><a href="content.action?cmsid=101020403000"  >지혜의 반찬</a></li>
+                          </ul>
+                        </li>
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101020500000">지정기탁사업</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101020600000">금융복지사업</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="program.action?cmsid=101040100000">알림마당</a>
+                      <ul class="depth2">
+                        <li class="no_child">
+                          <a href="program.action?cmsid=101040100000">공지사항</a>
+                        </li>
+                        <li >
+                          <a href="content.action?cmsid=101040201000">활동소식</a>
+                          <ul class="depth3">
+                            <li class="no_child"><a href="content.action?cmsid=101040201000">재단소식</a></li>
+                            <li class="no_child"><a href="content.action?cmsid=101040202000">연간보고서</a></li>
+                            <li class="no_child"><a href="content.action?cmsid=101040203000">웹진</a></li>
+                          </ul>
+                        </li>
+                        <li class="no_child">
+                          <a href="program.action?cmsid=10104000000">참여신청</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="program.action?cmsid=101040400000">재단에 바랍니다</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="program.action?cmsid=101040500000">연구자료실</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="program.action?cmsid=101040600000">서식다운로드</a>
+                        </li>
+                        <li >
+                          <a href="content.action?cmsid=101040701000">복지정보</a>
+                          <ul class="depth3">
+                            <li class="no_child"><a href="content.action?cmsid=101040701000">복지지도</a></li>
+                            <li class="no_child"><a href="content.action?cmsid=101040702000">복지시설검색</a></li>
+                            <li class="no_child"><a href="content.action?cmsid=101040703000">복지정보</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="content.action?cmsid=101050100000" >재단소개</a>
+                      <ul class="depth2">
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101050100000">인사말</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101050400000">일반현황</a> 
+                        </li>
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101050200000">조직구성</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101050300000">윤리경영</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="board.action?cmsid=101050700000">정보공개</a>
+                        </li>
+                        <li class="no_child">
+                          <a href="content.action?cmsid=101050800000">찾아오시는길</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- <s:iterator value="%{menu.children}" status="rowStatus">
+                  <s:if test="%{show == true && seq > 0}">
+                    <li>
+                        <a href="${url}" <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                        <s:if test="%{children.size > 0}">
+                        <ul class="depth2">
+
+                          <s:iterator value="children" status="rowStatus">
+                    <s:if test="%{show == true && seq > 0}">
+                          <li <s:if test="%{children.size == 0}">class="no_child"</s:if>>
+                            <a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                            <s:if test="%{children.size > 0}">
+                            <ul class="depth3">
+
+                              <s:iterator value="children" status="rowStatus">
+                        <s:if test="%{show == true && seq > 0}">
+                              <li <s:if test="%{children.size == 0}">class="no_child"</s:if>><a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a></li>
+                              </s:if>
+                        </s:iterator>
+
+                            </ul>
+                            </s:if>
+                          </li>
+                          </s:if>
+                    </s:iterator>
+
+                        </ul>
+                        </s:if>
+
+                    </li>
+                    </s:if>
+                </s:iterator> -->
+
+                  </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- //pc_header -->
+
+
+        <div id="mobile_header">
+          <div class="header_top">
+            <h1 class="logo"><a href="${homeUrl}"><img style="height:100%; padding:15px;" src="../images/common/logo2.png" alt="전주사람"/></a></h1>
+            <a href="" class="btn_menu">메뉴열기</a>
+          </div>
+
+          <div id="mobile_gnb">
+            <ul class="top_util">
+              <c:if test="${empty session.session_login_seq}">
+                <li><a title="로그인" href="/login/loginForm.action?url=${currentUrl}">로그인</a></li>
+              </c:if>
+
+              <c:if test="${!empty session.session_login_seq}">
+                <li><a href="#uname">${session.session_login_name}</span>님 환영합니다.</a></li>
+                <li><a title="로그아웃" href="/login/logout.jsp?url=${currentUrl}">로그아웃</a></li>
+              </c:if>
+
+              <li><a href="/main/content.action?cmsid=101060200000">사이트맵</a></li>
+              <li><a href="/main/content.action?cmsid=101060200000">명예의전당</a></li>
+            </ul>
+
+            <div id="mobile_search" class="all_search">
+              <form name="mob_search_form" method="post" action="program.action" onsubmit="fun_mob_top_search(); return false" class="inner_box">
+                <fieldset>
+                <legend>통합검색</legend>
+                <input type="hidden" name="method" value="">
+                <input type="hidden" name="target" value="">
+                <input type="hidden" name="cmsid" value="101060300000">
+                <input type="hidden" name="idx" value="">
+                <input type="hidden" name="page" value="1">
+                <input type="hidden" name="psize" value="10">
+                <label for="mob_sk"></label><input type="text" name="mob_sk" id="mob_sk" size="13" maxlength="15" value="" placeholder="검색어를 입력해주세요.">
+                <input type="button" onclick="fun_mob_top_search();" class="search" value="검색"/>
+                </fieldset>
+              </form>
+            </div>
+
+            <nav>
+              <ul class="depth1">
+                <li>
+                  <a href="content.action?cmsid=101010100000" >후원안내</a>
+
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101010100000"  >후원안내</a>
+                    </li>
+                    <li >
+                      <a href="content.action?cmsid=101010299000"  >후원하기</a>
+                      <ul class="depth3">
+
+                        <li class="no_child"><a href="program.action?cmsid=101010201000"  >희망천사</a></li>
+                        <li class="no_child"><a href="program.action?cmsid=101010205000"  >백만천사</a></li>
+                        <li class="no_child"><a href="program.action?cmsid=101010206000"  >기부천사</a></li>
+                        <li class="no_child"><a href="program.action?cmsid=101010203000"  >일시후원</a></li>
+                        <li class="no_child"><a href="program.action?cmsid=101010204000"  >현물후원</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="content.action?cmsid=101020100000" >사업안내</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101020100000"  >모금사업</a>
+                    </li>
+                    <li >
+                      <a href="content.action?cmsid=101020201000"  >사람중심 복지안전망 강화사업</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="content.action?cmsid=101020201000"  >전주형SOS긴급지원사업</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101020205000"  >사랑나눔 간병비 지원사업</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101020209000"  >저소득가정 청소년 통학비 지원사업</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101020210000"  >위기․고립가구 일상회복 지원넷(net) 사업</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101020203000"  >엄마의밥상</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101020204000"  >지혜의 반찬 </a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101020206000"  >지정기탁사업</a></li>
+                      </ul>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101020400000"  >사회복지정책개발</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101020500000"  >전주시금융복지상담소</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="program.action?cmsid=101030200000" >교육안내</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="program.action?cmsid=101030200000"  >신청확인 및 수료증출력</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="board.action?cmsid=101040101000" >알림마당</a>
+                  <ul class="depth2">
+                    <li >
+                      <a href="board.action?cmsid=101040101000"  >소식</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="board.action?cmsid=101040101000"  >공지사항</a></li>
+                        <li class="no_child"><a href="photo.action?cmsid=101040102000"  >활동소식</a></li>
+                        <li class="no_child"><a href="board.action?cmsid=101040103000"  >서식자료실</a></li>
+                      </ul>
+                    </li>
+                    <li >
+                      <a href="board.action?cmsid=101040201000"  >참여</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="board.action?cmsid=101040201000"  >시민제안</a></li>
+                        <li class="no_child"><a href="board.action?cmsid=101040202000"  >도움이 필요해요</a></li>
+                      </ul>
+                    </li>
+                    <li class="no_child">
+                      <a href="board.action?cmsid=101040300000"  >복지칼럼</a>
+                    </li>
+                    <li >
+                      <a href="program.action?cmsid=101040401000"  >복지정보</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="program.action?cmsid=101040401000"  >복지지도</a></li>
+                        <li class="no_child"><a href="program.action?cmsid=101040402000"  >복지시설검색</a></li>
+                        <li class="no_child"><a href="board.action?cmsid=101040403000"  >복지정보</a></li>
+                      </ul>
+                    </li>
+                    <li >
+                      <a href="photo.action?cmsid=101040501000"  >간행물</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="photo.action?cmsid=101040501000"  >간행물</a></li>
+                          <li class="no_child"><a href="program.action?cmsid=101040502000"  >웹진</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="content.action?cmsid=101050100000" >재단소개</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101050100000"  >인사말</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101050200000"  >임원소개</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101050300000"  >미션과비전</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101050400000"  >설립목적 및 연혁</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101050500000"  >CI</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101050600000"  >조직구성</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="board.action?cmsid=101050700000"  >정보공개</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101050800000"  >찾아오시는길</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- 
+                <s:iterator value="%{menu.children}" status="rowStatus">
+                  <s:if test="%{show == true && seq > 0}">
+                    <li>
+                      <a href="${url}" <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                      <s:if test="%{children.size > 0}">
+                        <ul class="depth2">
+
+                          <s:iterator value="children" status="rowStatus">
+                            <s:if test="%{show == true && seq > 0}">
+                              <li <s:if test="%{children.size == 0}">class="no_child"</s:if>>
+                                <a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                                <s:if test="%{children.size > 0}">
+                                  <ul class="depth3">
+
+                                    <s:iterator value="children" status="rowStatus">
+                                      <s:if test="%{show == true && seq > 0}">
+                                        <li <s:if test="%{children.size == 0}">class="no_child"</s:if>><a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a></li>
+                                      </s:if>
+                                    </s:iterator>
+
+                                  </ul>
+                                </s:if>
+                              </li>
+                            </s:if>
+                          </s:iterator>
+                        </ul>
+                      </s:if>
+                    </li>
+                  </s:if>
+                </s:iterator> -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- //mobile_header -->
+
+      </header>
+
+
+
+
+
+
+
+
+      <!-- 메인 콘텐츠 -->
+      <p class="dimmed_bg"></p>
+
+      <main id="main" class="sub">
+        <div id="lnb">
+          <ul>
+            <li class="home no_child"><a href="/main/main.action">HOME</a></li>
+            <li>
+              <a href="javascript:;">후원안내</a>
+              <ul class="sub">
+                <li class="on"><a href="#">후원안내</a></li>
+                <li ><a href="#">사업안내</a></li>
+                <li ><a href="#">알림마당</a></li>
+                <li ><a href="#">재단소개</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">희망천사</a>
+              <ul class="sub">
+                <li class="on"><a href="#">희망천사</a></li>
+                <li class=" "><a href="#">백만천사</a></li>
+                <li class=" "><a href="#">기부천사</a></li>
+                <li class=" "><a href="#">천사기업</a></li>
+                <li class=" "><a href="#">명예의전당</a></li>
+                <li class=" "><a href="#">후원신청하기</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sub_top">
+          <h2>희망천사</h2>
+          <ul class="sub_top_link">
+            <li><a href="#facebook" onclick="toSNS('facebook', '');" title="새창"><img src="../images/icon/icon_facebook.jpg" alt="페이스북"/></a>
+            <li><a href="#twitter" onclick="toSNS('twitter', '')" title="새창"><img src="../images/icon/icon_twitter.jpg" alt="트위터"/></a>
+            <li><a href="#print" onclick="window.print();" title="인쇄보기 바로가기[새창]"><img src="../images/icon/icon_print.jpg" alt="프린트"/></a>
+          </ul>
+        </div>
+        
+        <div id="contents">
+          <div class="contents_wrap">
+            
+            <!-- 서브 : 3depth -->
+            <!--
+                
+                
+            
+            -->
+            
+            <!-- 서브 : 4depth -->
+                
+                
+            
+            
+            <!-- 서브 : 5depth -->
+              
+              
+            
+            
+            
+            <div class="contents_html">
+              
+              
+                
+                <div class="sponsor_c01 section">
+        <div class="box">
+        <div class="inbox">
+        <p>전주사람의 희망을 지켜주는 천사의 의미를 마음에 새기며 절대빈곤과 위기가정, 복지사각지대에 있는 분들이 일어 설 수 있도록 든든한 버팀목을 만들고자 고액 후원자를 발굴하고 모금을 확대하여 복지사각지대 발굴지원을 위한 민간재원을 마련합니다.</p>
+        </div>
+        </div>
+        </div>
+        <!-- //sponsor01_c01 -->
+        
+        <div class="sponsor01_c02 section">
+        <h3 class="stitle01">희망천사</h3>
+        
+        <div class="box">
+        <ul class="circle_list">
+          <li>1회 또는 10년간 1,004만원 이상 고액기부를 약정하고 실천하는 전주시복지재단의 희망파트너</li>
+          <li>전주사람의 희망을 지켜주는 천사의 의미를 마음에 새기며 절대빈곤과 위기가정, 복지사각지대에 있는 분들이 다시 일어설 수 있도록 든든한 버팀목을 만들고자 고액후원자를 발굴하고 모금을 확대하여 복지사각지대 발굴지원을 위한 민간재원을 마련합니다.</li>
+        </ul>
+        </div>
+        </div>
+        <!-- //sponsor01_c02 -->
+        
+        <div class="sponsor01_c03 section">
+        <h3 class="stitle01">「희망천사」로 함께하는 방법</h3>
+        
+        <div class="box">
+          <ul class="circle_list">
+            <li>1,004만원을 1회 기부로 함께 하실 수 있습니다.</li>
+            <li>기부금액과 기간을 정하고 CMS 자동이체를 통해 함께 하실 수 있습니다.</li>
+          </ul>
+          <p class="txt"style="margin-top: 36px;"><strong>※ 후원계좌번호</strong> : 전북은행 505-23-0319466 (예금주: 전북공동모금회)</p>
+
+          <ul class="step_circle_box">
+            <li>
+              <div class="step_circle_img"></div>
+              <div class="step_circle_txt"></div>
+            </li>
+          </ul>
+
+          <ul class="list">
+            <li class="s01">
+            <dl>
+              <dt><span class="num">01</span>신청서작성</dt>
+              <dd>
+              <ul class="circle_list gray">
+                <li>홈페이지 내 서식자료실에서 지정기탁신청서 다운로드 </li>
+              </ul>
+              </dd>
+            </dl>
+            </li>
+            <li class="s02">
+            <dl>
+              <dt><span class="num">02</span>전송</dt>
+              <dd>
+              <ul class="circle_list gray">
+                <li>우편 : 전주객사2길 12-8, 2층</li>
+                <li>메일 : jjwf1004@daum.net</li>
+                <li>팩스 : 063) 281-0051</li>
+              </ul>
+              </dd>
+            </dl>
+            </li>
+            <li class="s03">
+            <dl>
+              <dt class="blue"><span class="num">03</span>확인</dt>
+              <dd>
+              <ul class="circle_list">
+                <li>전화 : 063) 281-0030</li>
+              </ul>
+              </dd>
+            </dl>
+            </li>
+          </ul>
+          
+        </div>
+        
+        
+        <div class="btn_area">
+        <p><a class="btn02" href="/main/content.action?cmsid=101010299000">후원하기</a></p>
+        
+        <p><a class="btn02" href="http://jjwf.or.kr/main/board.action?cmsid=101040103000">신청서 다운로드</a></p>
+        </div>
+        </div>
+        </div>
+        <!-- //sponsor01_c03 -->
+        
+        <div class="sponsor_box section">
+        <h3 class="stitle01">기부금영수증 발급안내</h3>
+        
+        <div class="box">
+        <p class="txt">기부금영수증은 지정기탁신청서에 영수증 발급에 필요한 정보를 모두 입력 해 주신 분에 한하여 발급이 가능합니다.</p>
+        
+        <ul class="circle_list">
+          <li>개인기부자의 경우 국세청 연말정산간소화 서비스를 통해 확인이 가능합니다(차기년도 1월 15일 이후). 즉시 발급을 원하신다면 재단으로 연락주세요.</li>
+          <li>법인(단체)기부자의 경우, 기부금ㆍ품 확인 후 즉시 발급해 드립니다.</li>
+        </ul>
+        
+        <p class="txt">전주시복지재단 「전주사람」은 전북사회복지공동모금회와 연합모금을 진행하고 있어, 「전북사회복지공동모금회」 명으로 영수증이 발급됩니다.</p>
+        </div>
+        </div>
+        
+        <div class="sponsor_box section">
+        <h3 class="stitle01">기타안내</h3>
+        
+        <div class="box">
+        <p class="txt">다음 중 하나에 해당되는 경우에는 전주시복지재단 「전주사람」이 재지정 요청을 할 수 있습니다.</p>
+        
+        <ul class="circle_list">
+          <li>지정대상 가운데 부적격자가 있는 경우</li>
+          <li>지정대상과 기부자가 특수 이해관계에 있는 경우</li>
+          <li>기타 지정내용이 전주시복지재단 「전주사람」의 배분지침에 위배되는 경우</li>
+        </ul>
+        
+        <p class="txt">※ 특수 이해관계에 있는 경우란?</p>
+        
+        <p class="txt02">혈족ㆍ인척 등 친족관계에 있는자(6촌 이내의 혈족, 4촌 이내의 인척, 배우자, 친생자로서 다른사람에게 친양자 입양된 자 및 그 배우자ㆍ직계비속), 임원ㆍ사용인 등 경제적 연관관계에 있는자, 주주ㆍ출자자 등 경영지배관계에 있는 자 등 국세기본법 제2조 제20호 및 동법시행령 제1조의 2에 해당하는 자를 말함</p>
+        </div>
+        </div>
+        
+        <div class="sponsor_box section">
+        <h3 class="stitle01">문의안내</h3>
+        
+        <div class="box">
+        <p class="txt">전주시복지재단「전주사람」 모금팀 063)281-0030</p>
+        </div>
+        </div>
+        <!-- //sponsor_c04 -->
+              
+              
+              <!-- 디버깅 후 삭제 -->
+              
+              
+            </div>
+            
+          </div>
+        </div>
+      
+      </main>	
+
+
+
+      <!-- 푸터 -->
+      <footer id="footer">
+        <ul class="fmenu">
+          <li><a href="/main/content.action?cmsid=101060500000">이용약관</a></li>
+          <li><a href="/main/content.action?cmsid=101060100000">개인정보처리방침</a></li>
+          <li><a href="/main/content.action?cmsid=101060400000">이메일무단수집거부</a></li>
+          <li><a href="/main/content.action?cmsid=101050800000">찾아오시는길</a></li>
+        </ul>
+
+        <div class="fcont">
+          <img src="../images/common/b_logo.png" alt="전주사람" class="b_logo"/>
+          <address>
+            <p><span>[54999] 전주시 완산구 전주객사2길 12-8(2층)</span><span>TEL. 063-281-0050</span><span>FAX. 063-281-0051</span></p>
+            <p><span>상호명) 재단법인 전주시복지재단 전주사람</span><span>[대표자명] 윤방섭</span>[사업자등록번호] 849-82-00212</span><span>[기관대표메일주소] jjwf1004@daum.net</span></p>
+            <p><span>COPYRIGHT ⓒ 2024. JEONJUSARAM ALL RIGHTS RESEVED.</span></p>
+          </address>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

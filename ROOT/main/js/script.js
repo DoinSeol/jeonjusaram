@@ -30,33 +30,32 @@ $(function(){
 		
 	/* pc nav */
 	$('.pc #pc_gnb .depth1, .nav_back').on('mouseenter focus', function() {
-		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
+		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');  //
 		// var $target = $(this).parent();
 		// $target.addClass('on');		
-		$('#pc_gnb .depth1 > li, .nav_back').addClass('on');		
+		$('#pc_gnb .depth1 > li, .nav_back').addClass('on');		//
 	});
-	// $('.pc #pc_gnb .depth2 > li > a').on('mouseenter focus', function() {
-	// 	$('#pc_gnb .depth2 > li, .nav_back').removeClass('on');
-	// 	var $target = $(this).parent();
-	// 	$target.addClass('on');		
-	// });
 
 	$('.pc #pc_gnb, .nav_back').on('mouseleave', function() {
-		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
+		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on'); //
 	});
 	$('.pc #pc_gnb a.last').on('focusout', function() {
-		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');
+		$('#pc_gnb .depth1 > li, .nav_back').removeClass('on'); //
 	});
-
-
+	
+	
 	$('#pc_gnb a').focus(function(){
 		$('#pc_gnb .depth1 > li, .nav_back').addClass('on');		
 	});
+	
+	
+	$('#pc_gnb .depth1 > li').on('mouseenter focus', function() {
+		$(this).children('a').css({"color":"#0170e0"});
+	});
+	$('#pc_gnb .depth1 > li').on('mouseleave focusout', function() {
+		$(this).children('a').css({"color":"#19191b"});
+	});
 
-
-	// $('#pc_gnb a').blur(function(){
-	// 	$('#pc_gnb .depth1 > li, .nav_back').removeClass('on');		
-	// });
 
 
 
