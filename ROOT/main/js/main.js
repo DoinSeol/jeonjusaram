@@ -167,7 +167,9 @@ $(function() {
       },
       768: {
         slidesPerView: 2,
-        // spaceBetween: 7
+      },
+      500: {
+        slidesPerView: 1,
       }
     }
   });
@@ -175,7 +177,7 @@ $(function() {
   var welfare_swiper = new Swiper("#sponsor_swiper_02 .swiper-container", {
     loop: true,
     speed: 700,
-    slidesPerView: 4,
+    slidesPerView: 5,
     spaceBetween: 3,
     navigation: {
       nextEl: "#sponsor_swiper_02 .swiper-button-next",
@@ -183,15 +185,33 @@ $(function() {
     },
     breakpoints: {
       1260: {
+        slidesPerView: 4,
+        spaceBetween: 2
+      },
+      900: {
         slidesPerView: 3,
         spaceBetween: 2
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 7
+      },
+      500: {
+        slidesPerView: 1,
       }
     }
   });
+
+
+  $('.business_text').hide();
+  $('.business_tab a').click(function () {
+    $('.business_text').hide().filter(this.hash).fadeIn();
+    $('.business_tab').removeClass('on');
+    $(this).closest(".business_tab").addClass('on');
+    return false;
+  }).filter(':eq(0)').click();
+
+
+
 
   $(window).on("resize", function() {
     resizeFn();
