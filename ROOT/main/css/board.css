@@ -145,7 +145,7 @@
 .pagination li a.active {color:#fff; border-color:#1b2e5a; background-color:#1b2e5a;text-decoration:underline;}
 .pagination li a:focus{border:1px solid #555;background:#eaeaea}
 .pagination .first,
-.pagination.prev,
+.pagination .prev,
 .pagination .next,
 .pagination .last {position:relative;}
 .pagination .first:before {display:inline-block; content:''; position:absolute; top:11px; left:10px; width:10px; height:10px; border-width:1px; border-style:solid; border-color:#888; border-right:0; border-bottom:0; transform:rotate(-45deg); -ms-transform:rotate(-45deg); box-sizing:border-box;}
@@ -319,7 +319,7 @@
 	.btn+.btn {margin-left:8px;}
 	.btn.msmall {min-width:50px; height:30px; padding:0 5px; white-space:nowrap; font-size:14px; line-height:30px;}
 
-	.btn02 {display:block; margin:4px auto; padding:0 40px 0 12px; width:200px; height:35px; font-size:15px; line-height:35px; background-size:auto 35px;}
+	.btn02 {display:block; margin:4px; padding:0 40px 0 12px; width:200px; height:35px; font-size:15px; line-height:35px; background-size:auto 35px;}
 	
 
 	.btn_more {padding-left:15px; padding-right:35px; font-size:13px;}

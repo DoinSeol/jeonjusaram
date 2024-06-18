@@ -37,6 +37,7 @@
     <!-- // 서브 CSS -->
     <link rel="stylesheet" type="text/css" href="../css/sub.css" />
     <link rel="stylesheet" type="text/css" href="../css/board.css" />
+    <link rel="stylesheet" type="text/css" href="../css/honors.css" />
     
     <!-- // 서브 공통 CSS -->
     <link rel="stylesheet" type="text/css" href="../00/css/common.css" />
@@ -242,7 +243,7 @@
           <div class="header_bottom">
             <div class="nav_back"></div>
             <div class="inwrap">
-              <h1><a href="${homeUrl}"><img style="padding-top:27px;" src="../images/common/logo2.png" alt="전주시복지재단(JEONJU WELFARE FOUNDATION) 전주사람"/></a></h1>
+              <h1><a href="../index.html"><img style="padding-top:27px;" src="../images/common/logo2.png" alt="전주시복지재단(JEONJU WELFARE FOUNDATION) 전주사람"/></a></h1>
               <div id="pc_search" class="all_search">
                 <form name="pc_search_form" method="post" action="program.action" onsubmit="fun_pc_top_search(); return false" class="inner_box">
                     <fieldset>
@@ -578,39 +579,6 @@
                     </li>
                   </ul>
                 </li>
-                <!-- 
-                <s:iterator value="%{menu.children}" status="rowStatus">
-                  <s:if test="%{show == true && seq > 0}">
-                    <li>
-                      <a href="${url}" <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
-
-                      <s:if test="%{children.size > 0}">
-                        <ul class="depth2">
-
-                          <s:iterator value="children" status="rowStatus">
-                            <s:if test="%{show == true && seq > 0}">
-                              <li <s:if test="%{children.size == 0}">class="no_child"</s:if>>
-                                <a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
-
-                                <s:if test="%{children.size > 0}">
-                                  <ul class="depth3">
-
-                                    <s:iterator value="children" status="rowStatus">
-                                      <s:if test="%{show == true && seq > 0}">
-                                        <li <s:if test="%{children.size == 0}">class="no_child"</s:if>><a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a></li>
-                                      </s:if>
-                                    </s:iterator>
-
-                                  </ul>
-                                </s:if>
-                              </li>
-                            </s:if>
-                          </s:iterator>
-                        </ul>
-                      </s:if>
-                    </li>
-                  </s:if>
-                </s:iterator> -->
               </ul>
             </nav>
           </div>
@@ -643,7 +611,7 @@
               </ul>
             </li>
             <li>
-              <a href="javascript:;">희망천사</a>
+              <a href="javascript:;">명예의전당</a>
               <ul class="sub">
                 <li class="on"><a href="#">희망천사</a></li>
                 <li class=" "><a href="#">백만천사</a></li>
@@ -657,7 +625,7 @@
         </div>
 
         <div class="sub_top">
-          <h2>희망천사</h2>
+          <h2>명예의전당</h2>
           <ul class="sub_top_link">
             <li><a href="#facebook" onclick="toSNS('facebook', '');" title="새창"><img src="../images/icon/icon_facebook.jpg" alt="페이스북"/></a>
             <li><a href="#twitter" onclick="toSNS('twitter', '')" title="새창"><img src="../images/icon/icon_twitter.jpg" alt="트위터"/></a>
@@ -667,155 +635,190 @@
         
         <div id="contents">
           <div class="contents_wrap">
-            
-            <!-- 서브 : 3depth -->
-            <!--
-                
-                
-            
-            -->
-            
-            <!-- 서브 : 4depth -->
-                
-                
-            
-            
-            <!-- 서브 : 5depth -->
-              
-              
-            
-            
-            
+
             <div class="contents_html">
               
+              <div class="sponsor_c01 section spon_05">
+                <div class="box">
+                  <div class="inbox">
+                    <p>전주사람의 희망을 지켜주는 천사의 의미를 마음에 새기며 절대빈곤과 위기가정, 복지사각지대에 있는 분들이 일어 설 수 있도록 든든한 버팀목을 만들고자 고액 후원자를 발굴하고 모금을 확대하여 복지사각지대 발굴지원을 위한 민간재원을 마련합니다.</p>
+                  </div>
+                </div>
+              </div>
               
-                
-                <div class="sponsor_c01 section">
-        <div class="box">
-        <div class="inbox">
-        <p>전주사람의 희망을 지켜주는 천사의 의미를 마음에 새기며 절대빈곤과 위기가정, 복지사각지대에 있는 분들이 일어 설 수 있도록 든든한 버팀목을 만들고자 고액 후원자를 발굴하고 모금을 확대하여 복지사각지대 발굴지원을 위한 민간재원을 마련합니다.</p>
-        </div>
-        </div>
-        </div>
-        <!-- //sponsor01_c01 -->
-        
-        <div class="sponsor01_c02 section">
-        <h3 class="stitle01">희망천사</h3>
-        
-        <div class="box">
-        <ul class="circle_list">
-          <li>1회 또는 10년간 1,004만원 이상 고액기부를 약정하고 실천하는 전주시복지재단의 희망파트너</li>
-          <li>전주사람의 희망을 지켜주는 천사의 의미를 마음에 새기며 절대빈곤과 위기가정, 복지사각지대에 있는 분들이 다시 일어설 수 있도록 든든한 버팀목을 만들고자 고액후원자를 발굴하고 모금을 확대하여 복지사각지대 발굴지원을 위한 민간재원을 마련합니다.</li>
-        </ul>
-        </div>
-        </div>
-        <!-- //sponsor01_c02 -->
-        
-        <div class="sponsor01_c03 section">
-        <h3 class="stitle01">「희망천사」로 함께하는 방법</h3>
-        
-        <div class="box">
-          <ul class="circle_list">
-            <li>1,004만원을 1회 기부로 함께 하실 수 있습니다.</li>
-            <li>기부금액과 기간을 정하고 CMS 자동이체를 통해 함께 하실 수 있습니다.</li>
-          </ul>
-          <p class="txt"style="margin-top: 36px;"><strong>※ 후원계좌번호</strong> : 전북은행 505-23-0319466 (예금주: 전북공동모금회)</p>
+              <!-- 희망천사 -->
+              <div class="honors_01">	
+                <!-- total / m-->
+                <div class="basic_box mt_30">
+                  <div class="inner">
+                    <p class="fl board_total"><span class="red bold">Total </span><span class="bold"> 200 </span> &nbsp;|&nbsp; <span class="ColorGry01">Page </span><span> <b>1</b> / 17</span> </p>
+                  </div>
+                </div>
+            
+                <div class="honors_wrap">
 
-          <ul class="step_circle_box">
-            <li>
-              <div class="step_circle_img"></div>
-              <div class="step_circle_txt"></div>
-            </li>
-          </ul>
+                  <ul class='honors_list_cont'>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/sample_img.jpg" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자후원자후원자후원자후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
 
-          <ul class="list">
-            <li class="s01">
-            <dl>
-              <dt><span class="num">01</span>신청서작성</dt>
-              <dd>
-              <ul class="circle_list gray">
-                <li>홈페이지 내 서식자료실에서 지정기탁신청서 다운로드 </li>
-              </ul>
-              </dd>
-            </dl>
-            </li>
-            <li class="s02">
-            <dl>
-              <dt><span class="num">02</span>전송</dt>
-              <dd>
-              <ul class="circle_list gray">
-                <li>우편 : 전주객사2길 12-8, 2층</li>
-                <li>메일 : jjwf1004@daum.net</li>
-                <li>팩스 : 063) 281-0051</li>
-              </ul>
-              </dd>
-            </dl>
-            </li>
-            <li class="s03">
-            <dl>
-              <dt class="blue"><span class="num">03</span>확인</dt>
-              <dd>
-              <ul class="circle_list">
-                <li>전화 : 063) 281-0030</li>
-              </ul>
-              </dd>
-            </dl>
-            </li>
-          </ul>
-          
-        </div>
-        
-        
-        <div class="btn_area">
-        <p><a class="btn02" href="/main/content.action?cmsid=101010299000">후원하기</a></p>
-        
-        <p><a class="btn02" href="http://jjwf.or.kr/main/board.action?cmsid=101040103000">신청서 다운로드</a></p>
-        </div>
-        </div>
-        </div>
-        <!-- //sponsor01_c03 -->
-        
-        <div class="sponsor_box section">
-        <h3 class="stitle01">기부금영수증 발급안내</h3>
-        
-        <div class="box">
-        <p class="txt">기부금영수증은 지정기탁신청서에 영수증 발급에 필요한 정보를 모두 입력 해 주신 분에 한하여 발급이 가능합니다.</p>
-        
-        <ul class="circle_list">
-          <li>개인기부자의 경우 국세청 연말정산간소화 서비스를 통해 확인이 가능합니다(차기년도 1월 15일 이후). 즉시 발급을 원하신다면 재단으로 연락주세요.</li>
-          <li>법인(단체)기부자의 경우, 기부금ㆍ품 확인 후 즉시 발급해 드립니다.</li>
-        </ul>
-        
-        <p class="txt">전주시복지재단 「전주사람」은 전북사회복지공동모금회와 연합모금을 진행하고 있어, 「전북사회복지공동모금회」 명으로 영수증이 발급됩니다.</p>
-        </div>
-        </div>
-        
-        <div class="sponsor_box section">
-        <h3 class="stitle01">기타안내</h3>
-        
-        <div class="box">
-        <p class="txt">다음 중 하나에 해당되는 경우에는 전주시복지재단 「전주사람」이 재지정 요청을 할 수 있습니다.</p>
-        
-        <ul class="circle_list">
-          <li>지정대상 가운데 부적격자가 있는 경우</li>
-          <li>지정대상과 기부자가 특수 이해관계에 있는 경우</li>
-          <li>기타 지정내용이 전주시복지재단 「전주사람」의 배분지침에 위배되는 경우</li>
-        </ul>
-        
-        <p class="txt">※ 특수 이해관계에 있는 경우란?</p>
-        
-        <p class="txt02">혈족ㆍ인척 등 친족관계에 있는자(6촌 이내의 혈족, 4촌 이내의 인척, 배우자, 친생자로서 다른사람에게 친양자 입양된 자 및 그 배우자ㆍ직계비속), 임원ㆍ사용인 등 경제적 연관관계에 있는자, 주주ㆍ출자자 등 경영지배관계에 있는 자 등 국세기본법 제2조 제20호 및 동법시행령 제1조의 2에 해당하는 자를 말함</p>
-        </div>
-        </div>
-        
-        <div class="sponsor_box section">
-        <h3 class="stitle01">문의안내</h3>
-        
-        <div class="box">
-        <p class="txt">전주시복지재단「전주사람」 모금팀 063)281-0030</p>
-        </div>
-        </div>
-        <!-- //sponsor_c04 -->
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/sample_img.jpg" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자후원자후원자후원자후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/sample_img.jpg" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자후원자후원자후원자후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/sample_img.jpg" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자후원자후원자후원자후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+                    <li class='honors_list'>
+                      <div class="honors_img">
+                        <img src="/ROOT/main/images/sub/tree_g.png" alt="후원자이미지">
+                      </div>  
+                      <p class="honors_tit">후원자</p>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class='pagination'>
+                  <ul>
+                    <li class='first'><a href='#fist' title='첫페이지 이동'></a></li>
+                    <li class='prev'><a href='#priv' title='이전 페이지 이동'></a></li>
+                    <li><a href='#1' class='active'>1</a></li>
+                    <li class=''> <a href='photo.action?cmsid=101040102000&amp;target=&amp;st=0&amp;sk=&amp;method=l&amp;idx=&amp;page=2'>2</a></li>
+                    <li class=''> <a href='photo.action?cmsid=101040102000&amp;target=&amp;st=0&amp;sk=&amp;method=l&amp;idx=&amp;page=3'>3</a></li>
+                    <li class=''> <a href='photo.action?cmsid=101040102000&amp;target=&amp;st=0&amp;sk=&amp;method=l&amp;idx=&amp;page=4'>4</a></li>
+                    <li class=''> <a href='photo.action?cmsid=101040102000&amp;target=&amp;st=0&amp;sk=&amp;method=l&amp;idx=&amp;page=5'>5</a></li>
+                    <li class='next'><a href='photo.action?cmsid=101040102000&amp;target=&amp;st=0&amp;sk=&amp;method=l&amp;idx=&amp;page=6' title='다음 페이지 이동'></a></li>
+                    <li class='last'><a href='photo.action?cmsid=101040102000&amp;target=&amp;st=0&amp;sk=&amp;method=l&amp;idx=&amp;page=17' title='마지막 페이지 이동'></a></li>
+                  </ul>
+                </div>
+
+              </div>
               
               
               <!-- 디버깅 후 삭제 -->
