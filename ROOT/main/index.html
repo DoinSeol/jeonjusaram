@@ -124,27 +124,6 @@
       <a href="#main" id="skip_nav">본문바로가기</a>
 
 
-      <!-- <%@ taglib tagdir="/WEB-INF/tags"                       prefix="tags"%>
-      <%@ taglib uri="/struts-tags"                           prefix="s"%>
-      <%@ taglib uri="http://java.sun.com/jsp/jstl/core"      prefix="c"%>
-      <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> -->
-      
-      <!-- <c:set var="currentUrl"  value="${requestScope['struts.request_uri']}?${pageContext.request.queryString}" scope="request" />
-      
-      <c:url var="loginUrl" value="/login/loginForm.action">
-        <c:param name="url">${currentUrl}</c:param>
-      </c:url>
-      <c:url var="logoutUrl" value="/login/logout.jsp">
-        <c:param name="url">${currentUrl}</c:param>
-      </c:url>
-      
-      
-      <c:url var="homeUrl" value="/main/main.action" />
-
-
-
-      <s:if test="%{isindex==true}"> -->
-
       <!-- 상단 배너 -->
       <!-- <s:set name="topbanner_chk">false</s:set>
       <s:iterator value="%{topbanners}" status="rowStatus">
@@ -242,7 +221,7 @@
           <div class="header_bottom">
             <div class="nav_back"></div>
             <div class="inwrap">
-              <h1><a href="${homeUrl}"><img style="padding-top:27px;" src="images/common/logo2.png" alt="전주시복지재단(JEONJU WELFARE FOUNDATION) 전주사람"/></a></h1>
+              <h1><a href="index.html"><img style="padding-top:27px;" src="images/common/logo2.png" alt="전주시복지재단(JEONJU WELFARE FOUNDATION) 전주사람"/></a></h1>
               <div id="pc_search" class="all_search">
                 <form name="pc_search_form" method="post" action="program.action" onsubmit="fun_pc_top_search(); return false" class="inner_box">
                     <fieldset>
@@ -260,157 +239,179 @@
               </div>
               <!-- <div class="nav_back"></div> -->
               <nav id="pc_gnb">
-                  <ul class="depth1">
-                    <li>
-                      <a href="content.action?cmsid=101010100000" >후원안내</a>
-                      <ul class="depth2">
-                        <li class="no_child">
-                          <a href="program.action?cmsid=101010100000">희망천사</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="program.action?cmsid=101010200000">백만천사</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="program.action?cmsid=101010300000">기부천사</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="program.action?cmsid=101010400000">일시후원</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="program.action?cmsid=101010500000">현물후원</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101010600000">후원안내</a>
-                        </li>
-                      </ul>
-                    </li>
+                <ul class="depth1">
+                  <li>
+                    <a href="../main/01/01_05.html" >후원안내</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="../main/01/01_01.html">희망천사</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="program.action?cmsid=101010200000">백만천사</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="program.action?cmsid=101010300000">기부천사</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="program.action?cmsid=101010400000">천사기업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../main/01/01_05.html">명예의전당</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../main/01/01_05.html">후원신청하기</a>
+                      </li>
+                    </ul>
+                  </li>
 
-                    <li>
-                      <a href="content.action?cmsid=101020100000">사업안내</a>
-                      <ul class="depth2">
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101020100000">나눔문화 활성사업</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101020200000">복지정책조사 연구사업</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101020300000">전주형 SOS긴급지원</a>
-                        </li>
-                        <li >
-                          <a href="content.action?cmsid=101020401000">아동·청소년지원</a>
-                          <ul class="depth3">
-                            <li class="no_child"><a href="content.action?cmsid=101020401000"  >아동·청소년 새학기·새출발 지원사업</a></li>
-                            <li class="no_child"><a href="content.action?cmsid=101020402000"  >엄마의 밥상</a></li>
-                            <li class="no_child"><a href="content.action?cmsid=101020403000"  >지혜의 반찬</a></li>
-                          </ul>
-                        </li>
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101020500000">지정기탁사업</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101020600000">금융복지사업</a>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li>
-                      <a href="program.action?cmsid=101040100000">알림마당</a>
-                      <ul class="depth2">
-                        <li class="no_child">
-                          <a href="program.action?cmsid=101040100000">공지사항</a>
-                        </li>
-                        <li >
-                          <a href="content.action?cmsid=101040201000">활동소식</a>
-                          <ul class="depth3">
-                            <li class="no_child"><a href="content.action?cmsid=101040201000">재단소식</a></li>
-                            <li class="no_child"><a href="content.action?cmsid=101040202000">연간보고서</a></li>
-                            <li class="no_child"><a href="content.action?cmsid=101040203000">웹진</a></li>
-                          </ul>
-                        </li>
-                        <li class="no_child">
-                          <a href="program.action?cmsid=10104000000">참여신청</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="program.action?cmsid=101040400000">재단에 바랍니다</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="program.action?cmsid=101040500000">연구자료실</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="program.action?cmsid=101040600000">서식다운로드</a>
-                        </li>
-                        <li >
-                          <a href="content.action?cmsid=101040701000">복지정보</a>
-                          <ul class="depth3">
-                            <li class="no_child"><a href="content.action?cmsid=101040701000">복지지도</a></li>
-                            <li class="no_child"><a href="content.action?cmsid=101040702000">복지시설검색</a></li>
-                            <li class="no_child"><a href="content.action?cmsid=101040703000">복지정보</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li>
-                      <a href="content.action?cmsid=101050100000" >재단소개</a>
-                      <ul class="depth2">
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101050100000">인사말</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101050400000">일반현황</a> 
-                        </li>
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101050200000">조직구성</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101050300000">윤리경영</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="board.action?cmsid=101050700000">정보공개</a>
-                        </li>
-                        <li class="no_child">
-                          <a href="content.action?cmsid=101050800000">찾아오시는길</a>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <!-- <s:iterator value="%{menu.children}" status="rowStatus">
-                  <s:if test="%{show == true && seq > 0}">
-                    <li>
-                        <a href="${url}" <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
-
-                        <s:if test="%{children.size > 0}">
-                        <ul class="depth2">
-
-                          <s:iterator value="children" status="rowStatus">
-                    <s:if test="%{show == true && seq > 0}">
-                          <li <s:if test="%{children.size == 0}">class="no_child"</s:if>>
-                            <a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
-
-                            <s:if test="%{children.size > 0}">
-                            <ul class="depth3">
-
-                              <s:iterator value="children" status="rowStatus">
-                        <s:if test="%{show == true && seq > 0}">
-                              <li <s:if test="%{children.size == 0}">class="no_child"</s:if>><a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a></li>
-                              </s:if>
-                        </s:iterator>
-
-                            </ul>
-                            </s:if>
-                          </li>
-                          </s:if>
-                    </s:iterator>
-
+                  <li>
+                    <a href="content.action?cmsid=101020100000">사업안내</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101020100000">나눔문화 활성사업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101020200000">복지정책조사 연구사업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101020300000">전주형 SOS긴급지원</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101020400000">사랑나눔간병비지원</a>
+                      </li>
+                      <li >
+                        <a href="content.action?cmsid=101020501000">아동·청소년지원</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="content.action?cmsid=101020501000"  >아동·청소년 새학기·새출발 지원사업</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101020502000"  >엄마의 밥상</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101020503000"  >지혜의 반찬</a></li>
                         </ul>
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101020600000">지정기탁사업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101020700000">위기·고립가구</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101020800000">금융복지사업</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="program.action?cmsid=101040100000">알림마당</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="program.action?cmsid=101040100000">공지사항</a>
+                      </li>
+                      <li >
+                        <a href="content.action?cmsid=101040201000">활동소식</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="content.action?cmsid=101040201000">재단소식</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101040202000">연간보고서</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101040203000">웹진</a></li>
+                        </ul>
+                      </li>
+                      <li class="no_child">
+                        <a href="program.action?cmsid=10104000000">참여신청</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="program.action?cmsid=101040400000">재단에 바랍니다</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="program.action?cmsid=101040500000">연구자료실</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="program.action?cmsid=101040600000">서식다운로드</a>
+                      </li>
+                      <li >
+                        <a href="content.action?cmsid=101040701000">복지정보</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="content.action?cmsid=101040701000">복지지도</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101040702000">복지시설검색</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101040703000">복지정보</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="content.action?cmsid=101050100000" >재단소개</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101050100000">인사말</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101050400000">일반현황</a> 
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101050200000">조직구성</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101050300000">윤리경영</a>
+                      </li>
+                      <li >
+                        <a href="board.action?cmsid=101050701000">정보공개</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="content.action?cmsid=101050701000">정관</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050702000">경영목표·운영계획</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050703000">외부감시·조치시행</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050704000">신규채용 친인척현황</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050705000">세입세출 예상현황</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050706000">인건비예산·집행</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050707000">수의계약</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050708000">복리후생비</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050709000">업무추진비</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050710000">기부금모금액활용실적</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050711000">전년도 경산서</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050712000">기관장 성과계약 달성도</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050713000">경영실적 평가경과</a></li>
+                          <li class="no_child"><a href="content.action?cmsid=101050714000">전년도임원·운영인력현황</a></li>
+                        </ul>
+                      </li>
+                      <li class="no_child">
+                        <a href="content.action?cmsid=101050800000">찾아오시는길</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- <s:iterator value="%{menu.children}" status="rowStatus">
+                <s:if test="%{show == true && seq > 0}">
+                  <li>
+                      <a href="${url}" <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                      <s:if test="%{children.size > 0}">
+                      <ul class="depth2">
+
+                        <s:iterator value="children" status="rowStatus">
+                  <s:if test="%{show == true && seq > 0}">
+                        <li <s:if test="%{children.size == 0}">class="no_child"</s:if>>
+                          <a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                          <s:if test="%{children.size > 0}">
+                          <ul class="depth3">
+
+                            <s:iterator value="children" status="rowStatus">
+                      <s:if test="%{show == true && seq > 0}">
+                            <li <s:if test="%{children.size == 0}">class="no_child"</s:if>><a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a></li>
+                            </s:if>
+                      </s:iterator>
+
+                          </ul>
+                          </s:if>
+                        </li>
                         </s:if>
+                  </s:iterator>
 
-                    </li>
-                    </s:if>
-                </s:iterator> -->
+                      </ul>
+                      </s:if>
 
-                  </ul>
+                  </li>
+                  </s:if>
+              </s:iterator> -->
+
+                </ul>
               </nav>
             </div>
           </div>
@@ -420,7 +421,7 @@
 
         <div id="mobile_header">
           <div class="header_top">
-            <h1 class="logo"><a href="${homeUrl}"><img style="height:100%; padding:15px;" src="images/common/logo2.png" alt="전주사람"/></a></h1>
+            <h1 class="logo"><a href="${homeUrl}"><img style="height:100%; padding:15px 0px;" src="images/common/logo2.png" alt="전주사람"/></a></h1>
             <a href="" class="btn_menu">메뉴열기</a>
           </div>
 
@@ -436,7 +437,7 @@
               </c:if>
 
               <li><a href="/main/content.action?cmsid=101060200000">사이트맵</a></li>
-              <li><a href="/main/content.action?cmsid=101060200000">명예의전당</a></li>
+              <li><a href="../main/01/01_01.html">명예의전당</a></li>
             </ul>
 
             <div id="mobile_search" class="all_search">
@@ -458,123 +459,137 @@
             <nav>
               <ul class="depth1">
                 <li>
-                  <a href="content.action?cmsid=101010100000" >후원안내</a>
+                  <a href="../main/01/01_01.html" >후원안내</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="../main/01/01_01.html">희망천사</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="program.action?cmsid=101010200000">백만천사</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="program.action?cmsid=101010300000">기부천사</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="program.action?cmsid=101010400000">천사기업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../main/01/01_05.html">명예의전당</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101010600000">후원신청하기</a>
+                    </li>
+                  </ul>
+                </li>
 
+                <li>
+                  <a href="content.action?cmsid=101020100000">사업안내</a>
                   <ul class="depth2">
                     <li class="no_child">
-                      <a href="content.action?cmsid=101010100000"  >후원안내</a>
+                      <a href="content.action?cmsid=101020100000">나눔문화 활성사업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101020200000">복지정책조사 연구사업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101020300000">전주형 SOS긴급지원</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101020400000">사랑나눔간병비지원</a>
                     </li>
                     <li >
-                      <a href="content.action?cmsid=101010299000"  >후원하기</a>
+                      <a href="content.action?cmsid=101020501000">아동·청소년지원</a>
                       <ul class="depth3">
+                        <li class="no_child"><a href="content.action?cmsid=101020501000"  >아동·청소년 새학기·새출발 지원사업</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101020502000"  >엄마의 밥상</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101020503000"  >지혜의 반찬</a></li>
+                      </ul>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101020600000">지정기탁사업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101020700000">위기·고립가구</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="content.action?cmsid=101020800000">금융복지사업</a>
+                    </li>
+                  </ul>
+                </li>
 
-                        <li class="no_child"><a href="program.action?cmsid=101010201000"  >희망천사</a></li>
-                        <li class="no_child"><a href="program.action?cmsid=101010205000"  >백만천사</a></li>
-                        <li class="no_child"><a href="program.action?cmsid=101010206000"  >기부천사</a></li>
-                        <li class="no_child"><a href="program.action?cmsid=101010203000"  >일시후원</a></li>
-                        <li class="no_child"><a href="program.action?cmsid=101010204000"  >현물후원</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
                 <li>
-                  <a href="content.action?cmsid=101020100000" >사업안내</a>
+                  <a href="program.action?cmsid=101040100000">알림마당</a>
                   <ul class="depth2">
                     <li class="no_child">
-                      <a href="content.action?cmsid=101020100000"  >모금사업</a>
+                      <a href="program.action?cmsid=101040100000">공지사항</a>
                     </li>
                     <li >
-                      <a href="content.action?cmsid=101020201000"  >사람중심 복지안전망 강화사업</a>
+                      <a href="content.action?cmsid=101040201000">활동소식</a>
                       <ul class="depth3">
-                        <li class="no_child"><a href="content.action?cmsid=101020201000"  >전주형SOS긴급지원사업</a></li>
-                        <li class="no_child"><a href="content.action?cmsid=101020205000"  >사랑나눔 간병비 지원사업</a></li>
-                        <li class="no_child"><a href="content.action?cmsid=101020209000"  >저소득가정 청소년 통학비 지원사업</a></li>
-                        <li class="no_child"><a href="content.action?cmsid=101020210000"  >위기․고립가구 일상회복 지원넷(net) 사업</a></li>
-                        <li class="no_child"><a href="content.action?cmsid=101020203000"  >엄마의밥상</a></li>
-                        <li class="no_child"><a href="content.action?cmsid=101020204000"  >지혜의 반찬 </a></li>
-                        <li class="no_child"><a href="content.action?cmsid=101020206000"  >지정기탁사업</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101040201000">재단소식</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101040202000">연간보고서</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101040203000">웹진</a></li>
                       </ul>
                     </li>
                     <li class="no_child">
-                      <a href="content.action?cmsid=101020400000"  >사회복지정책개발</a>
+                      <a href="program.action?cmsid=10104000000">참여신청</a>
                     </li>
                     <li class="no_child">
-                      <a href="content.action?cmsid=101020500000"  >전주시금융복지상담소</a>
+                      <a href="program.action?cmsid=101040400000">재단에 바랍니다</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="program.action?cmsid=101040500000">연구자료실</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="program.action?cmsid=101040600000">서식다운로드</a>
+                    </li>
+                    <li >
+                      <a href="content.action?cmsid=101040701000">복지정보</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="content.action?cmsid=101040701000">복지지도</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101040702000">복지시설검색</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101040703000">복지정보</a></li>
+                      </ul>
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <a href="program.action?cmsid=101030200000" >교육안내</a>
-                  <ul class="depth2">
-                    <li class="no_child">
-                      <a href="program.action?cmsid=101030200000"  >신청확인 및 수료증출력</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="board.action?cmsid=101040101000" >알림마당</a>
-                  <ul class="depth2">
-                    <li >
-                      <a href="board.action?cmsid=101040101000"  >소식</a>
-                      <ul class="depth3">
-                        <li class="no_child"><a href="board.action?cmsid=101040101000"  >공지사항</a></li>
-                        <li class="no_child"><a href="photo.action?cmsid=101040102000"  >활동소식</a></li>
-                        <li class="no_child"><a href="board.action?cmsid=101040103000"  >서식자료실</a></li>
-                      </ul>
-                    </li>
-                    <li >
-                      <a href="board.action?cmsid=101040201000"  >참여</a>
-                      <ul class="depth3">
-                        <li class="no_child"><a href="board.action?cmsid=101040201000"  >시민제안</a></li>
-                        <li class="no_child"><a href="board.action?cmsid=101040202000"  >도움이 필요해요</a></li>
-                      </ul>
-                    </li>
-                    <li class="no_child">
-                      <a href="board.action?cmsid=101040300000"  >복지칼럼</a>
-                    </li>
-                    <li >
-                      <a href="program.action?cmsid=101040401000"  >복지정보</a>
-                      <ul class="depth3">
-                        <li class="no_child"><a href="program.action?cmsid=101040401000"  >복지지도</a></li>
-                        <li class="no_child"><a href="program.action?cmsid=101040402000"  >복지시설검색</a></li>
-                        <li class="no_child"><a href="board.action?cmsid=101040403000"  >복지정보</a></li>
-                      </ul>
-                    </li>
-                    <li >
-                      <a href="photo.action?cmsid=101040501000"  >간행물</a>
-                        <ul class="depth3">
-                          <li class="no_child"><a href="photo.action?cmsid=101040501000"  >간행물</a></li>
-                          <li class="no_child"><a href="program.action?cmsid=101040502000"  >웹진</a></li>
-                        </ul>
-                    </li>
-                  </ul>
-                </li>
+
                 <li>
                   <a href="content.action?cmsid=101050100000" >재단소개</a>
                   <ul class="depth2">
                     <li class="no_child">
-                      <a href="content.action?cmsid=101050100000"  >인사말</a>
+                      <a href="content.action?cmsid=101050100000">인사말</a>
                     </li>
                     <li class="no_child">
-                      <a href="content.action?cmsid=101050200000"  >임원소개</a>
+                      <a href="content.action?cmsid=101050400000">일반현황</a> 
                     </li>
                     <li class="no_child">
-                      <a href="content.action?cmsid=101050300000"  >미션과비전</a>
+                      <a href="content.action?cmsid=101050200000">조직구성</a>
                     </li>
                     <li class="no_child">
-                      <a href="content.action?cmsid=101050400000"  >설립목적 및 연혁</a>
+                      <a href="content.action?cmsid=101050300000">윤리경영</a>
+                    </li>
+                    <li>
+                      <a href="board.action?cmsid=101050701000">정보공개</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="content.action?cmsid=101050701000">정관</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050702000">경영목표·운영계획</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050703000">외부감시·조치시행</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050704000">신규채용 친인척현황</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050705000">세입세출 예상현황</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050706000">인건비예산·집행</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050707000">수의계약</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050708000">복리후생비</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050709000">업무추진비</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050710000">기부금모금액활용실적</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050711000">전년도 경산서</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050712000">기관장 성과계약 달성도</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050713000">경영실적 평가경과</a></li>
+                        <li class="no_child"><a href="content.action?cmsid=101050714000">전년도임원·운영인력현황</a></li>
+                      </ul>
                     </li>
                     <li class="no_child">
-                      <a href="content.action?cmsid=101050500000"  >CI</a>
-                    </li>
-                    <li class="no_child">
-                      <a href="content.action?cmsid=101050600000"  >조직구성</a>
-                    </li>
-                    <li class="no_child">
-                      <a href="board.action?cmsid=101050700000"  >정보공개</a>
-                    </li>
-                    <li class="no_child">
-                      <a href="content.action?cmsid=101050800000"  >찾아오시는길</a>
+                      <a href="content.action?cmsid=101050800000">찾아오시는길</a>
                     </li>
                   </ul>
                 </li>
@@ -750,7 +765,7 @@
                 <div class="swiper-wrapper">
                   <div class="noticeimg"></div>
                   <div class="swiper-slide"><a href="http://jjfwc.jjwf.or.kr/" onclick="fun_popup_open('http://jjfwc.jjwf.or.kr/','_top')" >
-                    <img src="/ROOT/upload/popupzone/pop_01.png" alt="전주시 금융복지 상담소 소개 
+                    <img src="../upload/popupzone/pop_01.png" alt="전주시 금융복지 상담소 소개 
                     전주시 완산구 노송광장로 10, 전주시청 종합민원실(서노송동) 
                     전화번호 : 063) 281-0060
                     상담시간 : 09:00 ~ 18:00">
@@ -806,7 +821,7 @@
                       
                       <div class='swiper-slide'>
                         <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=631" title='[기부금 전달식] 임종우 연합회장님'>
-                          <p class='img_wrap'><img src="/ROOT/upload/photo/thumbnail/202405091745160_abcXiWKNLiupheKCkFC9y.gif" width='110' height='70' border='0' alt='[기부금 전달식] 임종우 연합회장님' /></p>
+                          <p class='img_wrap'><img src="../upload/photo/thumbnail/202405091745160_abcXiWKNLiupheKCkFC9y.gif" width='110' height='70' border='0' alt='[기부금 전달식] 임종우 연합회장님' /></p>
                           <div class='cont'>
                             <p class='tit'>[기부금 전달식] 임종우 연합...</p>
                             <p class='txt'>✅ 임종우 연합회장, 취약계층 아동 위한 후원금 기부♥️5월 8일,임종우 ...</p>
@@ -816,7 +831,7 @@
                       </div>
                       <div class='swiper-slide'>
                         <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=625" title='[기부물품 전달식] SH수협은행 전북지역금융본부 '>
-                          <p class='img_wrap'><img src="/Root/upload/photo/thumbnail/202405091734440_abcXiWKNLiupheKCkFC9y.gif" width='110' height='70' border='0' alt='[기부물품 전달식] SH수협은행 전북지역금융본부 ' /></p>
+                          <p class='img_wrap'><img src="../upload/photo/thumbnail/202405091734440_abcXiWKNLiupheKCkFC9y.gif" width='110' height='70' border='0' alt='[기부물품 전달식] SH수협은행 전북지역금융본부 ' /></p>
                           <div class='cont'>
                             <p class='tit'>[기부물품 전달식] SH수협은행...</p>
                             <p class='txt'>✅SH수협은행 전북지역금융본부, 취약계층 어르신을 위한 잡곡 기부!5월 7...</p>
@@ -826,7 +841,7 @@
                       </div>
                       <div class='swiper-slide'>
                         <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=623" title='[천사들의 따뜻한 나눔] 창대어린이집'>
-                          <p class='img_wrap'><img src="/Root/upload/photo/thumbnail/202404261805460_abcgKzM1N0HbU8myOPz8y.gif" width='110' height='70' border='0' alt='[천사들의 따뜻한 나눔] 창대어린이집' /></p>
+                          <p class='img_wrap'><img src="../upload/photo/thumbnail/202404261805460_abcgKzM1N0HbU8myOPz8y.gif" width='110' height='70' border='0' alt='[천사들의 따뜻한 나눔] 창대어린이집' /></p>
                           <div class='cont'>
                             <p class='tit'>[천사들의 따뜻한 나눔] 창대...</p>
                             <p class='txt'>✅천사들의 따뜻한 나눔, 창대어린이집💗4월 26일,창대리더어린이집(원장...</p>
@@ -836,7 +851,7 @@
                       </div>
                       <div class='swiper-slide'>
                         <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=613" title='[기부물품 전달식] 전주완산의용소방대'>
-                          <p class='img_wrap'><img src="/Root/upload/photo/thumbnail/202404251737330_abcNqArcHgsk0cRQwzu8y.gif" width='110' height='70' border='0' alt='[기부물품 전달식] 전주완산의용소방대' /></p>
+                          <p class='img_wrap'><img src="../upload/photo/thumbnail/202404251737330_abcNqArcHgsk0cRQwzu8y.gif" width='110' height='70' border='0' alt='[기부물품 전달식] 전주완산의용소방대' /></p>
                           <div class='cont'>
                             <p class='tit'>[기부물품 전달식] 전주완산의...</p>
                             <p class='txt'>✅전주완산의용소방대연합회, 취약계층 위해 백미 30포 기부👏👏4월 2...</p>
@@ -846,7 +861,7 @@
                       </div>
                       <div class='swiper-slide'>
                         <a href="photo.action?method=v&amp;cmsid=101040102000&amp;idx=612" title='[기부금 전달식] (주) 이마트 '>
-                          <p class='img_wrap'><img src="/Root/upload/photo/thumbnail/202404241834310_abcyewPaod9BkbRF96o8y.gif" width='110' height='70' border='0' alt='[기부금 전달식] (주) 이마트 ' /></p>
+                          <p class='img_wrap'><img src="../upload/photo/thumbnail/202404241834310_abcyewPaod9BkbRF96o8y.gif" width='110' height='70' border='0' alt='[기부금 전달식] (주) 이마트 ' /></p>
                           <div class='cont'>
                             <p class='tit'>[기부금 전달식] (주) 이마트 </p>
                             <p class='txt'>✅(주)이마트 전주점, 지역상권과 '상생'실천4월 24일,대형마트인 (주)이마...</p>
@@ -959,14 +974,14 @@
                   <div class="swiper-container">
                     <div class="swiper-wrapper">						
                       
-                    <div class="swiper-slide"><a href="http://jcsw.cafe24.com/default" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20190920083048_101000000000_abcGbCanNMpJK5aQd2l1w.jpg" alt=" 전주시사회복지협의회" /></p></a></div>
-                    <div class="swiper-slide"><a href="http://jeonjuvc.or.kr" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20190920083138_101000000000_abcGbCanNMpJK5aQd2l1w.jpg" alt="전주시자원봉사센터" /></p></a></div>
-                    <div class="swiper-slide"><a href="http://www.bokjiro.go.kr/nwel/bokjiroMain.do" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20200319131027_101000000000_abckD_WJDC6uidrtC9Wdx.jpg" alt="0" /></p></a></div>
-                    <div class="swiper-slide"><a href="http://jb.chest.or.kr" target="_blank" title="0[새창]"><p class="img_wrap"><img src="/ROOT/upload/banner/20200319131405_101000000000_abckD_WJDC6uidrtC9Wdx.jpg" alt="0" /></p></a></div>
-                    <div class="swiper-slide"><a href="http://www.jeonju.go.kr" target="_blank" title="0[새창]"><p class="img_wrap"><img src="/ROOT/upload/banner/20200319131214_101000000000_abckD_WJDC6uidrtC9Wdx.jpg" alt="0" /></p></a></div>
-                    <div class="swiper-slide"><a href="https://www.jeonbuk.go.kr/" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20220328151657_101000000000_abckt72QfERsa-9nBdJ9x.jpg" alt="전라북도" /></p></a></div>
-                    <div class="swiper-slide"><a href="https://www.nts.go.kr/nts/main.do" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20220328152347_101000000000_abckt72QfERsa-9nBdJ9x.jpg" alt="국세청" /></p></a></div>
-                    <div class="swiper-slide"><a href="https://www.acrc.go.kr/" target="_top" ><p class="img_wrap"><img src="/ROOT/upload/banner/20220328152302_101000000000_abckt72QfERsa-9nBdJ9x.jpg" alt="국민권익위원회" /></p></a></div>
+                    <div class="swiper-slide"><a href="http://jcsw.cafe24.com/default" target="_top" ><p class="img_wrap"><img src="../upload/banner/20190920083048_101000000000_abcGbCanNMpJK5aQd2l1w.jpg" alt=" 전주시사회복지협의회" /></p></a></div>
+                    <div class="swiper-slide"><a href="http://jeonjuvc.or.kr" target="_top" ><p class="img_wrap"><img src="../upload/banner/20190920083138_101000000000_abcGbCanNMpJK5aQd2l1w.jpg" alt="전주시자원봉사센터" /></p></a></div>
+                    <div class="swiper-slide"><a href="http://www.bokjiro.go.kr/nwel/bokjiroMain.do" target="_top" ><p class="img_wrap"><img src="../upload/banner/20200319131027_101000000000_abckD_WJDC6uidrtC9Wdx.jpg" alt="0" /></p></a></div>
+                    <div class="swiper-slide"><a href="http://jb.chest.or.kr" target="_blank" title="0[새창]"><p class="img_wrap"><img src="../upload/banner/20200319131405_101000000000_abckD_WJDC6uidrtC9Wdx.jpg" alt="0" /></p></a></div>
+                    <div class="swiper-slide"><a href="http://www.jeonju.go.kr" target="_blank" title="0[새창]"><p class="img_wrap"><img src="../upload/banner/20200319131214_101000000000_abckD_WJDC6uidrtC9Wdx.jpg" alt="0" /></p></a></div>
+                    <div class="swiper-slide"><a href="https://www.jeonbuk.go.kr/" target="_top" ><p class="img_wrap"><img src="../upload/banner/20220328151657_101000000000_abckt72QfERsa-9nBdJ9x.jpg" alt="전라북도" /></p></a></div>
+                    <div class="swiper-slide"><a href="https://www.nts.go.kr/nts/main.do" target="_top" ><p class="img_wrap"><img src="../upload/banner/20220328152347_101000000000_abckt72QfERsa-9nBdJ9x.jpg" alt="국세청" /></p></a></div>
+                    <div class="swiper-slide"><a href="https://www.acrc.go.kr/" target="_top" ><p class="img_wrap"><img src="../upload/banner/20220328152302_101000000000_abckt72QfERsa-9nBdJ9x.jpg" alt="국민권익위원회" /></p></a></div>
                     
                       
                       <!--
@@ -1346,13 +1361,6 @@
                   <a href="#">자세히보기</a>
                 </div>
               </div>
-
-
-
-
-
-
-
     				</div>
           </div>
         </div>

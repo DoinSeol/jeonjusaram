@@ -77,9 +77,9 @@
 <div class="sub_top">
  	<h2>${menu_title}</h2>
  	<ul class="sub_top_link">
-  		<li><a href="#facebook" onclick="toSNS('facebook', '');" title="새창"><img src="images/icon/icon_facebook.jpg" alt="페이스북"/></a>
-  		<li><a href="#twitter" onclick="toSNS('twitter', '')" title="새창"><img src="images/icon/icon_twitter.jpg" alt="트위터"/></a>
-  		<li><a href="#print" onclick="window.print();" title="인쇄보기 바로가기[새창]"><img src="images/icon/icon_print.jpg" alt="프린트"/></a>
+  		<li><a href="#facebook" onclick="toSNS('facebook', '');" title="새창"><img src="images/icon/icon_facebook.png" alt="페이스북"/></a>
+  		<li><a href="#twitter" onclick="toSNS('twitter', '')" title="새창"><img src="images/icon/icon_twitter.png" alt="트위터"/></a>
+  		<li><a href="#print" onclick="window.print();" title="인쇄보기 바로가기[새창]"><img src="images/icon/icon_print.png" alt="프린트"/></a>
  	</ul>
 </div>
 

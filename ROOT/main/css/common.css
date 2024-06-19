@@ -290,8 +290,8 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url("/main/images/common/select_arrow_black.png") right 10px
-    center no-repeat white !important;
+  background: url("../images/common/select_arrow_black.png") right 10px
+    center no-repeat white;
 }
 select::-ms-expand {
   display: none;

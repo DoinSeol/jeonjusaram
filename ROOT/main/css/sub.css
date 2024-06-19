@@ -1,7 +1,7 @@
 @charset "utf-8";
 .content_box {  margin-left: 20px;}
 .content_inner_box {  margin-top: 40px;}
-.stitle01 {  margin-bottom: 30px;  padding-left: 33px;  font-size: 1.75rem;  color: #333;  font-weight: 500;  line-height: 1.17;  background: url("/ROOT/main/images/icon/icon_stitle01.png") 0px 2px no-repeat;  background-size: auto 23px;}
+.stitle01 {  margin-bottom: 30px;  padding-left: 33px;  font-size: 1.75rem;  color: #333;  font-weight: 500;  line-height: 1.17;  background: url("../images/icon/icon_stitle01.png") 0px 2px no-repeat;  background-size: auto 23px;}
 .stitle02 {  margin-bottom: 12px;  font-size: 23px;  color: #333;  font-weight: 500;  line-height: 1.5;}
 .stitle03 {  margin-top: 47px;  margin-bottom: 12px;  font-size: 25px;  font-weight: 500;  line-height: 1.17;}
 .stitle04 {  margin-bottom: 47px;  font-size: 30px;  color: #333;  font-weight: 500;  line-height: 1.17;}
@@ -23,11 +23,11 @@
 .step_circle_box li {width: calc((100% - 48px) / 5); min-width:100px; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; }
 .step_circle_box li .step_circle_img {width: 150px; height: 150px; border: 1px solid #d8d8d8; border-radius: 50% ; background-repeat: no-repeat; background-position: center; background-size: 50% auto; }
 .step_circle_box li:nth-child(1) ~ li::before {content:""; display: block; width: 15px; height: 15px; border-top-right-radius: 3px; border-top: 3px solid #aaaaaa; border-right: 3px solid #aaaaaa;  position: absolute; top: 78px; left: -17px; transform: rotate(45deg) translate(-50%, -50%);}
-.step_circle_box li:nth-child(1) .step_circle_img {background-image: url('/ROOT/main/images/sub/sub_0101_03_01.png');}
-.step_circle_box li:nth-child(2) .step_circle_img {background-image: url('/ROOT/main/images/sub/sub_0101_03_02.png');}
-.step_circle_box li:nth-child(3) .step_circle_img {background-image: url('/ROOT/main/images/sub/sub_0101_03_03.png');}
-.step_circle_box li:nth-child(4) .step_circle_img {background-image: url('/ROOT/main/images/sub/sub_0101_03_04.png');}
-.step_circle_box li:nth-child(5) .step_circle_img {background-image: url('/ROOT/main/images/sub/sub_0101_03_05.png');}
+.step_circle_box li:nth-child(1) .step_circle_img {background-image: url('../images/sub/sub_0101_03_01.png');}
+.step_circle_box li:nth-child(2) .step_circle_img {background-image: url('../images/sub/sub_0101_03_02.png');}
+.step_circle_box li:nth-child(3) .step_circle_img {background-image: url('../images/sub/sub_0101_03_03.png');}
+.step_circle_box li:nth-child(4) .step_circle_img {background-image: url('../images/sub/sub_0101_03_04.png');}
+.step_circle_box li:nth-child(5) .step_circle_img {background-image: url('../images/sub/sub_0101_03_05.png');}
 .step_circle_box li .step_circle_txt {}
 .step_circle_box li .step_circle_txt p {text-align: center; color: #666;}
 
@@ -71,7 +71,7 @@
 /* 후원하기 */
 .sponsor_c01 .box {
   padding: 20px;
-  background: url("/ROOT/main/images/sub/bg01.png") no-repeat #e2e2e2;
+  background: url("../images/sub/bg01.png") no-repeat #e2e2e2;
   background-size: cover;
 }
 .sponsor_c01 .inbox {
@@ -86,8 +86,8 @@
   background: #fff;
 }
 .sponsor_c01 .inbox:after {  position: absolute;  top: 0;  left: 40px;  top: 40px;  bottom: 40px;  width: 148px;  border-right: 1px solid #e0e3e5;  content: "";}
-.sponsor_c01.spon_01 .inbox:after {  background: url("/ROOT/main/images/sub/sub_0101_01.png") 40% center no-repeat; content: "";}
-.sponsor_c01.spon_05 .inbox:after {  background: url("/ROOT/main/images/sub/sub_0101_05.png") 40% center no-repeat; content: "";}
+.sponsor_c01.spon_01 .inbox:after {  background: url("../images/sub/sub_0101_01.png") 40% center no-repeat; content: "";}
+.sponsor_c01.spon_05 .inbox:after {  background: url("../images/sub/sub_0101_05.png") 40% center no-repeat; content: "";}
 
 .sponsor_c02 .box {
   overflow: hidden;
@@ -124,16 +124,16 @@
   content: "";
 }
 .sponsor_c02 .s01 dt:after {
-  background-image: url("/ROOT/main/images/sub/icon_sponsor_c0201.png");
+  background-image: url("../images/sub/icon_sponsor_c0201.png");
 }
 .sponsor_c02 .s02 dt:after {
-  background-image: url("/ROOT/main/images/sub/icon_sponsor_c0202.png");
+  background-image: url("../images/sub/icon_sponsor_c0202.png");
 }
 .sponsor_c02 .s03 dt:after {
-  background-image: url("/ROOT/main/images/sub/icon_sponsor_c0203.png");
+  background-image: url("../images/sub/icon_sponsor_c0203.png");
 }
 .sponsor_c02 .s04 dt:after {
-  background-image: url("/ROOT/main/images/sub/icon_sponsor_c0204.png");
+  background-image: url("../images/sub/icon_sponsor_c0204.png");
 }
 .sponsor_c02 dt strong {
   font-size: 30px;
@@ -188,7 +188,7 @@
   height: 240px;
   padding: 55px 50px 55px 200px;
   color: #fff;
-  background: url("/ROOT/main/images/sub/icon_sponsor_c0401.png") no-repeat 50px
+  background: url("../images/sub/icon_sponsor_c0401.png") no-repeat 50px
  center #0170e0;
 }
 .sponsor_c04 .box dt {
@@ -214,13 +214,13 @@
   background: no-repeat center 33px #f4f4f4;
 }
 .sponsor_c04 .box li.s01 {
-  background-image: url("/ROOT/main/images/sub/icon_sponsor_c0402.png");
+  background-image: url("../images/sub/icon_sponsor_c0402.png");
 }
 .sponsor_c04 .box li.s02 {
-  background-image: url("/ROOT/main/images/sub/icon_sponsor_c0403.png");
+  background-image: url("../images/sub/icon_sponsor_c0403.png");
 }
 .sponsor_c04 .box li.s03 {
-  background-image: url("/ROOT/main/images/sub/icon_sponsor_c0404.png");
+  background-image: url("../images/sub/icon_sponsor_c0404.png");
 }
 .sponsor_c04 .box li + li {
   border-left: 1px solid #e2e2e2;
@@ -263,7 +263,7 @@
   width: 15px;
   height: 26px;
   margin-top: -13px;
-  background: url("/ROOT/main/images/icon/icon_arr02.png") no-repeat center;
+  background: url("../images/icon/icon_arr02.png") no-repeat center;
   content: "";
 }
 .sponsor01_c03 li.s03 dt:after {
@@ -324,7 +324,7 @@
 .sponsor02_c01 .more:before {  display: block;  width: 1px;  height: 27px;  margin: 0 auto 15px;  background: rgba(255, 255, 255, 0.3);  content: "";}
 
 /* 사업안내 */
-.socialwork_c01 .box {  padding: 20px;  background: url("/ROOT/main/images/sub/bg01.png") no-repeat #e2e2e2;  background-size: cover;}
+.socialwork_c01 .box {  padding: 20px;  background: url("../images/sub/bg01.png") no-repeat #e2e2e2;  background-size: cover;}
 .socialwork_c01 .inbox {  background: #fff;}
 .socialwork_c01 .box02 {  padding-left: 17px;}
 .socialwork_c01 .box02 .circle_list {  padding-left: 15px;}
@@ -333,7 +333,7 @@
 .socialwork_c01 .num_list li + li {  border-top: 1px solid #ddd;}
 .socialwork_c01 .num_list .num {  left: 35px;  font-family: "roboto", sans-serif;  color: #fff;  line-height: 40px;  text-align: center;  background: #0170e0;}
 
-.socialwork_c02 .box {  padding: 20px;  background: url("/ROOT/main/images/sub/bg01.png") no-repeat #e2e2e2;  background-size: cover;}
+.socialwork_c02 .box {  padding: 20px;  background: url("../images/sub/bg01.png") no-repeat #e2e2e2;  background-size: cover;}
 .socialwork_c02 .inbox {  background: #fff;}
 .socialwork_c02 .box02 {  padding-left: 17px;}
 .socialwork_c02 .box02 .circle_list {  padding-left: 15px;}
@@ -351,7 +351,7 @@
 
 .socialwork_c03 .box {
   padding: 20px;
-  background: url("/ROOT/main/images/sub/bg01.png") no-repeat #e2e2e2;
+  background: url("../images/sub/bg01.png") no-repeat #e2e2e2;
   background-size: cover;
 }
 .socialwork_c03 .inbox {
@@ -384,7 +384,7 @@
 
 .socialwork_c04 .box {
   padding: 20px;
-  background: url("/ROOT/main/images/sub/bg01.png") no-repeat #e2e2e2;
+  background: url("../images/sub/bg01.png") no-repeat #e2e2e2;
   background-size: cover;
 }
 .socialwork_c04 .inbox {
@@ -450,7 +450,7 @@
 }
 .company01_c03 .box {
   padding: 20px;
-  background: url("/ROOT/main/images/sub/bg01.png") no-repeat #e2e2e2;
+  background: url("../images/sub/bg01.png") no-repeat #e2e2e2;
   background-size: cover;
 }
 .company01_c03 .inbox {
@@ -468,7 +468,7 @@
   bottom: 40px;
   width: 148px;
   border-right: 1px solid #e0e3e5;
-  background: url("/ROOT/main/images/sub/company01_c03.png") 40% center no-repeat;
+  background: url("../images/sub/company01_c03.png") 40% center no-repeat;
   content: "";
 }
 .company01_c03 .inbox .t01 {

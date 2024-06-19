@@ -6,8 +6,23 @@
   border: 0px solid #dddddd;
 }
 
-.honors_wrap {  position: relative;  border-top: 2px solid #50585e;  padding: 30px 52px;  margin-bottom: 60px;  border-bottom: 1px solid #dadada;  overflow: hidden;  padding-top: 300px;  background: url("/ROOT/main/images/sub/sub_0101_05_back.png") top center no-repeat; background-size: auto 300px;}
+
+.honors_tab_contain {}
+.honors_tab_contain ul {display: flex; justify-content: flex-start; align-items: bottom; border-bottom: 4px solid #1b2e5a;}
+.honors_tab_contain ul li.honors_tab {background-color: #E2E2E2; flex-grow: 1;}
+.honors_tab_contain ul li.honors_tab:nth-child(1) {border-top-left-radius: 12px;}
+.honors_tab_contain ul li.honors_tab:nth-child(2) {border-top-right-radius: 12px;}
+.honors_tab_contain ul li.honors_tab a {text-align: center; padding: 1rem; padding-bottom: 0.625rem; font-size: 1.25rem;}
+.honors_tab_contain ul li.honors_tab.on {background-color: #1b2e5a;  }
+.honors_tab_contain ul li.honors_tab.on a {color: #fff;}
+
+
+
+.honors_wrap {  position: relative;  border-top: 2px solid #50585e;  padding: 52px 52px;  margin-bottom: 60px;  border-bottom: 1px solid #dadada;  overflow: hidden;  padding-top: 300px;  background: url("../images/sub/sub_0101_05_back.png") top center no-repeat; background-size: auto 300px;}
 .honors_wrap::before {  content: ""; display: block; position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; border: 20px solid #E2E2E2; }
+
+
+
 
 .honors_wrap ul.honors_list_cont {display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start; gap: 40px;}
 .honors_wrap ul.honors_list_cont li.honors_list { width: calc((100% - 200px) / 6); display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 10px;}
@@ -15,25 +30,24 @@
 .honors_wrap ul.honors_list_cont li.honors_list .honors_img img { width: 100%; height: 100%; object-fit: cover;}
 .honors_wrap ul.honors_list_cont li.honors_list .honors_tit {text-align: center; width: 100%; padding: 0px 16px; overflow:hidden; text-overflow:ellipsis;  white-space:nowrap;}
 
+
+
+
+
 @media all and (max-width: 1200px) {
-  /* .honors_wrap { padding-top: 250px; background-size: auto 250px;} */
-  
   .honors_wrap ul.honors_list_cont {gap: 22px;}
   .honors_wrap ul.honors_list_cont li.honors_list {width: calc((100% - 110px) / 6);}
   .honors_wrap ul.honors_list_cont li.honors_list .honors_img {width: 130px; height: 130px;}
-
-
 }
 
 @media all and (max-width: 1000px) {
   .honors_wrap { padding-top: 210px; background-size: auto 210px;}
   .honors_wrap ul.honors_list_cont li.honors_list {width: calc((100% - 88px) / 5);}
   .honors_wrap ul.honors_list_cont li.honors_list .honors_img {width: 120px; height: 120px;}
-
 }
 
 @media all and (max-width: 767.88px) {
-  .honors_wrap { padding: 30px 48px; padding-top: 180px; background-size: auto 180px;}
+  .honors_wrap { padding: 48px 48px; padding-top: 180px; background-size: auto 180px;}
   .honors_wrap::before {border: 15px solid #E2E2E2; }
   .honors_wrap ul.honors_list_cont {gap: 20px;}
   .honors_wrap ul.honors_list_cont li.honors_list {width: calc((100% - 80px) / 5);}
@@ -47,13 +61,13 @@
 }
 
 @media all and (max-width: 550px) {
-  .honors_wrap { padding: 30px 24px;  padding-top: 150px; background-size: auto 150px;}
+  .honors_wrap { padding: 36px 24px;  padding-top: 150px; background-size: auto 150px;}
   .honors_wrap ul.honors_list_cont {gap: 18px;}
   .honors_wrap ul.honors_list_cont li.honors_list {width: calc((100% - 40px) / 3);}
 }
 
 @media all and (max-width: 450px) {
-  .honors_wrap { padding: 30px 16px;  padding-top: 130px; background-size: auto 130px;}
+  .honors_wrap { padding: 32px 16px;  padding-top: 130px; background-size: auto 130px;}
   .honors_wrap ul.honors_list_cont {gap: 18px;}
   .honors_wrap ul.honors_list_cont li.honors_list {width: calc((100% - 20px) / 2);}
 }

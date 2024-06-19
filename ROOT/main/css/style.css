@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: top;}
+a {display: block; height: 100%;}
 /* HTML5 display-role reset for older browsers */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary, form,fieldset { display: block;}
 fieldset { min-width: 100%; }
@@ -62,16 +63,16 @@ a:tel {text-decoration:none;}
 
 
 
-#skip_nav {position: fixed; left: 0; top: -50px; width: 100%; text-align: center; line-height: 40px; background: rgba(0, 0, 0, 0.5); color: #ffffff; font-size: 13px; z-index: 10000; transition: top 0.3s;}
+#skip_nav {position: fixed; left: 0; height: 50px; top: -50px; width: 100%; text-align: center; line-height: 40px; background: rgba(0, 0, 0, 0.5); color: #ffffff; font-size: 13px; z-index: 10000; transition: top 0.3s;}
 #skip_nav:focus {top: 0;}
 
 
 
 /* input */
-input[type="text"], input[type="password"], input[type="search"], input[type="number"], input[type="date"], input[type="datetime"], input[type="email"], input[type="tel"] {height:38px; margin:0; padding:0 10px; border:1px solid #e2e2e2; font-size:15px; color:#444444;}
+input[type="text"], input[type="password"], input[type="search"], input[type="number"], input[type="date"], input[type="datetime"], input[type="email"], input[type="tel"] {height:38px; margin:0; padding:0 10px; border:1px solid #e2e2e2; font-size:15px; color:#666;}
 input[type="file"] {height:38px; font-size:1rem;}
-select {height:38px; padding-left:10px; padding-right:20px; border:1px solid #e2e2e2; font-size:1rem; color:#444444;}
-textarea {padding:10px; border:1px solid #d2d2d2; font-size:1rem; color:#444444;}
+select {height:38px; padding-left:10px; padding-right:24px; border:1px solid #e2e2e2; font-size:1rem; color:#666;}
+textarea {padding:10px; border:1px solid #d2d2d2; font-size:1rem; color:#666;}
 select, textarea, input[type="text"], input[type="password"], input[type="search"], input[type="number"], input[type="date"], input[type="datetime"], input[type="email"], input[type="tel"],input[type="submit"] {
 	-webkit-border-radius:0;
 	border-radius: 0px; /* iOS 둥근모서리 제거 */
@@ -80,24 +81,21 @@ select, textarea, input[type="text"], input[type="password"], input[type="search
     appearance: none;	
 }
 select::-ms-expand {display: none;}
-select{	
-	background: #fff url('/main/images/icon/icon_sel_arr.jpg') 100% 50% no-repeat !important;	
-
-}
+select{	background: #fff url('../images/icon/caret-down-solid.svg') center right 12px no-repeat; background-size: auto 18px;}
 
 
 
-input::-webkit-input-placeholder {color:#444444;}
-input:-moz-placeholder {color:#444444; opacity: 1;}
-input::-moz-placeholder {color:#444444; opacity: 1;}
-input::-ms-input-placeholder {color:#444444;}
-input::input-placeholder {color:#444444;}
+input::-webkit-input-placeholder {color:#666;}
+input:-moz-placeholder {color:#666; opacity: 1;}
+input::-moz-placeholder {color:#666; opacity: 1;}
+input::-ms-input-placeholder {color:#666;}
+input::input-placeholder {color:#666;}
 
-textarea::-webkit-input-placeholder {color:#444444;}
-textarea:-moz-placeholder {color:#444444; opacity: 1;}
-textarea::-moz-placeholder {color:#444444; opacity: 1;}
-textarea::-ms-input-placeholder {color:#444444;}
-textarea::input-placeholder {color:#444444;}
+textarea::-webkit-input-placeholder {color:#666;}
+textarea:-moz-placeholder {color:#666; opacity: 1;}
+textarea::-moz-placeholder {color:#666; opacity: 1;}
+textarea::-ms-input-placeholder {color:#666;}
+textarea::input-placeholder {color:#666;}
 
 
 
