@@ -40,7 +40,7 @@
 #pc_gnb .depth1 > li > a {display:block; font-size:1.25rem; color:#19191b; line-height:85px; font-weight:500; transition:color 0.4s;}
 /* #pc_gnb .depth1 > li.on > a {color:#0170e0;} */
 #pc_gnb .depth1 > li.on .depth2 {display:block;}
-#pc_gnb .depth2 {display:none; position:absolute; padding: 24px 8px 24px; top:85px; left:0; width:100%; /*border-top:3px solid #0170e0;*/}
+#pc_gnb .depth2 {overflow-y: auto; max-height: calc(100vh - 120px); display:none; position:absolute; padding: 24px 8px 24px; top:85px; left:0; width:100%; /*border-top:3px solid #0170e0;*/}
 #pc_gnb .depth2 > li {position:relative; margin-bottom: 8px;}
 #pc_gnb .depth2 > li > a {display:block; position:relative; font-size:0.9375rem; color:#666666; text-align:left; background:#f4f4f4; border-radius:8px; border: 1px solid #ddd; padding: 10px 24px 8px 8px; transition:all 0.4s; white-space: pre-line}
 #pc_gnb .depth2 > li > a:after {position:absolute; top:50%; right:12px; /*transform: rotate(90deg);*/ width:8px; height:12px; margin-top:-6px; background:url('../images/icon/caret-down-solid.svg') 0 bottom; content:'';}
@@ -111,7 +111,7 @@
 
 
 #footer {background:#333333;}
-.fmenu {border-bottom:1px solid #575b5e; font-size:0; text-align:center;}
+.fmenu {border-bottom:1px solid #575b5e; font-size:0; text-align:center; max-width: 100%;}
 .fmenu li {display:inline-block;}
 .fmenu a {display:block; position:relative; padding:0 15px; font-size:1.125rem; line-height:78px; color:#fff; font-weight:300;}
 .fmenu li+li a:before {position:absolute; top:0; left:-3px; content:'·'}
@@ -203,7 +203,7 @@
 	#lnb .depth1_menu {display:none;}
 	#lnb > ul > li {width:50%;}
 	#lnb > ul > li > a {overflow:hidden; padding:0 45px 0 20px; font-size:1.071425rem; line-height:43px; white-space:nowrap; text-overflow:ellipsis;}
-	#lnb > ul > li > a:after {right:20px; width:20px; height:15px; margin-top:-7px; background-size: auto 6px;}	
+	#lnb > ul > li > a:after {right: 7px;}
 	#lnb .sub {top:42px;}
 	#lnb .sub a {overflow:hidden; padding-left:20px; padding-right:20px; font-size:1rem; line-height:43px; white-space:nowrap; text-overflow:ellipsis;}
 	#lnb .sub a:after {right:13px; width:3px; height:6px; margin-top:-3px; background-size:3px auto;}
