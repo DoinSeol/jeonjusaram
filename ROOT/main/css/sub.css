@@ -3,7 +3,7 @@
 .content_inner_box {  margin-top: 40px;}
 .stitle01 {  margin-bottom: 30px;  padding-left: 33px;  font-size: 1.75rem;  color: #333;  font-weight: 500;  line-height: 1.17;  background: url("../images/icon/icon_stitle01.png") 0px 2px no-repeat;  background-size: auto 23px;}
 .stitle02 {  margin-bottom: 12px;  font-size: 23px;  color: #333;  font-weight: 500;  line-height: 1.5;}
-.stitle03 {  margin-top: 47px;  margin-bottom: 12px;  font-size: 25px;  font-weight: 500;  line-height: 1.17;}
+.stitle03 {  margin-top: 40px;  margin-bottom: 12px;  font-size: 1.25rem;  font-weight: 500;  line-height: 1.17;}
 .stitle04 {  margin-bottom: 47px;  font-size: 30px;  color: #333;  font-weight: 500;  line-height: 1.17;}
 
 .circle_list {  text-align: left;}
@@ -35,14 +35,14 @@
 .tab_menu {  display: -ms-flexbox;  display: flex;  -ms-flex-wrap: wrap;  flex-wrap: wrap;  width: 100%;  margin-bottom: 50px;  border: 1px solid #ddd;  background: #f5f5f5;}
 .tab_menu li {  -ms-flex: 0 0 25%;  flex: 0 0 25%;  max-width: 25%; vertical-align: middle;}
 .tab_menu li + li {  border-left: 1px solid #ddd;}
-.tab_menu a {  display: -ms-flexbox !important;  display: flex !important;  width: 100%;  height: 100%;  padding: 20px 10px;  text-align: center;  background: #f5f5f5;  transition: all 0.4s ease;  -webkit-transition: all 0.4s ease;  word-break: break-all;}
+.tab_menu a {  display: -ms-flexbox !important;  display: flex !important;  width: 100%;  height: 100%;  padding: 1rem 10px;  text-align: center;  background: #f5f5f5;  transition: all 0.4s ease;  -webkit-transition: all 0.4s ease;  word-break: break-all;}
 .tab_menu a span {  -ms-flex-item-align: center !important;  align-self: center !important;  width: 100%;}
 .tab_menu li.on a {  color: #fff;  background: #0170e0;}
 
 .tab_menu3 {  display: -ms-flexbox;  display: flex;  -ms-flex-wrap: wrap;  flex-wrap: wrap;  width: 100%;  margin-bottom: 50px;  border: 1px solid #ddd;  background: #f5f5f5;}
 .tab_menu3 li {  -ms-flex: 0 0 50%;  flex: 0 0 50%;  max-width: 50%;  vertical-align: middle;}
 .tab_menu3 li + li {  border-left: 1px solid #ddd;}
-.tab_menu3 a {  display: -ms-flexbox !important;  display: flex !important;  width: 100%;  height: 100%;  padding: 20px 10px;  text-align: center;  background: #f5f5f5;  transition: all 0.4s ease;  -webkit-transition: all 0.4s ease;  word-break: break-all;}
+.tab_menu3 a {  display: -ms-flexbox !important;  display: flex !important;  width: 100%;  height: 100%;  padding: 1rem 10px;  text-align: center;  background: #f5f5f5;  transition: all 0.4s ease;  -webkit-transition: all 0.4s ease;  word-break: break-all;}
 .tab_menu3 a span {  -ms-flex-item-align: center !important;  align-self: center !important;  width: 100%;}
 .tab_menu3 li.on a {  color: #fff;  background: #0170e0;}
 .tab_menu3 li a:hover, .tab_menu3 li a:focus {  background: #0170e0;  color: #fff;  text-decoration: none;}
@@ -676,6 +676,7 @@ color:#d8eaff;
 .company_common .board_table tbody th {
   width: 20%;
   background: #f8f8f8;
+  
 }
 
 .company07_c01 .box {
@@ -790,7 +791,7 @@ color:#d8eaff;
   overflow: hidden;
   width: 100%;
   height: auto;
-  margin: 30px auto 50px auto;
+  margin: 15px auto 50px auto;
   border-top: 1px solid #c1c1c1;
   border-left: 1px solid #c1c1c1;
 }
@@ -803,8 +804,8 @@ color:#d8eaff;
   margin-top: -1px;
   margin-left: -1px;
   text-align: center;
-  padding: 20px 1%;
-  font-size: 20px;
+  padding: 1rem 1%;
+  font-size: 1.125rem;
   display: block;
   color: #555;
   background-color: #f5f5f5;
@@ -875,7 +876,7 @@ color:#d8eaff;
 .theme_menu {position: relative; clear: both; display: block; overflow: hidden; width: 100%; height: auto; margin: 30px auto 50px auto; border-top: 1px solid #c1c1c1; border-left: 1px solid #c1c1c1;}
 .theme_menu li {float: left; width: 16.66%; display: block;}
 .theme_menu li a {
-  border: 1px solid #c1c1c1; margin-top: -1px; margin-left: -1px; text-align: center; padding: 20px 1%; font-size: 15px; display: block; color: #555; background-color: #f5f5f5;
+  border: 1px solid #c1c1c1; margin-top: -1px; margin-left: -1px; text-align: center; padding: 1rem 1%; font-size: 1rem; display: block; color: #555; background-color: #f5f5f5;
   transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -890,6 +891,9 @@ color:#d8eaff;
 .con_ness {padding-left: 20px; background: url("../images/ness.gif") no-repeat 10px center;}
 
 .sub_para1 {margin-top: 20px; padding: 0 14px; font-size: 16px; line-height: 32px;}
+
+.map_05_06 {width: 100% !important;}
+
 
 @media all and (max-width: 1260px) {
   /* 후원하기 */
@@ -916,7 +920,7 @@ color:#d8eaff;
   .stitle01 {margin-bottom: 11px; padding-left: 20px; font-size: 1.285715rem; /* background-position: 0 4px; */ background-size: 14px auto;}
 
   .stitle02 {margin-bottom: 10px; font-size: 1rem; font-weight: 700;}
-  .stitle03 {margin-top: 32px; margin-bottom: 8px; font-size: 1rem;}
+  .stitle03 {margin-top: 24px; margin-bottom: 8px; font-size: 1rem;}
   .stitle04 {margin-bottom: 32px; font-size: 21px;}
 
   .circle_list li {padding-left: 10px; font-size: 1rem;}

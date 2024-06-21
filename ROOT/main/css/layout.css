@@ -42,7 +42,7 @@
 #pc_gnb .depth1 > li.on .depth2 {display:block;}
 #pc_gnb .depth2 {overflow-y: auto; max-height: calc(100vh - 120px); display:none; position:absolute; padding: 24px 8px 24px; top:85px; left:0; width:100%; /*border-top:3px solid #0170e0;*/}
 #pc_gnb .depth2 > li {position:relative; margin-bottom: 8px;}
-#pc_gnb .depth2 > li > a {display:block; position:relative; font-size:0.9375rem; color:#666666; text-align:left; background:#f4f4f4; border-radius:8px; border: 1px solid #ddd; padding: 10px 24px 8px 8px; transition:all 0.4s; white-space: pre-line}
+#pc_gnb .depth2 > li > a {display:block; position:relative; font-size:0.9375rem; color:#666666; text-align:left; background:#f8f8f8; border-radius:8px; border: 1px solid #ddd; padding: 10px 24px 8px 8px; transition:all 0.4s; white-space: pre-line}
 #pc_gnb .depth2 > li > a:after {position:absolute; top:50%; right:12px; /*transform: rotate(90deg);*/ width:8px; height:12px; margin-top:-6px; background:url('../images/icon/caret-down-solid.svg') 0 bottom; content:'';}
 #pc_gnb .depth2 > li.no_child > a:after {display:none;}
 #pc_gnb .depth2 > li:hover > a:after {background:url('../images/icon/caret-down-solid_blue.svg') 0 bottom;}

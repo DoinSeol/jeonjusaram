@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new)전주시복지재단</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type"    content="text/html; charset=utf-8" />
+    <meta name="format-detection"      content="telephone=no,email=no,address=no" />
+    <meta name="viewport"              content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="title"                 content="" />
+    <meta name="description"           content="" />
+    
+    <meta name="author"      content="전주시복지재단 전주사람" />
+    <meta name="keywords"    content="전주시복지재단 전주사람 홈페이지" />
+    <meta name="description" content="전주시복지재단 전주사람" />
+    <meta name="copyright"   content="Copyright(c)2019 JJWF. All Rights Reserved." />
+    
+    <meta name="robots"             content="index,follow">
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="전주시복지재단 전주사람">
+    <meta property="og:description" content="전주시복지재단 전주사람">
+    <meta property="og:url"         content="http://www.jjwf.or.kr/main/main.action">
+    <meta property="og:image"       content="../images/open_graph.jpg">
+
+
+    <!-- // 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    
+    <!-- // 메인 CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+    <!-- // 서브 CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    <link rel="stylesheet" type="text/css" href="../css/board.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    
+    <!-- // 서브 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="../00/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../board/css/common.css" />
+    
+    <!-- // 서브 CMSID 대응 CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="${ct_css}" /> -->
+
+    <!-- // jQuery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+
+
+    <!--script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script-->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script> <!--메뉴-->
+    
+    <!--script type="text/javascript" src="/js/common.js" charset="utf-8"></script-->
+    <script type="text/javascript" src="../js/common.js" charset="utf-8"></script>
+    
+    <!--script type="text/javascript"  charset="utf-8" src="js/bxslider/jquery.bxslider.min.js"></script-->
+    
+    <s:if test="%{isindex == true}">
+    <script type="text/javascript" src="js/main.js" charset="utf-8"></script>	
+    </s:if>
+    
+    <s:if test="%{ct_type == '0'}">
+    <s:if test="%{mm != null && mm != ''}"><script type="text/javascript" src="${mm}/js/common.js"></script></s:if>
+    </s:if>
+    <s:if test="%{ct_script != null && ct_script != ''}"><script type="text/javascript" src="${ct_script}"></script></s:if>
+    
+    <!-- jQuery UI -->
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+
+    <script>
+      // 후원하기
+      function myListener(obj) {
+        var amount_type = $(obj).val();
+        var all_amount = document.querySelectorAll('.spon_amount');
+
+        console.log(all_amount);
+        console.log(amount_type);
+
+        all_amount.forEach((allList) => {
+
+          allList.classList.add('show_n');
+
+          if(allList = amount_type) {
+            // alert(allList + '_allList');
+            // alert(amount_type + '_amount_type');
+            var amountClassName = '.'+amount_type;
+            // alert(amountClassName);
+
+            document.querySelector(amountClassName).classList.remove('show_n');
+            document.querySelector(amountClassName).classList.add('show_f');
+          }
+        })
+        
+
+
+
+
+// #section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount.show_n {display: none;}
+
+      } ; 
+
+      // $("#spon_type").change(function(obj){
+      //   var selectVal = $(obj).val();
+
+      //   alert(selectVal);
+      //   console.log(selectVal);
+      // })
+
+    </script>
+
+  </head>
+
+
+  <body class="pc">
+    <div id="wrap" class="show">
+      <a href="#main" id="skip_nav">본문바로가기</a>
+
+      <!-- 상단 배너 -->
+      <!-- <s:set name="topbanner_chk">false</s:set>
+      <s:iterator value="%{topbanners}" status="rowStatus">
+      <s:if test="%{#rowStatus.count > 0}">
+      <s:set name="topbanner_chk">true</s:set>
+      </s:if>
+      </s:iterator>
+
+      <s:if test="#topbanner_chk == 'true'"> -->
+
+
+
+      <div id="top_ban">
+        <div class="inwrap">
+          <div class="ban_wrap">
+            <s:iterator value="%{topbanners}" status="rowStatus">
+              <s:if test="%{#rowStatus.index < 2}">
+              <a href="#" onclick="fun_popup_open(${link_url},'${link_target}')" <c:if test="${link_target == '_blank'}">title="${comments}[새창]"</c:if>><img src="/upload/topbanner/${image_url_saved}" alt="${comments}" title="${title}"></a>
+              </s:if>
+            </s:iterator>
+          </div>
+
+          <div class="ban_footer">
+              <form name="form_topbanner_close">
+            <input type="checkbox" name="topbanner_chk" id="closeChack" value="" /><label for="closeChack">오늘 하루 보이지 않기</label>
+              <a href="javascript:fun_topbanner_close();" id="topbanner_close" class="btn_close">닫기</a>
+            </form>
+          </div>
+        </div>
+      </div>
+      </s:if>
+
+      </s:if>
+
+
+      <header id="header">
+        <script type="text/javascript">
+          function fun_pc_top_search()
+          {
+            var form = document.pc_search_form;
+
+            if(form.pc_sk.value == "")
+            {
+              alert("검색어를 입력 하세요.");
+              form.pc_sk.focus();
+              return false;
+            }
+
+            form.submit();
+          }
+
+          function fun_mob_top_search()
+          {
+            var form = document.mob_search_form;
+
+            if(form.mob_sk.value == "")
+            {
+              alert("검색어를 입력 하세요.");
+              form.mob_sk.focus();
+              return false;
+            }
+
+            form.submit();
+          }
+
+        </script>
+
+        <div id="pc_header">
+          <div class="header_top">
+            <div class="inwrap">
+              <ul class="top_util">
+
+                <c:if test="${empty session.session_login_seq}">
+                  <li><a title="로그인" href="/login/loginForm.action?url=${currentUrl}">로그인</a></li>
+                </c:if>
+
+                <c:if test="${!empty session.session_login_seq}">
+                  <li><a href="#uname">${session.session_login_name}</span>님 환영합니다.</a></li>
+                </c:if>
+
+                <c:if test="${!empty session.session_login_seq}">
+                  <li><a title="로그아웃" href="/login/logout.jsp?url=${currentUrl}">로그아웃</a></li>
+                </c:if>
+                <li><a href="/main/content.action?cmsid=101060200000">사이트맵</a></li>
+                <li>
+                  <a class="honor" href="/main/content.action?cmsid=101060200000">
+                    <svg width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill:#ffd43b;" d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"/></svg>
+                    명예의전당
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header_bottom">
+            <div class="nav_back"></div>
+            <div class="inwrap">
+              <h1><a href="../index.html"><img style="padding-top:27px;" src="../images/common/logo2.png" alt="전주시복지재단(JEONJU WELFARE FOUNDATION) 전주사람"/></a></h1>
+              <div id="pc_search" class="all_search">
+                <form name="pc_search_form" method="post" action="program.action" onsubmit="fun_pc_top_search(); return false" class="inner_box">
+                    <fieldset>
+                    <legend>통합검색</legend>
+                    <input type="hidden" name="method" value="">
+                    <input type="hidden" name="target" value="">
+                    <input type="hidden" name="cmsid" value="101060300000">
+                    <input type="hidden" name="idx" value="">
+                    <input type="hidden" name="page" value="1">
+                    <input type="hidden" name="psize" value="10">
+                    <label for="pc_sk"></label><input type="text" name="pc_sk" id="pc_sk" size="13" maxlength="15" value="" placeholder="검색어를 입력해주세요.">
+                    <input type="button" onclick="fun_pc_top_search();" class="search" value="검색"/>
+                    </fieldset>
+                </form>
+              </div>
+              <!-- <div class="nav_back"></div> -->
+              <nav id="pc_gnb">
+                <ul class="depth1">
+                  <li>
+                    <a href="../01/01_01.html" >후원안내</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="../01/01_01.html">희망천사</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_02.html">백만천사</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_03.html">기부천사</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_04.html">천사기업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_05.html">명예의전당</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_06.html">후원신청하기</a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a href="../02/02_01.html">사업안내</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="../02/02_01.html">나눔문화 활성사업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../02/02_02.html">복지정책조사 연구사업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../02/02_03.html">전주형 SOS긴급지원</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../02/02_04.html">사랑나눔간병비지원</a>
+                      </li>
+                      <li >
+                        <a href="../02/02_05_01.html">아동·청소년지원</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="./02_05_01.html"  >아동·청소년 새학기·새출발 지원사업</a></li>
+                          <li class="no_child"><a href="./02_05_02.html"  >엄마의 밥상</a></li>
+                          <li class="no_child"><a href="./02_05_03.html"  >지혜의 반찬</a></li>
+                        </ul>
+                      </li>
+                      <li class="no_child">
+                        <a href="../02/02_06.html">지정기탁사업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../02/02_07.html">위기·고립가구</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../02/02_08.html">금융복지사업</a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a href="../04/04_01.html">알림마당</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="../04/04_01.html">공지사항</a>
+                      </li>
+                      <li >
+                        <a href="../04/04_02_01.html">활동소식</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="../04/04_02_01.html">재단소식</a></li>
+                          <li class="no_child"><a href="../04/04_02_02.html">연간보고서</a></li>
+                          <li class="no_child"><a href="../04/04_02_03.html">웹진</a></li>
+                        </ul>
+                      </li>
+                      <li class="no_child">
+                        <a href="../04/04_03.html">참여신청</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../04/04_04.html">재단에 바랍니다</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../04/04_05.html">연구자료실</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../04/04_06.html">서식다운로드</a>
+                      </li>
+                      <li >
+                        <a href="../04/04_07_01.html">복지정보</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="../04/04_07_01.html">복지지도</a></li>
+                          <li class="no_child"><a href="../04/04_07_02.html">복지시설검색</a></li>
+                          <li class="no_child"><a href="../04/04_07_03.html">복지정보</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a href="./05_01.html" >재단소개</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="./05_01.html">인사말</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="./05_02.html">일반현황</a> 
+                      </li>
+                      <li class="no_child">
+                        <a href="./05_03.html">조직구성</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="./05_04.html">윤리경영</a>
+                      </li>
+                      <li>
+                        <a href="./05_05_01.html">정보공개</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="./05_05_01.html">정관</a></li>
+                          <li class="no_child"><a href="./05_05_02.html">경영목표·운영계획</a></li>
+                          <li class="no_child"><a href="./05_05_03.html">외부감시·조치시행</a></li>
+                          <li class="no_child"><a href="./05_05_04.html">신규채용 친인척현황</a></li>
+                          <li class="no_child"><a href="./05_05_05.html">세입세출 예상현황</a></li>
+                          <li class="no_child"><a href="./05_05_06.html">인건비예산·집행</a></li>
+                          <li class="no_child"><a href="./05_05_07.html">수의계약</a></li>
+                          <li class="no_child"><a href="./05_05_08.html">복리후생비</a></li>
+                          <li class="no_child"><a href="./05_05_09.html">업무추진비</a></li>
+                          <li class="no_child"><a href="./05_05_10.html">기부금모금액활용실적</a></li>
+                          <li class="no_child"><a href="./05_05_11.html">전년도 경산서</a></li>
+                          <li class="no_child"><a href="./05_05_12.html">기관장 성과계약 달성도</a></li>
+                          <li class="no_child"><a href="./05_05_13.html">경영실적 평가경과</a></li>
+                          <li class="no_child"><a href="./05_05_14.html">전년도임원·운영인력현황</a></li>
+                        </ul>
+                      </li>
+                      <li class="no_child">
+                        <a href="./05_06.html">찾아오시는길</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- 
+                  <s:iterator value="%{menu.children}" status="rowStatus">
+                    <s:if test="%{show == true && seq > 0}">
+                      <li>
+                        <a href="${url}" <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+  
+                        <s:if test="%{children.size > 0}">
+                          <ul class="depth2">
+  
+                            <s:iterator value="children" status="rowStatus">
+                              <s:if test="%{show == true && seq > 0}">
+                                <li <s:if test="%{children.size == 0}">class="no_child"</s:if>>
+                                  <a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+  
+                                  <s:if test="%{children.size > 0}">
+                                    <ul class="depth3">
+  
+                                      <s:iterator value="children" status="rowStatus">
+                                        <s:if test="%{show == true && seq > 0}">
+                                          <li <s:if test="%{children.size == 0}">class="no_child"</s:if>><a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a></li>
+                                        </s:if>
+                                      </s:iterator>
+  
+                                    </ul>
+                                  </s:if>
+                                </li>
+                              </s:if>
+                            </s:iterator>
+                          </ul>
+                        </s:if>
+                      </li>
+                    </s:if>
+                  </s:iterator> -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- //pc_header -->
+
+
+        <div id="mobile_header">
+          <div class="header_top">
+            <h1 class="logo"><a href="../index.html"><img style="height:100%; padding:15px 0px;" src="../images/common/logo2.png" alt="전주사람"/></a></h1>
+            <a href="" class="btn_menu">메뉴열기</a>
+          </div>
+
+          <div id="mobile_gnb">
+            <ul class="top_util">
+              <c:if test="${empty session.session_login_seq}">
+                <li><a title="로그인" href="/login/loginForm.action?url=${currentUrl}">로그인</a></li>
+              </c:if>
+
+              <c:if test="${!empty session.session_login_seq}">
+                <li><a href="#uname">${session.session_login_name}</span>님 환영합니다.</a></li>
+                <li><a title="로그아웃" href="/login/logout.jsp?url=${currentUrl}">로그아웃</a></li>
+              </c:if>
+
+              <li><a href="/main/content.action?cmsid=101060200000">사이트맵</a></li>
+              <li><a href="../01/01_05.html">명예의전당</a></li>
+            </ul>
+
+            <div id="mobile_search" class="all_search">
+              <form name="mob_search_form" method="post" action="program.action" onsubmit="fun_mob_top_search(); return false" class="inner_box">
+                <fieldset>
+                <legend>통합검색</legend>
+                <input type="hidden" name="method" value="">
+                <input type="hidden" name="target" value="">
+                <input type="hidden" name="cmsid" value="101060300000">
+                <input type="hidden" name="idx" value="">
+                <input type="hidden" name="page" value="1">
+                <input type="hidden" name="psize" value="10">
+                <label for="mob_sk"></label><input type="text" name="mob_sk" id="mob_sk" size="13" maxlength="15" value="" placeholder="검색어를 입력해주세요.">
+                <input type="button" onclick="fun_mob_top_search();" class="search" value="검색"/>
+                </fieldset>
+              </form>
+            </div>
+
+            <nav>
+              <ul class="depth1">
+                <li>
+                  <a href="../01/01_01.html" >후원안내</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="../01/01_01.html">희망천사</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_02.html">백만천사</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_03.html">기부천사</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_04.html">천사기업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_05.html">명예의전당</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_06.html">후원신청하기</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="../02/02_01.html">사업안내</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="../02/02_01.html">나눔문화 활성사업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../02/02_02.html">복지정책조사 연구사업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../02/02_03.html">전주형 SOS긴급지원</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../02/02_04.html">사랑나눔간병비지원</a>
+                    </li>
+                    <li >
+                      <a href="../02/02_05_01.html">아동·청소년지원</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="../02/02_05_01.html"  >아동·청소년 새학기·새출발 지원사업</a></li>
+                        <li class="no_child"><a href="../02/02_05_02.html"  >엄마의 밥상</a></li>
+                        <li class="no_child"><a href="../02/02_05_03.html"  >지혜의 반찬</a></li>
+                      </ul>
+                    </li>
+                    <li class="no_child">
+                      <a href="../02/02_06.html">지정기탁사업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../02/02_07.html">위기·고립가구</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../02/02_08.html">금융복지사업</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="../04/04_01.html">알림마당</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="../04/04_01.html">공지사항</a>
+                    </li>
+                    <li >
+                      <a href="../04/04_02_01.html">활동소식</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="../04/04_02_01.html">재단소식</a></li>
+                        <li class="no_child"><a href="../04/04_02_02.html">연간보고서</a></li>
+                        <li class="no_child"><a href="../04/04_02_03.html">웹진</a></li>
+                      </ul>
+                    </li>
+                    <li class="no_child">
+                      <a href="../04/04_03.html">참여신청</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../04/04_04.html">재단에 바랍니다</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../04/04_05.html">연구자료실</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../04/04_06.html">서식다운로드</a>
+                    </li>
+                    <li >
+                      <a href="../04/04_07_01.html">복지정보</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="../04/04_07_01.html">복지지도</a></li>
+                        <li class="no_child"><a href="../04/04_07_02.html">복지시설검색</a></li>
+                        <li class="no_child"><a href="../04/04_07_03.html">복지정보</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="./05_01.html" >재단소개</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="./05_01.html">인사말</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="./05_02.html">일반현황</a> 
+                    </li>
+                    <li class="no_child">
+                      <a href="./05_03.html">조직구성</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="./05_04.html">윤리경영</a>
+                    </li>
+                    <li>
+                      <a href="./05_05_01.html">정보공개</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="./05_05_01.html">정관</a></li>
+                        <li class="no_child"><a href="./05_05_02.html">경영목표·운영계획</a></li>
+                        <li class="no_child"><a href="./05_05_03.html">외부감시·조치시행</a></li>
+                        <li class="no_child"><a href="./05_05_04.html">신규채용 친인척현황</a></li>
+                        <li class="no_child"><a href="./05_05_05.html">세입세출 예상현황</a></li>
+                        <li class="no_child"><a href="./05_05_06.html">인건비예산·집행</a></li>
+                        <li class="no_child"><a href="./05_05_07.html">수의계약</a></li>
+                        <li class="no_child"><a href="./05_05_08.html">복리후생비</a></li>
+                        <li class="no_child"><a href="./05_05_09.html">업무추진비</a></li>
+                        <li class="no_child"><a href="./05_05_10.html">기부금모금액활용실적</a></li>
+                        <li class="no_child"><a href="./05_05_11.html">전년도 경산서</a></li>
+                        <li class="no_child"><a href="./05_05_12.html">기관장 성과계약 달성도</a></li>
+                        <li class="no_child"><a href="./05_05_13.html">경영실적 평가경과</a></li>
+                        <li class="no_child"><a href="./05_05_14.html">전년도임원·운영인력현황</a></li>
+                      </ul>
+                    </li>
+                    <li class="no_child">
+                      <a href="./05_06.html">찾아오시는길</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- 
+                <s:iterator value="%{menu.children}" status="rowStatus">
+                  <s:if test="%{show == true && seq > 0}">
+                    <li>
+                      <a href="${url}" <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                      <s:if test="%{children.size > 0}">
+                        <ul class="depth2">
+
+                          <s:iterator value="children" status="rowStatus">
+                            <s:if test="%{show == true && seq > 0}">
+                              <li <s:if test="%{children.size == 0}">class="no_child"</s:if>>
+                                <a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                                <s:if test="%{children.size > 0}">
+                                  <ul class="depth3">
+
+                                    <s:iterator value="children" status="rowStatus">
+                                      <s:if test="%{show == true && seq > 0}">
+                                        <li <s:if test="%{children.size == 0}">class="no_child"</s:if>><a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a></li>
+                                      </s:if>
+                                    </s:iterator>
+
+                                  </ul>
+                                </s:if>
+                              </li>
+                            </s:if>
+                          </s:iterator>
+                        </ul>
+                      </s:if>
+                    </li>
+                  </s:if>
+                </s:iterator> -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- //mobile_header -->
+
+      </header>
+
+
+
+
+
+
+
+
+      <!-- 메인 콘텐츠 -->
+      <p class="dimmed_bg"></p>
+
+      <main id="main" class="sub">
+        <div id="lnb">
+          <ul>
+            <li class="home no_child"><a href="/main/main.action">HOME</a></li>
+            <li>
+              <a href="javascript:;">재단소개</a>
+              <ul class="sub">
+                <li ><a href="../01/01_01.html">후원안내</a></li>
+                <li ><a href="../02/02_01.html">사업안내</a></li>
+                <li ><a href="../04/04_01.html">알림마당</a></li>
+                <li class="on"><a href="./05_01.html">재단소개</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">정보공개</a>
+              <ul class="sub">
+                <li class=""><a href="./05_01.html">인사말</a></li>
+                <li class=" "><a href="./05_02.html">일반현황</a></li>
+                <li class=" "><a href="./05_03.html">조직구성</a></li>
+                <li class=" "><a href="./05_04.html">윤리경영</a></li>
+                <li class="on"><a href="./05_05_01.html">정보공개</a></li>
+                <li class=" "><a href="./05_06.html">찾아오시는길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">정관</a>
+              <ul class="sub">
+                <li class="on"><a href="./05_05_01.html">정관</a></li>
+                <li class=" "><a href="./05_05_02.html">경영목표·운영계획</a></li>
+                <li class=" "><a href="./05_05_03.html">외부감시·조치시행</a></li>
+                <li class=" "><a href="./05_05_04.html">신규채용 친인척현황</a></li>
+                <li class=" "><a href="./05_05_05.html">세입세출 예상현황</a></li>
+                <li class=" "><a href="./05_05_06.html">인건비예산·집행</a></li>
+                <li class=" "><a href="./05_05_07.html">수의계약</a></li>
+                <li class=" "><a href="./05_05_08.html">복리후생비</a></li>
+                <li class=" "><a href="./05_05_09.html">업무추진비</a></li>
+                <li class=" "><a href="./05_05_10.html">기부금모금액활용실적</a></li>
+                <li class=" "><a href="./05_05_11.html">전년도 경산서</a></li>
+                <li class=" "><a href="./05_05_12.html">기관장 성과계약 달성도</a></li>
+                <li class=" "><a href="./05_05_13.html">경영실적 평가경과</a></li>
+                <li class=" "><a href="./05_05_14.html">전년도임원·운영인력현황</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sub_top">
+          <h2>정보공개</h2>
+          <ul class="sub_top_link">
+            <li><a href="#facebook" onclick="toSNS('facebook', '');" title="새창"><img src="../images/icon/icon_facebook.png" alt="페이스북"/></a>
+            <li><a href="#twitter" onclick="toSNS('twitter', '')" title="새창"><img src="../images/icon/icon_twitter.png" alt="트위터"/></a>
+            <li><a href="#print" onclick="window.print();" title="인쇄보기 바로가기[새창]"><img src="../images/icon/icon_print.png" alt="프린트"/></a>
+          </ul>
+        </div>
+        
+        <div id="contents">
+          <div class="contents_wrap">
+            
+            <!-- 서브 : 3depth -->
+
+            
+            <!-- 서브 : 4depth -->
+
+            
+            
+            <!-- 서브 : 5depth -->
+
+            <div class="contents_html">
+              <!-- 콘텐츠   -->
+              <!-- <div class='theme_menu'>
+                <ul>
+                  <li><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;st=0&amp;sk='>전체</a></li>
+                  <li><a class='on' href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;st=0&amp;sk=&amp;cc=100'>정관</a></li>
+                  <li><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;st=0&amp;sk=&amp;cc=101'>경영공시</a></li>
+                  <li><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;st=0&amp;sk=&amp;cc=102'>업무추진비</a></li>
+                  <li><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;st=0&amp;sk=&amp;cc=103'>수의계약내역공개</a></li>
+                  <li><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;st=0&amp;sk=&amp;cc=104'>연간 기부금 모금액 및 활용실적</a></li>
+                </ul>
+              </div> -->
+                
+                
+              <div class="notice_wrap">	
+                                            
+                <!-- basic_sch -->
+                <div class="basic_sch">
+              
+                  <form name="board_form" method="post" action="board.action" onsubmit="return fun_search();" class="inner_box">
+                    
+                    <fieldset class="search_area">
+                      <legend class="HIDE">검색</legend>
+                      <input type="hidden" name="method"    value="" />
+                      <input type="hidden" name="target"    value="" />
+                      <input type="hidden" name="cmsid"     value="101050700000" />
+                      <input type="hidden" name="idx"       value="" />
+                      <input type="hidden" name="page"      value="1" />
+                      <input type="hidden" name="cc"        value="100" />
+                      <input type="hidden" name="psize"     value="10" />
+                      <!-- row -->
+                      
+                      <div class="row">										
+                        <!-- slt_box -->
+                        <div class="slt_box">
+                          <label for="st" class="HIDE">검색범위 선택</label>
+                          <select name="st" size="1" id="st" class="formControl">
+                            <option value='0' selected='selected'>제목</option>
+                            <option value='1'>내용</option>
+                            <option value='2'>작성자</option>
+                          </select>
+                        </div>
+                        <!-- // slt_box -->
+                        <div class="input_box">     
+                          <label for="sk" class="HIDE">검색어</label>
+                          <input type="text" name="sk" id="sk" class="input" size="13" maxlength="15" value="" placeholder="검색어를 입력해주세요." />
+                        </div>
+                      </div>
+                      <!-- // row -->
+                  
+                      <button type="submit" id="search" class="st_sch_btn" title="게시글 검색"><span>검색</span></button>
+                      <button type="button" id="all_view" onclick="fun_search_clear();" class="st_sch_btn_all" title="전체게시글 보기"><span>전체보기</span></button>
+                    </fieldset>
+                  </form>
+          
+                </div>
+                <!-- // basic_sch -->
+              
+                <!-- total / m-->
+                <div class="basic_box mt_30">
+                  <div class="inner">
+                  
+                    <p class="fl board_total"><span class="red bold">Total </span><span class="bold"> 7 </span> &nbsp;|&nbsp; <span class="ColorGry01">Page </span><span> <b>1</b> / 1</span> </p>
+                    
+                    
+                    <div class="fr sortmenu">
+                      <label for="pageSize" class="skip">출력갯수 선택</label>
+                      <select id="pageSize" onchange="fun_pagesize(this.value)">
+                        <option value="10" selected>10개 출력</option>
+                        <option value="30" >30개 출력</option>
+                        <option value="50" >50개 출력</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+            
+                <table class="basic_table tc list">
+                  <caption class="HIDE">
+                    <strong>정보공개 목록</strong>
+                    <p>정보공개 목록 게시물 항목(번호, 제목, 첨부, 작성자, 작성일, 조회등)를 볼수 있고 제목 링크를 통해서 게시물 상세 내용으로 이동합니다.</p>
+                  </caption>
+            
+                  <thead>
+                    <tr class='first_line'>
+                      <th scope='col' class='bt_num' style='width:8%;'>번호</th>
+                      <th scope='col' style='width:15%;'>구분</th>
+                      <th scope='col' style='width:36%;'>제목</th>
+                      <th scope='col' class='bt_file' style='width:6%;'>첨부</th>
+                      <th scope='col' class='bt_name' style='width:18%;'>작성자</th>
+                      <th scope='col' class='bt_date' style='width:15%;'>작성일</th>
+                      <th scope='col' class='bt_count' style='width:8%;'>조회</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class='bt_num'>7</td>
+                      <td class='tit'>100</td>
+                      <td class='tl tit'><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;cc=100&amp;st=0&amp;sk=&amp;method=v&amp;idx=385&amp;page=1' alt='수의계약 내역공개(2024.05.)' title='수의계약 내역공개(2024.05.)'>수의계약 내역공개(2024.05.)</a></td>
+                      <td class='bt_file'><img src='../images/file/hwp.gif' alt='한글파일' width='16' height='16' border='0' /></td>
+                      <td class='bt_name'>전주사람</td>
+                      <td class='bt_date'>2024-05-31</td>
+                      <td class='bt_count'>18</td>
+                    </tr>
+                    <tr>
+                      <td class='bt_num'>6</td>
+                      <td class='tit'>100</td>
+                      <td class='tl tit'><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;cc=100&amp;st=0&amp;sk=&amp;method=v&amp;idx=355&amp;page=1' alt='정관(개정 2023.08.23)' title='정관(개정 2023.08.23)'>정관(개정 2023.08.23)</a></td>
+                      <td class='bt_file'><img src='../images/file/hwp.gif' alt='한글파일' width='16' height='16' border='0' /></td>
+                      <td class='bt_name'>전주사람</td>
+                      <td class='bt_date'>2023-09-01</td>
+                      <td class='bt_count'>286</td>
+                    </tr>
+                    <tr>
+                      <td class='bt_num'>5</td>
+                      <td class='tit'>100</td>
+                      <td class='tl tit'><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;cc=100&amp;st=0&amp;sk=&amp;method=v&amp;idx=338&amp;page=1' alt='정관(개정 2023.02.17)' title='정관(개정 2023.02.17)'>정관(개정 2023.02.17)</a></td>
+                      <td class='bt_file'><img src='../images/file/pdf.gif' alt='PDF파일' width='16' height='16' border='0' /></td>
+                      <td class='bt_name'>전주사람</td>
+                      <td class='bt_date'>2023-04-06</td>
+                      <td class='bt_count'>373</td>
+                    </tr>
+                    <tr>
+                      <td class='bt_num'>4</td>
+                      <td class='tit'>100</td>
+                      <td class='tl tit'><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;cc=100&amp;st=0&amp;sk=&amp;method=v&amp;idx=152&amp;page=1' alt='정관 (개정 2019.10. 31.)' title='정관 (개정 2019.10. 31.)'>정관 (개정 2019.10. 31.)</a></td>
+                      <td class='bt_file'><img src='../images/file/pdf.gif' alt='PDF파일' width='16' height='16' border='0' /></td>
+                      <td class='bt_name'>전주사람</td>
+                      <td class='bt_date'>2020-02-28</td>
+                      <td class='bt_count'>1308</td>
+                    </tr>
+                    <tr>
+                      <td class='bt_num'>3</td>
+                      <td class='tit'>100</td>
+                      <td class='tl tit'><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;cc=100&amp;st=0&amp;sk=&amp;method=v&amp;idx=118&amp;page=1' alt='정관 (개정 2019.01.07.)' title='정관 (개정 2019.01.07.)'>정관 (개정 2019.01.07.)</a></td>
+                      <td class='bt_file'><img src='../images/file/pdf.gif' alt='PDF파일' width='16' height='16' border='0' /></td>
+                      <td class='bt_name'>전주사람</td>
+                      <td class='bt_date'>2019-09-02</td>
+                      <td class='bt_count'>1283</td>
+                    </tr>
+                    <tr>
+                      <td class='bt_num'>2</td>
+                      <td class='tit'>100</td>
+                      <td class='tl tit'><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;cc=100&amp;st=0&amp;sk=&amp;method=v&amp;idx=117&amp;page=1' alt='정관 (제정 2018.11.16.)' title='정관 (제정 2018.11.16.)'>정관 (제정 2018.11.16.)</a></td>
+                      <td class='bt_file'><img src='../images/file/pdf.gif' alt='PDF파일' width='16' height='16' border='0' /></td>
+                      <td class='bt_name'>전주사람</td>
+                      <td class='bt_date'>2019-09-02</td>
+                      <td class='bt_count'>1268</td>
+                    </tr>
+                    <tr>
+                      <td class='bt_num'>1</td>
+                      <td class='tit'>100</td>
+                      <td class='tl tit'><a href='board.action?cmsid=101050700000&amp;target=&amp;psize=10&amp;cc=100&amp;st=0&amp;sk=&amp;method=v&amp;idx=116&amp;page=1' alt='전주시 복지재단 설립 및 운영에 관한 조례(2017.10.30.)' title='전주시 복지재단 설립 및 운영에 관한 조례(2017.10.30.)'>전주시 복지재단 설립 및 운영에 관한 조례(201...</a></td>
+                      <td class='bt_file'><img src='../images/file/pdf.gif' alt='PDF파일' width='16' height='16' border='0' /></td>
+                      <td class='bt_name'>전주사람</td>
+                      <td class='bt_date'>2019-09-02</td>
+                      <td class='bt_count'>1230</td>
+                    </tr>
+                  </tbody>
+              
+                </table>
+
+                <div class="pagination">
+                  <ul>
+                    <li class='first'><a href='#first' title='첫페이지 이동'><span style='display: none'>첫 페이지 이동</span></a></li>
+                    <li class='prev'><a href='#previ' title='이전 페이지 이동'><span style='display: none'>이전 페이지 이동</span></a></li>
+                    <li><a href='#1' class='active'>1</a></li>
+                    <li class='next'><a href='#next' title='다음 페이지 이동'><span style='display: none'>다음 페이지 이동</span></a></li>
+                    <li class='last'><a href='#last' title='마지막 페이지 이동'><span style='display: none'>마지막 페이지 이동</span></a></li>
+                  </ul>
+                </div>
+              </div>
+                
+              <!-- 디버깅 후 삭제 -->
+            </div>
+            
+          </div>
+        </div>
+      
+      </main>	
+
+
+
+      <!-- 푸터 -->
+      <footer id="footer">
+        <ul class="fmenu">
+          <li><a href="/main/content.action?cmsid=101060500000">이용약관</a></li>
+          <li><a href="/main/content.action?cmsid=101060100000">개인정보처리방침</a></li>
+          <li><a href="/main/content.action?cmsid=101060400000">이메일무단수집거부</a></li>
+          <li><a href="/main/content.action?cmsid=101050800000">찾아오시는길</a></li>
+        </ul>
+
+        <div class="fcont">
+          <img src="../images/common/b_logo.png" alt="전주사람" class="b_logo"/>
+          <address>
+            <p><span>[54999] 전주시 완산구 전주객사2길 12-8(2층)</span><span>TEL. 063-281-0050</span><span>FAX. 063-281-0051</span></p>
+            <p><span>상호명) 재단법인 전주시복지재단 전주사람</span><span>[대표자명] 윤방섭</span>[사업자등록번호] 849-82-00212</span><span>[기관대표메일주소] jjwf1004@daum.net</span></p>
+            <p><span>COPYRIGHT ⓒ 2024. JEONJUSARAM ALL RIGHTS RESEVED.</span></p>
+          </address>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

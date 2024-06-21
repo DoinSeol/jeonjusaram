@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new)전주시복지재단</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type"    content="text/html; charset=utf-8" />
+    <meta name="format-detection"      content="telephone=no,email=no,address=no" />
+    <meta name="viewport"              content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="title"                 content="" />
+    <meta name="description"           content="" />
+    
+    <meta name="author"      content="전주시복지재단 전주사람" />
+    <meta name="keywords"    content="전주시복지재단 전주사람 홈페이지" />
+    <meta name="description" content="전주시복지재단 전주사람" />
+    <meta name="copyright"   content="Copyright(c)2019 JJWF. All Rights Reserved." />
+    
+    <meta name="robots"             content="index,follow">
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="전주시복지재단 전주사람">
+    <meta property="og:description" content="전주시복지재단 전주사람">
+    <meta property="og:url"         content="http://www.jjwf.or.kr/main/main.action">
+    <meta property="og:image"       content="../images/open_graph.jpg">
+
+
+    <!-- // 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    
+    <!-- // 메인 CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+    <!-- // 서브 CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    <link rel="stylesheet" type="text/css" href="../css/board.css" />
+    
+    <!-- // 서브 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="../00/css/common.css" />
+    
+    <!-- // 서브 CMSID 대응 CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="${ct_css}" /> -->
+
+    <!-- // jQuery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+
+
+    <!--script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script-->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script> <!--메뉴-->
+    
+    <!--script type="text/javascript" src="/js/common.js" charset="utf-8"></script-->
+    <script type="text/javascript" src="../js/common.js" charset="utf-8"></script>
+    
+    <!--script type="text/javascript"  charset="utf-8" src="js/bxslider/jquery.bxslider.min.js"></script-->
+    
+    <s:if test="%{isindex == true}">
+    <script type="text/javascript" src="js/main.js" charset="utf-8"></script>	
+    </s:if>
+    
+    <s:if test="%{ct_type == '0'}">
+    <s:if test="%{mm != null && mm != ''}"><script type="text/javascript" src="${mm}/js/common.js"></script></s:if>
+    </s:if>
+    <s:if test="%{ct_script != null && ct_script != ''}"><script type="text/javascript" src="${ct_script}"></script></s:if>
+    
+    <!-- jQuery UI -->
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+
+    <script>
+      // 후원하기
+      function myListener(obj) {
+        var amount_type = $(obj).val();
+        var all_amount = document.querySelectorAll('.spon_amount');
+
+        console.log(all_amount);
+        console.log(amount_type);
+
+        all_amount.forEach((allList) => {
+
+          allList.classList.add('show_n');
+
+          if(allList = amount_type) {
+            // alert(allList + '_allList');
+            // alert(amount_type + '_amount_type');
+            var amountClassName = '.'+amount_type;
+            // alert(amountClassName);
+
+            document.querySelector(amountClassName).classList.remove('show_n');
+            document.querySelector(amountClassName).classList.add('show_f');
+          }
+        })
+        
+
+
+
+
+// #section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount.show_n {display: none;}
+
+      } ; 
+
+      // $("#spon_type").change(function(obj){
+      //   var selectVal = $(obj).val();
+
+      //   alert(selectVal);
+      //   console.log(selectVal);
+      // })
+
+    </script>
+
+  </head>
+
+
+  <body class="pc">
+    <div id="wrap" class="show">
+      <a href="#main" id="skip_nav">본문바로가기</a>
+
+      <!-- 상단 배너 -->
+      <!-- <s:set name="topbanner_chk">false</s:set>
+      <s:iterator value="%{topbanners}" status="rowStatus">
+      <s:if test="%{#rowStatus.count > 0}">
+      <s:set name="topbanner_chk">true</s:set>
+      </s:if>
+      </s:iterator>
+
+      <s:if test="#topbanner_chk == 'true'"> -->
+
+
+
+      <div id="top_ban">
+        <div class="inwrap">
+          <div class="ban_wrap">
+            <s:iterator value="%{topbanners}" status="rowStatus">
+              <s:if test="%{#rowStatus.index < 2}">
+              <a href="#" onclick="fun_popup_open(${link_url},'${link_target}')" <c:if test="${link_target == '_blank'}">title="${comments}[새창]"</c:if>><img src="/upload/topbanner/${image_url_saved}" alt="${comments}" title="${title}"></a>
+              </s:if>
+            </s:iterator>
+          </div>
+
+          <div class="ban_footer">
+              <form name="form_topbanner_close">
+            <input type="checkbox" name="topbanner_chk" id="closeChack" value="" /><label for="closeChack">오늘 하루 보이지 않기</label>
+              <a href="javascript:fun_topbanner_close();" id="topbanner_close" class="btn_close">닫기</a>
+            </form>
+          </div>
+        </div>
+      </div>
+      </s:if>
+
+      </s:if>
+
+
+      <header id="header">
+        <script type="text/javascript">
+          function fun_pc_top_search()
+          {
+            var form = document.pc_search_form;
+
+            if(form.pc_sk.value == "")
+            {
+              alert("검색어를 입력 하세요.");
+              form.pc_sk.focus();
+              return false;
+            }
+
+            form.submit();
+          }
+
+          function fun_mob_top_search()
+          {
+            var form = document.mob_search_form;
+
+            if(form.mob_sk.value == "")
+            {
+              alert("검색어를 입력 하세요.");
+              form.mob_sk.focus();
+              return false;
+            }
+
+            form.submit();
+          }
+
+        </script>
+
+        <div id="pc_header">
+          <div class="header_top">
+            <div class="inwrap">
+              <ul class="top_util">
+
+                <c:if test="${empty session.session_login_seq}">
+                  <li><a title="로그인" href="/login/loginForm.action?url=${currentUrl}">로그인</a></li>
+                </c:if>
+
+                <c:if test="${!empty session.session_login_seq}">
+                  <li><a href="#uname">${session.session_login_name}</span>님 환영합니다.</a></li>
+                </c:if>
+
+                <c:if test="${!empty session.session_login_seq}">
+                  <li><a title="로그아웃" href="/login/logout.jsp?url=${currentUrl}">로그아웃</a></li>
+                </c:if>
+                <li><a href="/main/content.action?cmsid=101060200000">사이트맵</a></li>
+                <li>
+                  <a class="honor" href="/main/content.action?cmsid=101060200000">
+                    <svg width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill:#ffd43b;" d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"/></svg>
+                    명예의전당
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header_bottom">
+            <div class="nav_back"></div>
+            <div class="inwrap">
+              <h1><a href="../index.html"><img style="padding-top:27px;" src="../images/common/logo2.png" alt="전주시복지재단(JEONJU WELFARE FOUNDATION) 전주사람"/></a></h1>
+              <div id="pc_search" class="all_search">
+                <form name="pc_search_form" method="post" action="program.action" onsubmit="fun_pc_top_search(); return false" class="inner_box">
+                    <fieldset>
+                    <legend>통합검색</legend>
+                    <input type="hidden" name="method" value="">
+                    <input type="hidden" name="target" value="">
+                    <input type="hidden" name="cmsid" value="101060300000">
+                    <input type="hidden" name="idx" value="">
+                    <input type="hidden" name="page" value="1">
+                    <input type="hidden" name="psize" value="10">
+                    <label for="pc_sk"></label><input type="text" name="pc_sk" id="pc_sk" size="13" maxlength="15" value="" placeholder="검색어를 입력해주세요.">
+                    <input type="button" onclick="fun_pc_top_search();" class="search" value="검색"/>
+                    </fieldset>
+                </form>
+              </div>
+              <!-- <div class="nav_back"></div> -->
+              <nav id="pc_gnb">
+                <ul class="depth1">
+                  <li>
+                    <a href="../01/01_01.html" >후원안내</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="../01/01_01.html">희망천사</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_02.html">백만천사</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_03.html">기부천사</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_04.html">천사기업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_05.html">명예의전당</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../01/01_06.html">후원신청하기</a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a href="./02_01.html">사업안내</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="./02_01.html">나눔문화 활성사업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="./02_02.html">복지정책조사 연구사업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="./02_03.html">전주형 SOS긴급지원</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="./02_04.html">사랑나눔간병비지원</a>
+                      </li>
+                      <li >
+                        <a href="./02_05_01.html">아동·청소년지원</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="./02_05_01.html"  >아동·청소년 새학기·새출발 지원사업</a></li>
+                          <li class="no_child"><a href="./02_05_02.html"  >엄마의 밥상</a></li>
+                          <li class="no_child"><a href="./02_05_03.html"  >지혜의 반찬</a></li>
+                        </ul>
+                      </li>
+                      <li class="no_child">
+                        <a href="./02_06.html">지정기탁사업</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="./02_07.html">위기·고립가구</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="./02_08.html">금융복지사업</a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a href="../04/04_01.html">알림마당</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="../04/04_01.html">공지사항</a>
+                      </li>
+                      <li >
+                        <a href="../04/04_02_01.html">활동소식</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="../04/04_02_01.html">재단소식</a></li>
+                          <li class="no_child"><a href="../04/04_02_02.html">연간보고서</a></li>
+                          <li class="no_child"><a href="../04/04_02_03.html">웹진</a></li>
+                        </ul>
+                      </li>
+                      <li class="no_child">
+                        <a href="../04/04_03.html">참여신청</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../04/04_04.html">재단에 바랍니다</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../04/04_05.html">연구자료실</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../04/04_06.html">서식다운로드</a>
+                      </li>
+                      <li >
+                        <a href="../04/04_07_01.html">복지정보</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="../04/04_07_01.html">복지지도</a></li>
+                          <li class="no_child"><a href="../04/04_07_02.html">복지시설검색</a></li>
+                          <li class="no_child"><a href="../04/04_07_03.html">복지정보</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a href="../05/05_01.html" >재단소개</a>
+                    <ul class="depth2">
+                      <li class="no_child">
+                        <a href="../05/05_01.html">인사말</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../05/05_02.html">일반현황</a> 
+                      </li>
+                      <li class="no_child">
+                        <a href="../05/05_03.html">조직구성</a>
+                      </li>
+                      <li class="no_child">
+                        <a href="../05/05_04.html">윤리경영</a>
+                      </li>
+                      <li>
+                        <a href="../05/05_05_01.html">정보공개</a>
+                        <ul class="depth3">
+                          <li class="no_child"><a href="../05/05_05_01.html">정관</a></li>
+                          <li class="no_child"><a href="../05/05_05_02.html">경영목표·운영계획</a></li>
+                          <li class="no_child"><a href="../05/05_05_03.html">외부감시·조치시행</a></li>
+                          <li class="no_child"><a href="../05/05_05_04.html">신규채용 친인척현황</a></li>
+                          <li class="no_child"><a href="../05/05_05_05.html">세입세출 예상현황</a></li>
+                          <li class="no_child"><a href="../05/05_05_06.html">인건비예산·집행</a></li>
+                          <li class="no_child"><a href="../05/05_05_07.html">수의계약</a></li>
+                          <li class="no_child"><a href="../05/05_05_08.html">복리후생비</a></li>
+                          <li class="no_child"><a href="../05/05_05_09.html">업무추진비</a></li>
+                          <li class="no_child"><a href="../05/05_05_10.html">기부금모금액활용실적</a></li>
+                          <li class="no_child"><a href="../05/05_05_11.html">전년도 경산서</a></li>
+                          <li class="no_child"><a href="../05/05_05_12.html">기관장 성과계약 달성도</a></li>
+                          <li class="no_child"><a href="../05/05_05_13.html">경영실적 평가경과</a></li>
+                          <li class="no_child"><a href="../05/05_05_14.html">전년도임원·운영인력현황</a></li>
+                        </ul>
+                      </li>
+                      <li class="no_child">
+                        <a href="../05/05_06.html">찾아오시는길</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- 
+                  <s:iterator value="%{menu.children}" status="rowStatus">
+                    <s:if test="%{show == true && seq > 0}">
+                      <li>
+                        <a href="${url}" <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+  
+                        <s:if test="%{children.size > 0}">
+                          <ul class="depth2">
+  
+                            <s:iterator value="children" status="rowStatus">
+                              <s:if test="%{show == true && seq > 0}">
+                                <li <s:if test="%{children.size == 0}">class="no_child"</s:if>>
+                                  <a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+  
+                                  <s:if test="%{children.size > 0}">
+                                    <ul class="depth3">
+  
+                                      <s:iterator value="children" status="rowStatus">
+                                        <s:if test="%{show == true && seq > 0}">
+                                          <li <s:if test="%{children.size == 0}">class="no_child"</s:if>><a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a></li>
+                                        </s:if>
+                                      </s:iterator>
+  
+                                    </ul>
+                                  </s:if>
+                                </li>
+                              </s:if>
+                            </s:iterator>
+                          </ul>
+                        </s:if>
+                      </li>
+                    </s:if>
+                  </s:iterator> -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- //pc_header -->
+
+
+        <div id="mobile_header">
+          <div class="header_top">
+            <h1 class="logo"><a href="../index.html"><img style="height:100%; padding:15px 0px;" src="../images/common/logo2.png" alt="전주사람"/></a></h1>
+            <a href="" class="btn_menu">메뉴열기</a>
+          </div>
+
+          <div id="mobile_gnb">
+            <ul class="top_util">
+              <c:if test="${empty session.session_login_seq}">
+                <li><a title="로그인" href="/login/loginForm.action?url=${currentUrl}">로그인</a></li>
+              </c:if>
+
+              <c:if test="${!empty session.session_login_seq}">
+                <li><a href="#uname">${session.session_login_name}</span>님 환영합니다.</a></li>
+                <li><a title="로그아웃" href="/login/logout.jsp?url=${currentUrl}">로그아웃</a></li>
+              </c:if>
+
+              <li><a href="/main/content.action?cmsid=101060200000">사이트맵</a></li>
+              <li><a href="../01/01_05.html">명예의전당</a></li>
+            </ul>
+
+            <div id="mobile_search" class="all_search">
+              <form name="mob_search_form" method="post" action="program.action" onsubmit="fun_mob_top_search(); return false" class="inner_box">
+                <fieldset>
+                <legend>통합검색</legend>
+                <input type="hidden" name="method" value="">
+                <input type="hidden" name="target" value="">
+                <input type="hidden" name="cmsid" value="101060300000">
+                <input type="hidden" name="idx" value="">
+                <input type="hidden" name="page" value="1">
+                <input type="hidden" name="psize" value="10">
+                <label for="mob_sk"></label><input type="text" name="mob_sk" id="mob_sk" size="13" maxlength="15" value="" placeholder="검색어를 입력해주세요.">
+                <input type="button" onclick="fun_mob_top_search();" class="search" value="검색"/>
+                </fieldset>
+              </form>
+            </div>
+
+            <nav>
+              <ul class="depth1">
+                <li>
+                  <a href="../01/01_01.html" >후원안내</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="../01/01_01.html">희망천사</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_02.html">백만천사</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_03.html">기부천사</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_04.html">천사기업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_05.html">명예의전당</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../01/01_06.html">후원신청하기</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="./02_01.html">사업안내</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="./02_01.html">나눔문화 활성사업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="./02_02.html">복지정책조사 연구사업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="./02_03.html">전주형 SOS긴급지원</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="./02_04.html">사랑나눔간병비지원</a>
+                    </li>
+                    <li >
+                      <a href="./02_05_01.html">아동·청소년지원</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="./02_05_01.html"  >아동·청소년 새학기·새출발 지원사업</a></li>
+                        <li class="no_child"><a href="./02_05_02.html"  >엄마의 밥상</a></li>
+                        <li class="no_child"><a href="./02_05_03.html"  >지혜의 반찬</a></li>
+                      </ul>
+                    </li>
+                    <li class="no_child">
+                      <a href="./02_06.html">지정기탁사업</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="./02_07.html">위기·고립가구</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="./02_08.html">금융복지사업</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="../04/04_01.html">알림마당</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="../04/04_01.html">공지사항</a>
+                    </li>
+                    <li >
+                      <a href="../04/04_02_01.html">활동소식</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="../04/04_02_01.html">재단소식</a></li>
+                        <li class="no_child"><a href="../04/04_02_02.html">연간보고서</a></li>
+                        <li class="no_child"><a href="../04/04_02_03.html">웹진</a></li>
+                      </ul>
+                    </li>
+                    <li class="no_child">
+                      <a href="../04/04_03.html">참여신청</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../04/04_04.html">재단에 바랍니다</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../04/04_05.html">연구자료실</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../04/04_06.html">서식다운로드</a>
+                    </li>
+                    <li >
+                      <a href="../04/04_07_01.html">복지정보</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="../04/04_07_01.html">복지지도</a></li>
+                        <li class="no_child"><a href="../04/04_07_02.html">복지시설검색</a></li>
+                        <li class="no_child"><a href="../04/04_07_03.html">복지정보</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="../05/05_01.html" >재단소개</a>
+                  <ul class="depth2">
+                    <li class="no_child">
+                      <a href="../05/05_01.html">인사말</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../05/05_02.html">일반현황</a> 
+                    </li>
+                    <li class="no_child">
+                      <a href="../05/05_03.html">조직구성</a>
+                    </li>
+                    <li class="no_child">
+                      <a href="../05/05_04.html">윤리경영</a>
+                    </li>
+                    <li>
+                      <a href="../05/05_05_01.html">정보공개</a>
+                      <ul class="depth3">
+                        <li class="no_child"><a href="../05/05_05_01.html">정관</a></li>
+                        <li class="no_child"><a href="../05/05_05_02.html">경영목표·운영계획</a></li>
+                        <li class="no_child"><a href="../05/05_05_03.html">외부감시·조치시행</a></li>
+                        <li class="no_child"><a href="../05/05_05_04.html">신규채용 친인척현황</a></li>
+                        <li class="no_child"><a href="../05/05_05_05.html">세입세출 예상현황</a></li>
+                        <li class="no_child"><a href="../05/05_05_06.html">인건비예산·집행</a></li>
+                        <li class="no_child"><a href="../05/05_05_07.html">수의계약</a></li>
+                        <li class="no_child"><a href="../05/05_05_08.html">복리후생비</a></li>
+                        <li class="no_child"><a href="../05/05_05_09.html">업무추진비</a></li>
+                        <li class="no_child"><a href="../05/05_05_10.html">기부금모금액활용실적</a></li>
+                        <li class="no_child"><a href="../05/05_05_11.html">전년도 경산서</a></li>
+                        <li class="no_child"><a href="../05/05_05_12.html">기관장 성과계약 달성도</a></li>
+                        <li class="no_child"><a href="../05/05_05_13.html">경영실적 평가경과</a></li>
+                        <li class="no_child"><a href="../05/05_05_14.html">전년도임원·운영인력현황</a></li>
+                      </ul>
+                    </li>
+                    <li class="no_child">
+                      <a href="../05/05_06.html">찾아오시는길</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- 
+                <s:iterator value="%{menu.children}" status="rowStatus">
+                  <s:if test="%{show == true && seq > 0}">
+                    <li>
+                      <a href="${url}" <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                      <s:if test="%{children.size > 0}">
+                        <ul class="depth2">
+
+                          <s:iterator value="children" status="rowStatus">
+                            <s:if test="%{show == true && seq > 0}">
+                              <li <s:if test="%{children.size == 0}">class="no_child"</s:if>>
+                                <a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a>
+
+                                <s:if test="%{children.size > 0}">
+                                  <ul class="depth3">
+
+                                    <s:iterator value="children" status="rowStatus">
+                                      <s:if test="%{show == true && seq > 0}">
+                                        <li <s:if test="%{children.size == 0}">class="no_child"</s:if>><a href="${url}" <c:if test="${target == '_blank'}">class="blank"</c:if> <s:if test="%{target!=''}">target="${target}"</s:if>>${title}</a></li>
+                                      </s:if>
+                                    </s:iterator>
+
+                                  </ul>
+                                </s:if>
+                              </li>
+                            </s:if>
+                          </s:iterator>
+                        </ul>
+                      </s:if>
+                    </li>
+                  </s:if>
+                </s:iterator> -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- //mobile_header -->
+
+      </header>
+
+
+
+
+
+
+
+
+      <!-- 메인 콘텐츠 -->
+      <p class="dimmed_bg"></p>
+
+      <main id="main" class="sub">
+        <div id="lnb">
+          <ul>
+            <li class="home no_child"><a href="/main/main.action">HOME</a></li>
+            <li>
+              <a href="javascript:;">사업안내</a>
+              <ul class="sub">
+                <li ><a href="../01/01_01.html">후원안내</a></li>
+                <li class="on"><a href="./02_01.html">사업안내</a></li>
+                <li ><a href="../04/04_01.html">알림마당</a></li>
+                <li ><a href="../05/05_01.html">재단소개</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;">금융복지사업</a>
+              <ul class="sub">
+                <li class=" "><a href="../02/02_01.html">나눔문화활성화사업</a></li>
+                <li class=" "><a href="../02/02_02.html">복지정책조사 연구사업</a></li>
+                <li class=" "><a href="../02/02_03.html">전주형 SOS긴급지원</a></li>
+                <li class=" "><a href="../02/02_04.html">사랑나눔간병비지원</a></li>
+                <li class=" "><a href="../02/02_05_01.html">아동·청소년지원</a></li>
+                <li class=" "><a href="../02/02_06.html">지정기탁사업</a></li>
+                <li class=" "><a href="../02/02_06.html">위기·고립가구</a></li>
+                <li class="on"><a href="../02/02_06.html">금융복지사업</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sub_top">
+          <h2>금융복지사업</h2>
+          <ul class="sub_top_link">
+            <li><a href="#facebook" onclick="toSNS('facebook', '');" title="새창"><img src="../images/icon/icon_facebook.png" alt="페이스북"/></a>
+            <li><a href="#twitter" onclick="toSNS('twitter', '')" title="새창"><img src="../images/icon/icon_twitter.png" alt="트위터"/></a>
+            <li><a href="#print" onclick="window.print();" title="인쇄보기 바로가기[새창]"><img src="../images/icon/icon_print.png" alt="프린트"/></a>
+          </ul>
+        </div>
+        
+        <div id="contents">
+          <div class="contents_wrap">
+            
+            <!-- 서브 : 3depth -->
+
+            
+            <!-- 서브 : 4depth -->
+
+            
+            
+            <!-- 서브 : 5depth -->
+
+            <div class="contents_html">
+              <!-- 콘텐츠   -->
+              <div class="tab_cont socialwork socialwork_c01 section">
+                <div class="cont on">
+                <h3 class="stitle01">전주시금융복지상담소</h3>
+                
+                <div class="box">
+                <div class="inbox">
+                <ul class="num_list2">
+                  <li>악성 가계부채로 고통받는 금융소외계층에게 재무관리, 법률구제 등의 금융복지서비스를 제공하여 사회‧ 경제적 재기의 기회를 마련합니다.</li>
+                </ul>
+                </div>
+                </div>
+                
+                <div class="pl_20">
+                <h4 class="stitle03">주요사업</h4>
+                
+                <ul class="circle_list">
+                  <li>전주시 취약계층 채무 및 재무관리에 관한 채무조정 상담</li>
+                  <li>서민 가계부채 확대예방을 위한 금융교육</li>
+                  <li>상담자의 복지수요에 따른 복지서비스 연계</li>
+                  <li>전주시 부실채권 매입 소각</li>
+                </ul>
+                
+                <h4 class="stitle03">상담신청</h4>
+                
+                <ul class="circle_list">
+                  <li>대표번호 063-281-0060</li>
+                  <li>온라인상담&nbsp; <a href="http://jjfwc.jjwf.or.kr">http://jjfwc.jjwf.or.kr</a></li>
+                  <li>전주시 완산구 노송광장로 10 (서노송동, 전주시금융복지상담소)</li>
+                </ul>
+                </div>
+                
+                <div class="mt_60 box02">
+                <h4 class="stitle03">지원사업보기</h4>
+                
+                <ul class="tab_menu2">
+                  <li><a href="#debt_support1"><span>채무조정지원</span></a></li>
+                  <li><a href="#debt_support2"><span>파산관재인 선임비 지원</span></a></li>
+                  <li><a href="#debt_support3"><span>채무자대리인제도 지원</span></a></li>
+                  <li><a href="#debt_support4"><span>소액채무지원</span></a></li>
+                  <li><a href="#debt_support5"><span>부실채권지원사업</span></a></li>
+                </ul>
+                
+                <h3 class="stitle01" id="debt_support1">채무조정지원</h3>
+                
+                <ul class="circle_list">
+                  <li>채무과중으로 정상적인 상환이 어려운 채무자를 대상으로 실질적 변제가능성을 고려한 채무조정 지원을 통하여 채무자의 경제적 회생 및 자립을 지원합니다.</li>
+                </ul>
+                
+                <h4 class="stitle03">채무조정지원 주요내용</h4>
+                
+                <div class="table_wrap">
+                <table class="board_table bline">
+                  <caption>채무조정지원 구분, 개인워크아웃, 개인회생, 개인파산</caption>
+                  <colgroup>
+                    <col style="width: 15%;" />
+                    <col span="3" style="width: 28%;" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">개인워크아웃</th>
+                      <th scope="col">개인회생</th>
+                      <th scope="col">개인파산</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>운영주체</td>
+                      <td>신용회복위원회</td>
+                      <td>법원</td>
+                      <td>법원</td>
+                    </tr>
+                    <tr>
+                      <td>대상채무자</td>
+                      <td>3개월 이상 연체 중인 개인채무자 중 일정소득발생자 (신속채무조정:정상&sim;1개월, 프리워크아웃:1&sim;3개월 연체)</td>
+                      <td>개인채무자 중 일정소득 발생자</td>
+                      <td>개인채무자</td>
+                    </tr>
+                    <tr>
+                      <td>대상채권</td>
+                      <td>협약가입 금융기관 및 대부업체 보유채권</td>
+                      <td>제한없음 (사채포함)</td>
+                      <td>제한없음 (사채포함)</td>
+                    </tr>
+                    <tr>
+                      <td>채무조정 신청범위</td>
+                      <td>총채무금액 15억원
+                      <ul>
+                        <li>무담보채무 5억원</li>
+                        <li>담보채무 10억원</li>
+                      </ul>
+                      </td>
+                      <td>총채무금액 25억원
+                      <ul>
+                        <li>무담보채무 10억원</li>
+                        <li>담보채무 15억원</li>
+                      </ul>
+                      </td>
+                      <td>제한없음</td>
+                    </tr>
+                    <tr>
+                      <td>채무조정내용</td>
+                      <td>채무감면, 분할상환, 이자율조정, 상환유예, 상환기간연장 등</td>
+                      <td>가용소득 범위 내에서 3년(최장5년) 변제 후 잔여채무면책</td>
+                      <td>파산면책결정을 통해 상환책임 면제 (비면책채권 제외)</td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+                <h4 class="stitle03">지원방법</h4>
+                
+                <ul class="circle_list">
+                  <li>상담을 통하여 신청자의 부채와 재무상태를 고려 최적의 채무조정제도 진행 지원</li>
+                </ul>
+                
+                <h4 class="stitle03">상담전화</h4>
+                
+                <ul class="circle_list">
+                  <li>전주시금융복지상담소(063-281-0060)</li>
+                </ul>
+                
+                <h3 class="stitle01 mt_60" id="debt_support2">파산관재인 선임비 지원</h3>
+                
+                <div class="box">
+                <div class="inbox">
+                <ul class="num_list2">
+                  <li>개인파산&middot;면책, 회생사건을 진행하는 과정에 있는 채무자 재산현황을 조사하는 관재인&middot;회생위원의 선임비용을 지원합니다.</li>
+                </ul>
+                </div>
+                </div>
+                
+                <h4 class="stitle03">지원대상</h4>
+                
+                <ul class="circle_list">
+                  <li>주민등록기준 전주시 거주자</li>
+                  <li>중위소득 120% 이하 (한시적)</li>
+                </ul>
+                
+                <p class="pt_20 pl_20">※ 위 지원요건을 충족한자 중, 법률구조공단, 신용회복위원회 등에서 파산관재인 선임비용을 지원받지 못한 경우 지원</p>
+                
+                <h4 class="stitle03">신청방법</h4>
+                
+                <ul class="circle_list">
+                  <li>신청 : 전주시금융복지상담소</li>
+                  <li>절차 : 상담 &rarr; 개인파산절차진행 &rarr; 신청 &rarr; 심의 &rarr; 지원</li>
+                  <li>한도 : 1인 30만원 범위 내에서 지원</li>
+                </ul>
+                
+                <h4 class="stitle03">신청서류</h4>
+                
+                <ul class="circle_list">
+                  <li>신청서, 신분증 및 주민등록등본, 통장사본, 지원대상임을 입증할 수 있는 증명서, 파산관재인 비용 납입 명령문, 파산관재인 비용 납입영수증</li>
+                </ul>
+                
+                <h4 class="stitle03">문의</h4>
+                
+                <ul class="circle_list">
+                  <li>전주시금융복지상담소(063-281-0060)</li>
+                </ul>
+                
+                <h3 class="stitle01 mt_60" id="debt_support3">채무자대리인제도 지원 사업</h3>
+                
+                <div class="box">
+                <div class="inbox">
+                <ul class="num_list2">
+                  <li>대부업체 등 채권자의 빚 독촉을 채무자가 아닌 변호사에게 유도하여 과도한 추심압력으로부터 벗어날 수 있도록 지원합니다.</li>
+                </ul>
+                </div>
+                </div>
+                
+                <h4 class="stitle03">지원대상</h4>
+                
+                <ul class="circle_list">
+                  <li>주민등록기준 전주시 거주자</li>
+                  <li>중위소득 120% 이하 (한시적)</li>
+                </ul>
+                
+                <h4 class="stitle03">신청방법</h4>
+                
+                <ul class="circle_list">
+                  <li>신청 : 전주시금융복지상담소</li>
+                  <li>절차 : 상담 &rarr; 채무조정 &rarr; 신청 &rarr; 심의 &rarr; 지원</li>
+                  <li>한도 : 1인 40만원 범위 내에서 지원</li>
+                </ul>
+                
+                <p class="pt_20 pl_20">※ 대리인의 위임기간을 연장할 필요가 있는 경우 배분심사위원회 심의를 거쳐 60만원 내에서 지원</p>
+                
+                <h4 class="stitle03">신청서류</h4>
+                
+                <ul class="circle_list">
+                  <li>신청서, 신분증 및 주민등록등본, 채무증빙서류, 지원대상임을 입증할 수 있는 증명서</li>
+                </ul>
+                
+                <h4 class="stitle03">문의</h4>
+                
+                <ul class="circle_list">
+                  <li>전주시금융복지상담소(063-281-0060)</li>
+                </ul>
+                
+                <h3 class="stitle01 mt_60" id="debt_support4">소액채무지원</h3>
+                
+                <div class="box">
+                <div class="inbox">
+                <ul class="num_list2">
+                  <li>금융복지상담 및 채무조정을 통해 소액의 채무만 남아있는 금융취약계층에게 100만원 이하의 채무탕감 비용을 지원하여 사회&middot;경제적 재기의 기회를 제공합니다.</li>
+                </ul>
+                </div>
+                </div>
+                
+                <h4 class="stitle03">지원대상</h4>
+                
+                <ul class="circle_list">
+                  <li>주민등록기준 전주시 거주자</li>
+                  <li>중위소득 120% 이하 (한시적)</li>
+                </ul>
+                
+                <h4 class="stitle03">신청방법</h4>
+                
+                <ul class="circle_list">
+                  <li>신청 : 전주시금융복지상담소</li>
+                  <li>절차 : 상담 &rarr; 채무조정 &rarr; 신청 &rarr; 심의 &rarr; 지원</li>
+                  <li>한도 : 1인 100만원 범위 내에서 지원</li>
+                </ul>
+                
+                <h4 class="stitle03">신청서류</h4>
+                
+                <ul class="circle_list">
+                  <li>신청서, 신분증 및 주민등록등본, 지원대상임을 입증할 수 있는 증명서</li>
+                </ul>
+                
+                <h4 class="stitle03">문의</h4>
+                
+                <ul class="circle_list">
+                  <li>전주시금융복지상담소(063-281-0060)</li>
+                </ul>
+                
+                <h3 class="stitle01 mt_60" id="debt_support5">부실채권지원사업</h3>
+                
+                <div class="box">
+                <div class="inbox">
+                <ul class="num_list2">
+                  <li>금융기관이 보유하고 있는 부실채권을 주빌리은행을 통해 매입 후 소각하여 과도한 부채로 어려움을 겪는 전주시민의 새출발을 지원합니다.</li>
+                </ul>
+                </div>
+                </div>
+                
+                <h4 class="stitle03">대상</h4>
+                
+                <ul class="circle_list">
+                  <li>10년 이상 부실채권을 보유하고 있는 전라북도민</li>
+                </ul>
+                
+                <h4 class="stitle03">지원내용</h4>
+                
+                <ul class="circle_list">
+                  <li>부실채권 소각</li>
+                </ul>
+                
+                <h4 class="stitle03">지원방법</h4>
+                
+                <ul class="circle_list">
+                  <li>금융기관이 보유하고 있는 부실채권을 주빌리은행을 통해 매입 후 소각하여 부채탐감 지원</li>
+                </ul>
+                
+                <h4 class="stitle03">문의</h4>
+                
+                <ul class="circle_list">
+                  <li>전주시금융복지상담소(063-281-0060)</li>
+                </ul>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <!-- 디버깅 후 삭제 -->
+                
+                
+            </div>
+            
+          </div>
+        </div>
+      
+      </main>	
+
+
+
+      <!-- 푸터 -->
+      <footer id="footer">
+        <ul class="fmenu">
+          <li><a href="/main/content.action?cmsid=101060500000">이용약관</a></li>
+          <li><a href="/main/content.action?cmsid=101060100000">개인정보처리방침</a></li>
+          <li><a href="/main/content.action?cmsid=101060400000">이메일무단수집거부</a></li>
+          <li><a href="/main/content.action?cmsid=101050800000">찾아오시는길</a></li>
+        </ul>
+
+        <div class="fcont">
+          <img src="../images/common/b_logo.png" alt="전주사람" class="b_logo"/>
+          <address>
+            <p><span>[54999] 전주시 완산구 전주객사2길 12-8(2층)</span><span>TEL. 063-281-0050</span><span>FAX. 063-281-0051</span></p>
+            <p><span>상호명) 재단법인 전주시복지재단 전주사람</span><span>[대표자명] 윤방섭</span>[사업자등록번호] 849-82-00212</span><span>[기관대표메일주소] jjwf1004@daum.net</span></p>
+            <p><span>COPYRIGHT ⓒ 2024. JEONJUSARAM ALL RIGHTS RESEVED.</span></p>
+          </address>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
