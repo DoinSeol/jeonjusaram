@@ -85,7 +85,7 @@
   font-weight: 300;
   background: #fff;
 }
-.sponsor_c01 .inbox:after {  position: absolute;  top: 0;  left: 40px;  top: 40px;  bottom: 40px;  width: 148px;  border-right: 1px solid #e0e3e5;  content: "";}
+.sponsor_c01 .inbox:after {  position: absolute;  top: 0;  left: 40px;  top: 40px;  bottom: 40px;  width: 148px;  border-right: 1px solid #e0e3e5;  content: ""; background: url("../images/sub/icon_sponsor_c01.png") 40% center no-repeat; content: "";}
 .sponsor_c01.spon_01 .inbox:after {  background: url("../images/sub/sub_0101_01.png") 40% center no-repeat; content: "";}
 .sponsor_c01.spon_05 .inbox:after {  background: url("../images/sub/sub_0101_05.png") 40% center no-repeat; content: "";}
 
