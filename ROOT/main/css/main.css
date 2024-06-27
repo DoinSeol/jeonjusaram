@@ -194,9 +194,7 @@
 }
 .main_pop_zone #pop_zone .pop_zone_control .pop_zone-pagination-num {font-size: 0.875rem; color: #fff; padding: 0px 12px;}
   
-.main_pop_zone #pop_zone .pop_zone_control .swiper-controls.main_pop {
-  display: flex;
-}
+.main_pop_zone #pop_zone .pop_zone_control .swiper-controls.main_pop {display: flex;}
 
 
 
@@ -216,13 +214,7 @@
 
 #section01 .activity_swiper_control { display: flex; gap: 8px;}
 #section01 .activity_swiper_control .swiper-button-prev, #section01 .activity_swiper_control .swiper-button-next { background-image: none; padding-right: 2px;}
-#section01 .activity_swiper_control .swiper-button-next, #section01 .activity_swiper_control .swiper-button-prev {
-  position: static; margin: 0px;  width: 26px; height: 26px; border-radius: 50%; 
-  /* background-color: rgba(0, 0, 0, 0.6);  */
-  /* border: 1px solid #ddd; */
-  background-position: center; background-size: 15px auto;
-  display: flex; justify-content: center; align-items: center;
-}
+#section01 .activity_swiper_control .swiper-button-next, #section01 .activity_swiper_control .swiper-button-prev {position: static; margin: 0px;  width: 26px; height: 26px; border-radius: 50%; background-position: center; background-size: 15px auto; display: flex; justify-content: center; align-items: center;}
 #section01 .activity_swiper_control .swiper-button-prev .activity_swiper_bt_left {fill: #acacac;}
 #section01 .activity_swiper_control .swiper-button-next .activity_swiper_bt_right {fill: #acacac;}
 
@@ -453,8 +445,13 @@ display: block;} */
 #section03 .csize .business_right .business_text .business_right_back .business_bg_cir01 {width: 160px; height: 320px; border-radius: 160px 0 0 160px; top: -10px; left: -20px; box-shadow: none;}
 #section03 .csize .business_right .business_text .business_right_back .business_bg_cir02 {width: 230px; height: 230px; top: 430px; left: 45%; background-image: url('../images/main/business_tab_00.png'); animation-duration: 4s; animation-name: updown_02; animation-iteration-count: infinite;}
 #section03 .csize .business_right .business_text .business_right_back .business_bg_cir03 {width: 250px; height: 250px; top: 300px; left: 85%; box-shadow: none;}
-#section03 .csize .business_right .business_text .business_right_back .business_bg_cir04 {width: 350px; height: 350px; top: 1rem; left: 70%; background-image: url('../images/main/business_tab_01.png'); animation-duration: 4s; animation-name: updown_01; animation-iteration-count: infinite;}
+#section03 .csize .business_right .business_text .business_right_back .business_bg_cir04 {width: 350px; height: 350px; top: 1rem; left: 70%; background-image: url('../images/main/business_tab_01.png'); animation-duration: 4s; animation-name: updown_01; animation-iteration-count: infinite; }
 
+#section03 .csize .business_right .business_text#business_tab_02 .business_right_back .business_bg_cir04 {background-image: url('../images/main/business_tab_02.png');}
+#section03 .csize .business_right .business_text#business_tab_03 .business_right_back .business_bg_cir04 {background-image: url('../images/main/business_tab_03.png');}
+#section03 .csize .business_right .business_text#business_tab_04 .business_right_back .business_bg_cir04 {background-image: url('../images/main/business_tab_04.png');}
+#section03 .csize .business_right .business_text#business_tab_05 .business_right_back .business_bg_cir04 {background-image: url('../images/main/business_tab_05.png');}
+#section03 .csize .business_right .business_text#business_tab_06 .business_right_back .business_bg_cir04 {background-image: url('../images/main/business_tab_06.png');}
 
 #section03 .csize .business_right .business_text .business_text_cont {display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1rem;}
 #section03 .csize .business_right .business_text .business_text_cont h3, #section03 .csize .business_right .business_text .business_text_cont p, #section03 .csize .business_right .business_text .business_text_cont dl dt, #section03 .csize .business_right .business_text .business_text_cont dl dd {

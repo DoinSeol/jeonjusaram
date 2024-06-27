@@ -81,7 +81,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="search
     appearance: none;	
 }
 select::-ms-expand {display: none;}
-select{	background: #fff url('../images/icon/caret-down-solid.svg') center right 12px no-repeat; background-size: auto 18px;}
+select{border-radius: 4px;	background: #fff url('../images/icon/caret-down-solid.svg') center right 12px no-repeat; background-size: auto 14px;}
 
 
 
