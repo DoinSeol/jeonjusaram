@@ -237,10 +237,10 @@
 
 #section01 .inwrap .main_content_web {}
 #section01 .inwrap .main_content_web .inwrap_cont {width: 100%;}
-#section01 .inwrap .main_content_web .inwrap_cont a {display: block; width: 100%; height: 100%; background-color: #FFAD1E; border-radius: 12px; overflow: hidden; position: relative;}
-#section01 .inwrap .main_content_web .inwrap_cont a .tit_contain_web {position: absolute; right: 12px; top: 12px; }
-#section01 .inwrap .main_content_web .inwrap_cont a .tit_contain_web .tit_web {text-align: right; }
-#section01 .inwrap .main_content_web .inwrap_cont a .tit_contain_web .date_web {text-align: right; font-size: 0.9375rem;}
+#section01 .inwrap .main_content_web .inwrap_cont a {display: block; width: 100%; height: 100%; background-image: url("../images/main/tree_70.png"), linear-gradient(-64deg, #fda085, #FFAD1E 60%); background-size: auto 70%, auto; background-repeat: no-repeat; background-position: bottom 4px center, center; border-radius: 12px; overflow: hidden; position: relative; }
+#section01 .inwrap .main_content_web .inwrap_cont a .tit_contain_web {position: absolute; right: 12px; top: 12px; line-height: 1.3; }
+#section01 .inwrap .main_content_web .inwrap_cont a .tit_contain_web .tit_web {text-align: right; font-size: 1.25rem; font-family: 'Gmarket Sans Bold'; color: #fff; }
+#section01 .inwrap .main_content_web .inwrap_cont a .tit_contain_web .date_web {text-align: right; font-size: 0.875rem; font-family: 'Gmarket Sans Light'; color: #fff;}
 
 
 #activity_swiper { position: relative;}
