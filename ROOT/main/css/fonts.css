@@ -1,6 +1,11 @@
 @charset "utf-8";
 
 @font-face {
+  font-family: 'JeonbukStateSB';
+  src: url(font/JeonbukStateSB_OTF.otf) format('truetype');
+}
+
+@font-face {
   font-family: 'Gmarket Sans Bold';
   src: url(font/gmarketsans/GmarketSansBold.otf) format('truetype');
 }

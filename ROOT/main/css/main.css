@@ -14,7 +14,7 @@
 
 /* 메인 이미지존 타이틀 */
 #main_visual .main_title {position: absolute; width: 100%; max-width: 1440px; height: auto; padding: 16px; top:36%; left:50%; transform: translate(-50%, -50%); z-index: 3;}
-#main_visual .main_title h1 {font-size: 2.875rem; font-weight: 600; color: #fff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);}
+#main_visual .main_title h1 {font-size: 2.875rem; font-weight: 600; color: #fff; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); }
 #main_visual .main_title h1 span {color: #EE2E5B;}
 /* 메인 이미지존 컨트롤 */
 #main_visual .main_title .main_controlbox {padding: 4px 12px; margin-top: 8px; border-radius: 16px; display: inline-block; background-color: rgba(0, 0, 0, 0.6); vertical-align:middle;}
