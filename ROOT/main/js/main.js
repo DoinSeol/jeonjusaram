@@ -75,6 +75,22 @@ $(function() {
   });
 
 
+
+  // 탭_공지사항
+  $("#section01 .inwrap .main_content_boardTab .tab_menu a").on("click", function(e) {
+    e.preventDefault();
+    $("#section01 .inwrap .main_content_boardTab .tab_menu li").removeClass("on");
+    $(this)
+      .parents("li")
+      .addClass("on");
+    $("#section01 .inwrap .main_content_boardTab .tab_menu a").attr("aria-selected", "false");
+    $(this).attr("aria-selected", "true");
+
+    var id = $(this).attr("aria-controls");
+    $("#section01 .inwrap .main_content_boardTab .board").removeClass("on");
+    $("#" + id).addClass("on");
+  });
+
   // 후원하기
   $('#section02 .inwrap .main_cont_sponsor_03 .spon_bottom_cont .spon_amount .spon_amount_bt.spon_amount_txt input').click(function() {
     $("input:radio[name=spon_amount_radio]:checked")[0].checked = false;
@@ -108,11 +124,15 @@ $(function() {
     },
     breakpoints: {
       1000: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 14
       },
       768: {
         slidesPerView: 2,
+        spaceBetween: 14
+      },
+      600: {
+        slidesPerView: 1,
         spaceBetween: 14
       },
       450: {
