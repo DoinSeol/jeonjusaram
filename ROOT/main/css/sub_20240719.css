@@ -85,19 +85,19 @@
   overflow: hidden;
   position: relative;
   /* min-height: 185px; */
-  padding: 48px 40px 48px 227px;
+  padding: 57px 40px 57px 227px;
   font-size: 1.25rem;
   color: #333;
   line-height: 1.346;
   font-weight: 300;
   background: #fff;
 }
-.sponsor_c01 .inbox:after {  position: absolute;  top: 0;  left: 40px;  top: 40px;  bottom: 40px;  width: 148px;  border-right: 1px solid #e0e3e5;  content: ""; background: url("../images/sub/icon_sponsor_c01.png") 40% center no-repeat; background-size: contain; content: "";}
-.sponsor_c01.spon_01 .inbox:after {  background: url("../images/sub/sub_0101_01.png") 40% center no-repeat; content: ""; background-size: contain; }
-.sponsor_c01.spon_02 .inbox:after {  background: url("../images/sub/sub_0101_02.png") 40% center no-repeat; content: ""; background-size: contain; }
-.sponsor_c01.spon_03 .inbox:after {  background: url("../images/sub/sub_0101_03.png") 40% center no-repeat; content: ""; background-size: contain; }
-.sponsor_c01.spon_04 .inbox:after {  background: url("../images/sub/sub_0101_04.png") 40% center no-repeat; content: ""; background-size: contain; }
-.sponsor_c01.spon_05 .inbox:after {  background: url("../images/sub/sub_0101_05.png") 40% center no-repeat; content: ""; background-size: contain; }
+.sponsor_c01 .inbox:after {  position: absolute;  top: 0;  left: 40px;  top: 40px;  bottom: 40px;  width: 148px;  border-right: 1px solid #e0e3e5;  content: ""; background: url("../images/sub/icon_sponsor_c01.png") 40% center no-repeat; content: "";}
+.sponsor_c01.spon_01 .inbox:after {  background: url("../images/sub/sub_0101_01.png") 40% center no-repeat; content: ""; }
+.sponsor_c01.spon_02 .inbox:after {  background: url("../images/sub/sub_0101_02.png") 40% center no-repeat; content: ""; }
+.sponsor_c01.spon_03 .inbox:after {  background: url("../images/sub/sub_0101_03.png") 40% center no-repeat; content: ""; }
+.sponsor_c01.spon_04 .inbox:after {  background: url("../images/sub/sub_0101_04.png") 40% center no-repeat; content: ""; }
+.sponsor_c01.spon_05 .inbox:after {  background: url("../images/sub/sub_0101_05.png") 40% center no-repeat; content: ""; }
 
 .sponsor_c02 .box {
   overflow: hidden;
