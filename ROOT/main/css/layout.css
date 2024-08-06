@@ -1,5 +1,5 @@
 @charset "utf-8";
-#wrap {position:relative; overflow:hidden; min-width:320px;}
+#wrap {position:relative; overflow:hidden; min-width:320px; min-height: 100vh; display: flex; flex-direction: column;}
 #main {min-height:400px; }
 #main_visual {padding-top: 120px;}
 
@@ -145,7 +145,7 @@
 
 #main.sub {width:95%; max-width:1440px; margin:120px auto 150px; padding-top: 1px;}
 .sub_top {position:relative; margin:40px 0 40px; border-bottom:1px solid #e2e2e2;}
-.sub_top h2 {font-family: 'Gmarket Sans Bold'; font-size:2rem; color:#333; line-height:2.285; font-weight:500;}
+.sub_top h2 {flex-grow: 1; font-family: 'Gmarket Sans Bold'; font-size:2rem; color:#333; line-height:2.285; font-weight:500;}
 .sub_top_link {position:absolute; top: 50%; transform: translateY(-50%); right:0;}
 .sub_top_link li {float:left; margin-left:5px;}
 .sub_top_link li img {height: 30px}
