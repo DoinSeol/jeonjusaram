@@ -182,8 +182,6 @@
 .btn_more:after {position:absolute; top:50%; right:20px; width:8px; height:13px; margin-top:-6px; background:url('../images/icon/icon_arr01.png') no-repeat center; background-size:100% auto; content:'';}
 
 
-
-
 /* etc */
 .img_wrap {overflow:hidden;}
 .img_wrap span {display:block; position:relative; padding-bottom:117%;}
@@ -199,8 +197,9 @@
 .table_responsive {overflow:hidden; width:100%; overflow-x: auto; -webkit-overflow-scrolling: touch;}
 .table_responsive .board_table {width:100%; max-width:100%; min-width:900px; table-layout: auto;}
 
-
-
+.minwidth_table {overflow-x: auto; position: relative;}
+.minwidth_table.minwidth_410 table {min-width: 410px;}
+.minwidth_table.minwidth_760 table {min-width: 760px;}
 
 
 @media all and (max-width: 1100px){
@@ -329,4 +328,16 @@
 	/* etc */
 	.map_box {height:350px;}
 }
+
+@media all and (max-width: 790px){
+	.scroll_icon {position: relative;}
+	.scroll_icon.scroll_760::before {content: ""; display: block; width: 25px; height: 25px; position: absolute; right: 0px; bottom: 0px; 
+		background: url("../images/icon/move_pointer.gif") no-repeat; background-size: 100%; background-position: bottom center;}
+}
+
+@media all and (max-width: 440px){
+	.scroll_icon.scroll_410::before {content: ""; display: block; width: 25px; height: 25px; position: absolute; right: 0px; bottom: 0px; 
+		background: url("../images/icon/move_pointer.gif") no-repeat; background-size: 100%; background-position: bottom center;}
+}
+
 

@@ -128,14 +128,18 @@ $(function() {
         spaceBetween: 14
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 14
       },
       600: {
         slidesPerView: 1,
         spaceBetween: 14
       },
-      450: {
+      500: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      400: {
         slidesPerView: 1,
         spaceBetween: 10
       }
